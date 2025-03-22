@@ -3,83 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Spantik Adventure for trekking and tour services in Gilgit Baltistan, Northern Pakistan">
-    <title>Contact Us | Spantik Adventure</title>
+    <meta name="description" content="Contact Spantik Adventure - Get in touch for premium trekking and tour services in Gilgit Baltistan, Northern Pakistan">
+    <title>Contact Us - Spantik Adventure</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- CSS Links - CONSISTENT ORDER -->
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/additional-styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        /* Contact Page Specific Styles */
+        .contact-section {
+            padding: 80px 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-info-item {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info-item i {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-right: 15px;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(var(--primary-rgb), 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-info-item h4 {
+            margin-bottom: 5px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .contact-info-item p, .contact-info-item a {
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .contact-info-item a:hover {
+            color: var(--primary-color);
+        }
+        
+        .contact-form {
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .map-container {
+            height: 450px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .booking-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .booking-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .social-links-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .social-links-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .social-link-item {
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .social-link-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .social-link-item i {
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        .faq-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+        
+        .faq-answer.active {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+        
+        @media (max-width: 767px) {
+            .contact-section, .booking-section, .map-section {
+                padding: 50px 0;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Header Navigation - Add this at the beginning of the body -->
-    <header class="header">
-        <div class="container">
-            <div class="header-wrapper">
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/logo/logo.png" alt="Spantik Adventure" class="main-logo">
-                        <img src="images/logo/logo-white.png" alt="Spantik Adventure" class="white-logo">
-                    </a>
-                </div>
-                
-                <!-- Navigation -->
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="services.html" class="nav-link"><i class="fas fa-mountain"></i> Services</a></li>
-                        <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
-                        <li><a href="contact.html" class="nav-link active"><i class="fas fa-envelope"></i> Contact</a></li>
-                    </ul>
-                </nav>
-                
-                <!-- Header Right - Language & CTA -->
-                <div class="header-right">
-                    <div class="language-selector">
-                        <div class="selected-language">
-                            <img src="images/flags/en.svg" alt="English" class="flag-icon">
-                            <span>EN</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <ul class="language-dropdown">
-                            <li><a href="#"><img src="images/flags/en.svg" alt="English" class="flag-icon"> English</a></li>
-                            <li><a href="#"><img src="images/flags/ru.svg" alt="Russian" class="flag-icon"> Russian</a></li>
-                            <li><a href="#"><img src="images/flags/fr.svg" alt="French" class="flag-icon"> French</a></li>
-                        </ul>
-                    </div>
-                    
-                    <a href="contact.html#booking" class="btn btn-primary book-btn">
-                        <i class="fas fa-calendar-check"></i> Book Now
-                    </a>
-                </div>
-                
-                <!-- Mobile Menu Toggle -->
-                <div class="mobile-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- Page Title -->
     <section class="page-title" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/backgrounds/contact-bg.jpg');">
         <div class="container">
@@ -92,184 +251,338 @@
         </div>
     </section>
     
-    <!-- Contact Details Section -->
-    <section class="contact-details">
+    <!-- Contact Section -->
+    <section class="contact-section">
         <div class="container">
             <div class="section-header">
-                <h2>Get in Touch</h2>
-                <p>We're here to help you plan your perfect adventure</p>
+                <h2><i class="fas fa-envelope"></i> Get In Touch</h2>
+                <p>We're here to answer any questions you may have</p>
             </div>
             
-            <div class="contact-info-wrapper">
-                <div class="contact-info-item">
-                    <div class="contact-info-icon">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-info-item">
                         <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Our Location</h4>
+                            <p>123 Mountain View Road, Gilgit City</p>
+                            <p>Gilgit Baltistan, Pakistan</p>
+                        </div>
                     </div>
-                    <div class="contact-info-content">
-                        <h4>Our Location</h4>
-                        <p>Main Street, Gilgit<br>Gilgit Baltistan, Pakistan</p>
+                    
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone Numbers</h4>
+                            <p>Main Office: <a href="tel:+923451234567">+92 345 1234567</a></p>
+                            <p>Bookings: <a href="tel:+923219876543">+92 321 9876543</a></p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="contact-info-item">
-                    <div class="contact-info-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="contact-info-content">
-                        <h4>Phone Number</h4>
-                        <p>+92 123 456 7890<br>+92 098 765 4321</p>
-                    </div>
-                </div>
-                
-                <div class="contact-info-item">
-                    <div class="contact-info-icon">
+                    
+                    <div class="contact-info-item">
                         <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Addresses</h4>
+                            <p>General Inquiries: <a href="mailto:info@spantikadventure.com">info@spantikadventure.com</a></p>
+                            <p>Bookings: <a href="mailto:bookings@spantikadventure.com">bookings@spantikadventure.com</a></p>
+                        </div>
                     </div>
-                    <div class="contact-info-content">
-                        <h4>Email Address</h4>
-                        <p>info@spantikadventure.com<br>booking@spantikadventure.com</p>
-                    </div>
-                </div>
-                
-                <div class="contact-info-item">
-                    <div class="contact-info-icon">
+                    
+                    <div class="contact-info-item">
                         <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Office Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 4:00 PM</p>
+                            <p>Sunday: Closed</p>
+                        </div>
                     </div>
-                    <div class="contact-info-content">
-                        <h4>Office Hours</h4>
-                        <p>Monday - Friday: 9 AM - 6 PM<br>Saturday: 10 AM - 4 PM</p>
+                    
+                    <div class="contact-info-item">
+                        <i class="fas fa-share-alt"></i>
+                        <div>
+                            <h4>Social Media</h4>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Map -->
-    <section class="contact-map-section">
-        <div class="container">
-            <div class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51681.05333676326!2d74.26976283839034!3d35.9200967020243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e6495e9dfec2d1%3A0xce54e1fcb5ccdfb8!2sGilgit%2C%20Gilgit-Baltistan%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1687459418371!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Form Section -->
-    <section class="contact-form-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Send Us a Message</h2>
-                <p>Fill out the form below and we'll get back to you as soon as possible</p>
-            </div>
-            
-            <div class="form-wrapper">
-                <div class="form-message success">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Your message has been sent successfully! We'll get back to you soon.</p>
                 </div>
                 
-                <div class="form-message error">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <p>There was an error sending your message. Please try again later or contact us directly.</p>
-                </div>
-                
-                <form id="contact-form">
-                    <div class="form-row">
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form action="#" method="post" id="contact-form">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                            <div class="error-message"></div>
+                            <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
-                            <div class="error-message"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                            <div class="error-message"></div>
+                            <input type="email" id="email" name="email" class="form-control" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                            <div class="error-message"></div>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
                         </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-map-marked-alt"></i> Find Us</h2>
+                <p>Our location in the heart of Gilgit Baltistan</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104485.95938889436!2d74.35699844335938!3d35.920194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e649e3642f0671%3A0x40fd0ca3ca17282b!2sGilgit%2C%20Gilgit-Baltistan%2C%20Pakistan!5e0!3m2!1sen!2s!4v1616661626904!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-calendar-check"></i> Book Your Adventure</h2>
+                <p>Start planning your unforgettable journey today</p>
+            </div>
+            
+            <div class="booking-container">
+                <p class="mb-4">Fill out the form below to start the booking process for your adventure. Our team will contact you within 24 hours to discuss details and confirm your reservation.</p>
+                
+                <form id="bookingForm" action="#" method="post" class="booking-form">
+                    <div class="form-group">
+                        <label for="bookingName">Full Name</label>
+                        <input type="text" id="bookingName" name="bookingName" class="form-control" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
-                        <div class="error-message"></div>
+                        <label for="bookingEmail">Email Address</label>
+                        <input type="email" id="bookingEmail" name="bookingEmail" class="form-control" required>
                     </div>
                     
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <label for="bookingPhone">Phone Number</label>
+                        <input type="tel" id="bookingPhone" name="bookingPhone" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="adventureType">Adventure Type</label>
+                        <select id="adventureType" name="adventureType" class="form-control" required>
+                            <option value="">Select Adventure Type</option>
+                            <option value="trekking">Trekking Package</option>
+                            <option value="expedition">Mountain Expedition</option>
+                            <option value="sightseeing">Sightseeing Tour</option>
+                            <option value="custom">Custom Adventure</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="startDate">Preferred Start Date</label>
+                        <input type="date" id="startDate" name="startDate" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="duration">Duration (Days)</label>
+                        <input type="number" id="duration" name="duration" min="1" max="30" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="groupSize">Number of People</label>
+                        <input type="number" id="groupSize" name="groupSize" min="1" max="20" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="accommodation">Preferred Accommodation</label>
+                        <select id="accommodation" name="accommodation" class="form-control">
+                            <option value="">Select Accommodation Type</option>
+                            <option value="standard">Standard (Budget-friendly)</option>
+                            <option value="comfort">Comfort (Mid-range)</option>
+                            <option value="luxury">Luxury (Premium)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="specialRequirements">Special Requirements or Questions</label>
+                        <textarea id="specialRequirements" name="specialRequirements" class="form-control"></textarea>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-calendar-check"></i> Request Booking
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
     
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- FAQ Section -->
+    <section class="faq-section">
         <div class="container">
-            <div class="footer-wrapper">
-                <div class="footer-about">
-                    <img src="images/logo-white.png" alt="Spantik Adventure" class="footer-logo">
-                    <p>Spantik Adventure provides premium trekking, expedition, and tour services in the breathtaking regions of Gilgit Baltistan, Northern Pakistan.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            <div class="section-header">
+                <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+                <p>Answers to common inquiries about our services</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do I book an adventure with Spantik Adventure?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Booking an adventure with us is easy! You can either fill out the booking form on this page, send us an email, or give us a call. Our team will get back to you within 24 hours to discuss your requirements and confirm your booking.</p>
                     </div>
                 </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What payment methods do you accept?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept various payment methods including credit/debit cards, bank transfers, and PayPal. For international clients, we also accept Western Union and MoneyGram. A 30% deposit is required to confirm your booking, with the remaining balance due 30 days before your adventure begins.</p>
+                    </div>
                 </div>
-                <div class="footer-services">
-                    <h3>Our Services</h3>
-                    <ul>
-                        <li><a href="services.html#trekking">Trekking Packages</a></li>
-                        <li><a href="services.html#expeditions">Mountain Expeditions</a></li>
-                        <li><a href="services.html#sightseeing">Sightseeing Tours</a></li>
-                        <li><a href="services.html#transportation">Transportation</a></li>
-                        <li><a href="services.html#custom">Custom Adventures</a></li>
-                    </ul>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What is your cancellation policy?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our cancellation policy is as follows:</p>
+                        <ul>
+                            <li>Cancellations made 60+ days before departure: Full refund minus a $100 administrative fee</li>
+                            <li>Cancellations made 30-59 days before departure: 50% refund</li>
+                            <li>Cancellations made less than 30 days before departure: No refund</li>
+                        </ul>
+                        <p>We strongly recommend purchasing travel insurance to protect against unforeseen circumstances.</p>
+                    </div>
                 </div>
-                <div class="footer-newsletter">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter for updates and special offers.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your Email Address" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </form>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you offer custom adventure packages?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we specialize in creating custom adventure packages tailored to your preferences, timeframe, and budget. Whether you're looking for a family-friendly tour, a challenging expedition, or a cultural experience, we can design the perfect itinerary for you. Contact us with your requirements, and we'll craft a personalized adventure just for you.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Spantik Adventure. All rights reserved.</p>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What should I pack for my adventure in Gilgit Baltistan?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Packing requirements vary depending on the type of adventure and the season. Once your booking is confirmed, we'll send you a detailed packing list specific to your adventure. Generally, you'll need appropriate clothing for varying weather conditions, sturdy hiking boots, personal medications, and personal items. For trekking and expeditions, specialized equipment can be rented from us if needed.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- Scripts -->
-    <script src="js/script.js"></script>
+    </section>
+    
+    <!-- Social Links Section -->
+    <section class="social-links-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-share-alt"></i> Connect With Us</h2>
+                <p>Follow our adventures and share your experiences</p>
+            </div>
+            
+            <div class="social-links-container">
+                <a href="#" class="social-link-item">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link-item">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link-item">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link-item">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-link-item">
+                    <i class="fab fa-tripadvisor"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/backgrounds/cta-bg.jpg');">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Embark on an Adventure?</h2>
+                <p>Contact us today to plan your perfect journey through the majestic landscapes of Gilgit Baltistan.</p>
+                <div class="cta-buttons">
+                    <a href="tel:+923456789012" class="btn btn-primary">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                    <a href="#booking" class="btn btn-secondary">
+                        <i class="fas fa-calendar-check"></i> Book Online
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Include Header and Footer -->
+    <script src="js/include-components.js"></script>
+    
+    <!-- Google Maps API (replace YOUR_API_KEY with actual key) -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    
+    <script>
+        // Initialize Google Map
+        function initMap() {
+            const location = { lat: 35.8885, lng: 74.4584 }; // Gilgit coordinates
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: location,
+            });
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "Spantik Adventure"
+            });
+        }
+        
+        // FAQ Accordion
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    
+                    // Toggle active class
+                    this.classList.toggle('active');
+                    answer.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>

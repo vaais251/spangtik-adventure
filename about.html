@@ -11,70 +11,21 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/additional-styles.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- CSS Links - CONSISTENT ORDER -->
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/additional-styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <div class="header-wrapper">
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/logo/logo.png" alt="Spantik Adventure" class="main-logo">
-                        <img src="images/logo/logo-white.png" alt="Spantik Adventure" class="white-logo">
-                    </a>
-                </div>
-                
-                <!-- Navigation -->
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="about.html" class="nav-link active"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="services.html" class="nav-link"><i class="fas fa-mountain"></i> Services</a></li>
-                        <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
-                        <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-                    </ul>
-                </nav>
-                
-                <!-- Header Right - Language & CTA -->
-                <div class="header-right">
-                    <div class="language-selector">
-                        <div class="selected-language">
-                            <img src="images/flags/en.svg" alt="English" class="flag-icon">
-                            <span>EN</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <ul class="language-dropdown">
-                            <li><a href="#"><img src="images/flags/en.svg" alt="English" class="flag-icon"> English</a></li>
-                            <li><a href="#"><img src="images/flags/ru.svg" alt="Russian" class="flag-icon"> Russian</a></li>
-                            <li><a href="#"><img src="images/flags/fr.svg" alt="French" class="flag-icon"> French</a></li>
-                        </ul>
-                    </div>
-                    
-                    <a href="contact.html#booking" class="btn btn-primary book-btn">
-                        <i class="fas fa-calendar-check"></i> Book Now
-                    </a>
-                </div>
-                
-                <!-- Mobile Menu Toggle -->
-                <div class="mobile-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </header>
-    
     <!-- Page Title -->
     <section class="page-title" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/backgrounds/cta-bg.jpg');">
         <div class="container">
@@ -90,38 +41,32 @@
     <!-- About Intro -->
     <section class="about-intro">
         <div class="container">
-            <div class="about-intro-wrapper">
-                <div class="about-intro-content">
-                    <div class="section-header">
-                        <h2><i class="fas fa-mountain"></i> Our Story</h2>
-                        <p>Pioneering Adventures in the Heart of Gilgit Baltistan</p>
-                    </div>
-                    <p class="intro-text">Founded in 2010, <strong>Spantik Adventure</strong> has grown from a small group of passionate mountaineers to become a leading adventure tourism company in Northern Pakistan. Our journey began with a simple mission: to share the majestic beauty of Gilgit Baltistan with the world while preserving its natural splendor and supporting local communities.</p>
-                    <p>Named after the magnificent Spantik Peak (7,027m), our company embodies the spirit of adventure, resilience, and respect for nature that this mountain represents. Today, we proudly guide adventurers from across the globe through some of the most breathtaking landscapes on Earth.</p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-text">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">500+</div>
-                            <div class="stat-text">Expeditions</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">5000+</div>
-                            <div class="stat-text">Happy Adventurers</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">20+</div>
-                            <div class="stat-text">Destinations</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-image">
+                        <img src="images/about/about-main.jpg" alt="About Spantik Adventure">
+                        <div class="experience-badge">
+                            <span class="number">10+</span>
+                            <span class="text">Years of Experience</span>
                         </div>
                     </div>
                 </div>
-                <div class="about-intro-image">
-                    <img src="images/about/about-main.jpg" alt="Spantik Adventure Team in Mountains">
-                    <div class="experience-badge">
-                        <span class="years">10+</span>
-                        <span class="text">Years of<br>Excellence</span>
+                <div class="col-md-6">
+                    <div class="about-content">
+                        <div class="section-header">
+                            <h2>Your Trusted Partner for Northern Pakistan Adventures</h2>
+                            <p>Discover the story behind Spantik Adventure and our passion for showcasing the beauty of Gilgit Baltistan</p>
+                        </div>
+                        <p>Founded in 2013, Spantik Adventure has grown to become one of the most respected adventure tourism companies in Northern Pakistan. Our journey began with a simple mission: to share the incredible natural beauty and rich cultural heritage of Gilgit Baltistan with the world.</p>
+                        <p>Named after the majestic Spantik Peak (7,027m), our company embodies the spirit of adventure, resilience, and breathtaking beauty that defines this region. We take pride in our deep local knowledge, professional approach, and unwavering commitment to sustainable tourism practices.</p>
+                        <ul class="about-features">
+                            <li><i class="fas fa-check-circle"></i> Local expertise with global standards</li>
+                            <li><i class="fas fa-check-circle"></i> Customized adventures for every traveler</li>
+                            <li><i class="fas fa-check-circle"></i> Safety-first approach on all expeditions</li>
+                            <li><i class="fas fa-check-circle"></i> Commitment to responsible tourism</li>
+                            <li><i class="fas fa-check-circle"></i> Support for local communities</li>
+                        </ul>
+                        <a href="services.html" class="btn btn-primary"><i class="fas fa-mountain"></i> Explore Our Services</a>
                     </div>
                 </div>
             </div>
@@ -513,6 +458,6 @@
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
     
     <!-- Scripts -->
-    <script src="js/script.js"></script>
+    <script src="js/include-components.js"></script>
 </body>
 </html>

@@ -22,9 +22,11 @@
     <!-- Swiper Slider CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     
-    <!-- CSS Links - IMPORTANT ORDER -->
+    <!-- CSS Links - CONSISTENT ORDER -->
     <link rel="stylesheet" href="css/header-footer.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/additional-styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
     <!-- Add this style block to replace all previous slider-related CSS -->
     <style>
@@ -304,59 +306,6 @@
     </style>
 </head>
 <body>
-    <!-- Header Navigation - Simple Version -->
-    <header class="header">
-        <div class="container">
-            <div class="header-wrapper">
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/logo/logo.png" alt="Spantik Adventure" class="main-logo">
-                        <img src="images/logo/logo-white.png" alt="Spantik Adventure" class="white-logo">
-                    </a>
-                </div>
-                
-                <!-- Navigation -->
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="services.html" class="nav-link"><i class="fas fa-mountain"></i> Services</a></li>
-                        <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
-                        <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-                    </ul>
-                </nav>
-                
-                <!-- Header Right - Language & CTA -->
-                <div class="header-right">
-                    <div class="language-selector">
-                        <div class="selected-language">
-                            <img src="images/flags/en.svg" alt="English" class="flag-icon">
-                            <span>EN</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <ul class="language-dropdown">
-                            <li><a href="#"><img src="images/flags/en.svg" alt="English" class="flag-icon"> English</a></li>
-                            <li><a href="#"><img src="images/flags/ru.svg" alt="Russian" class="flag-icon"> Russian</a></li>
-                            <li><a href="#"><img src="images/flags/fr.svg" alt="French" class="flag-icon"> French</a></li>
-                        </ul>
-                    </div>
-                    
-                    <a href="contact.html#booking" class="btn btn-primary book-btn">
-                        <i class="fas fa-calendar-check"></i> Book Now
-                    </a>
-                </div>
-                
-                <!-- Mobile Menu Toggle -->
-                <div class="mobile-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-slider swiper">
@@ -405,31 +354,6 @@
             <div class="swiper-button-prev"></div>
         </div>
     </section>
-
-    <!-- Add this right after the hero section for testing purposes (you can remove later) -->
-    
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('test-prev').addEventListener('click', function() {
-            console.log('Manual prev clicked');
-            if (window.heroSlider) {
-                window.heroSlider.slidePrev();
-            } else {
-                console.error('Slider instance not available');
-            }
-        });
-        
-        document.getElementById('test-next').addEventListener('click', function() {
-            console.log('Manual next clicked');
-            if (window.heroSlider) {
-                window.heroSlider.slideNext();
-            } else {
-                console.error('Slider instance not available');
-            }
-        });
-    });
-    </script>
 
     <!-- Features Section -->
     <section class="features">
@@ -564,7 +488,7 @@
         </div>
     </section>
 
-    <!-- Add upcoming dates section with calendar icons -->
+    <!-- Upcoming Dates Section -->
     <section class="upcoming-dates">
         <div class="container">
             <div class="section-header">
@@ -598,7 +522,7 @@
         </div>
     </section>
 
-    <!-- Add weather widget after dates for logical grouping -->
+    <!-- Weather Widget Section -->
     <section class="weather-widget">
         <div class="container">
             <div class="section-header">
@@ -644,7 +568,7 @@
         </div>
     </section>
 
-    <!-- Gallery Preview -->
+    <!-- Gallery Preview Section -->
     <section class="gallery-preview">
         <div class="container">
             <div class="section-header">
@@ -830,105 +754,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-wrapper">
-                <div class="footer-about">
-                    <img src="images/logo/logo-white.png" alt="Spantik Adventure" class="footer-logo">
-                    <p>Spantik Adventure provides premium trekking, expedition, and tour services in the breathtaking regions of Gilgit Baltistan, Northern Pakistan.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h3><i class="fas fa-link"></i> Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
-                        <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-services">
-                    <h3><i class="fas fa-hiking"></i> Our Services</h3>
-                    <ul>
-                        <li><a href="services.html#trekking"><i class="fas fa-chevron-right"></i> Trekking Packages</a></li>
-                        <li><a href="services.html#expeditions"><i class="fas fa-chevron-right"></i> Mountain Expeditions</a></li>
-                        <li><a href="services.html#sightseeing"><i class="fas fa-chevron-right"></i> Sightseeing Tours</a></li>
-                        <li><a href="services.html#transportation"><i class="fas fa-chevron-right"></i> Transportation</a></li>
-                        <li><a href="services.html#custom"><i class="fas fa-chevron-right"></i> Custom Adventures</a></li>
-                    </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h3><i class="far fa-envelope"></i> Newsletter</h3>
-                    <p>Subscribe to our newsletter for updates and special offers.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your Email Address" required>
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Spantik Adventure. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Include Header and Footer -->
+    <script src="js/include-components.js"></script>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- JavaScript - Keep the header functionality -->
-    <script>
-    // Simplified JavaScript for header functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const mainNav = document.querySelector('.main-nav');
-        
-        if (mobileToggle) {
-            mobileToggle.addEventListener('click', function() {
-                mobileToggle.classList.toggle('active');
-                mainNav.classList.toggle('active');
-            });
-        }
-        
-        // Sticky header
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 50) {
-                header.classList.add('sticky');
-            } else {
-                header.classList.remove('sticky');
-            }
-        });
-        
-        // Language selector
-        const selectedLanguage = document.querySelector('.selected-language');
-        const languageDropdown = document.querySelector('.language-dropdown');
-        
-        if (selectedLanguage) {
-            selectedLanguage.addEventListener('click', function(e) {
-                e.preventDefault();
-                languageDropdown.classList.toggle('active');
-            });
-            
-            // Close language dropdown when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.language-selector')) {
-                    languageDropdown.classList.remove('active');
-                }
-            });
-        }
-    });
-    </script>
-    
     <!-- Load Swiper JS before script.js -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
