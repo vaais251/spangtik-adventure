@@ -1,0 +1,1573 @@
+/* Additional Styles and Animations */
+
+/* Preloader Animation */
+@keyframes loader-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.preloader {
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.loader {
+    animation: loader-spin 1s linear infinite;
+}
+
+/* Page Transitions */
+.page-transition {
+    animation: page-fade-in 1s ease;
+}
+
+@keyframes page-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Hover Effects */
+.btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Image Hover Effects */
+.team-member:hover .team-image img,
+.service-detail:hover .service-detail-image img {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
+/* Service Card Hover Animation */
+.feature-card {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card .feature-icon {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: rotateY(180deg);
+}
+
+/* Timeline Animation */
+.timeline-dot {
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.5);
+    background-color: var(--secondary-color);
+}
+
+/* Form Focus Effects */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Menu Hover Effect */
+.nav-link::after {
+    transition: width 0.3s ease;
+}
+
+/* Gallery Image Filter Transition */
+.gallery-masonry .gallery-item {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Social Media Icons Animation */
+.social-link {
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+}
+
+/* Testimonial Hover Effect */
+.testimonial {
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* CTA Button Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cta .btn-primary {
+    animation: pulse 2s infinite;
+}
+
+/* FAQ Accordion Animation */
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    transition: all 0.5s ease;
+}
+
+/* Service Image Animation */
+.service-detail-image {
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service-detail-image img {
+    transition: transform 0.5s ease;
+}
+
+.service-detail:hover .service-detail-image {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-detail:hover .service-detail-image img {
+    transform: scale(1.05);
+}
+
+/* Scroll Animation Styles */
+.will-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger animation for items in the same container */
+.features-wrapper .feature-card:nth-child(2),
+.tours-wrapper .tour-card:nth-child(2),
+.weather-locations .weather-location:nth-child(2),
+.gallery-grid .gallery-item:nth-child(2),
+.team-wrapper .team-member:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.features-wrapper .feature-card:nth-child(3),
+.tours-wrapper .tour-card:nth-child(3),
+.weather-locations .weather-location:nth-child(3),
+.gallery-grid .gallery-item:nth-child(3),
+.team-wrapper .team-member:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.gallery-grid .gallery-item:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+/* Add these rules to fix Swiper fade effect issues */
+.swiper-container-fade .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0 !important;
+    visibility: hidden;
+}
+
+.swiper-container-fade .swiper-slide-active {
+    opacity: 1 !important;
+    visibility: visible;
+}
+
+.swiper-wrapper {
+    height: 100%;
+}
+
+/* Force hardware acceleration for smoother transitions */
+.hero-slider .swiper-slide {
+    will-change: opacity;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Icon styling */
+.section-header h2 i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.nav-link i {
+    margin-right: 8px;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.tour-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.tour-features span {
+    display: flex;
+    align-items: center;
+}
+
+.tour-features span i {
+    margin-right: 5px;
+    color: var(--accent-color);
+}
+
+/* Animated icons */
+.feature-icon i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    transition: transform 0.5s ease;
+}
+
+.feature-card:hover .feature-icon i {
+    transform: rotateY(180deg);
+}
+
+/* Add subtle pulse to weather icons */
+.weather-icon i {
+    animation: iconPulse 3s infinite ease-in-out;
+}
+
+@keyframes iconPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Enhanced weather widget with animated icons */
+.weather-icon i {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.weather-icon i.fa-sun {
+    color: #f1c40f;
+}
+
+.weather-icon i.fa-cloud {
+    color: #95a5a6;
+}
+
+.weather-icon i.fa-cloud-rain,
+.weather-icon i.fa-cloud-showers-heavy {
+    color: #3498db;
+}
+
+.weather-icon i.fa-bolt {
+    color: #f39c12;
+}
+
+.weather-icon i.fa-snowflake {
+    color: #3498db;
+}
+
+.weather-temp {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.weather-detail i.fa-wind {
+    color: #7f8c8d;
+}
+
+.weather-detail i.fa-tint {
+    color: #3498db;
+}
+
+/* Progressive image loading effect */
+.fade-in-image {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Better image placeholders */
+.image-placeholder {
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    background-size: 200% 100%;
+    animation: 1.5s shine linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position-x: -200%;
+    }
+}
+
+/* Make sure all images cover their containers properly */
+.tour-image img,
+.gallery-item img,
+.hero-slider .swiper-slide {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Improve testimonial author images */
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+
+/* Add styles for the attribution section */
+.image-attribution {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    font-size: 0.9rem;
+}
+
+.attribution-content h4 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.attribution-content i {
+    margin-right: 8px;
+    color: var(--accent-color);
+}
+
+.attribution-list {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.attribution-list li {
+    margin-bottom: 8px;
+}
+
+.attribution-list a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.attribution-list a:hover {
+    text-decoration: underline;
+}
+
+/* Consistent section spacing */
+section {
+    padding: 80px 0;
+}
+
+section+section {
+    margin-top: 0;
+}
+
+/* Alternating background colors for visual distinction */
+section:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+section:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Override background for sections that need specific backgrounds */
+.hero,
+.cta {
+    background-color: transparent;
+}
+
+/* Fix weather widget styling */
+.weather-widget {
+    background-color: #f9f9f9;
+}
+
+.weather-locations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Improve upcoming dates display */
+.dates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.date-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.date-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.date-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 2rem;
+}
+
+.date-content {
+    padding: 25px;
+    flex: 1;
+}
+
+.date-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.date-content p {
+    margin-bottom: 10px;
+}
+
+.date-content .btn {
+    margin-top: 15px;
+}
+
+/* Improved tour cards */
+.tour-card {
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tour-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.tour-image img {
+    transition: transform 0.5s ease;
+}
+
+.tour-card:hover .tour-image img {
+    transform: scale(1.05);
+}
+
+.tour-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+/* Enhanced gallery items */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+}
+
+.gallery-item img {
+    transition: transform 0.5s ease;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(44, 62, 80, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* Enhanced weather widget */
+.weather-location {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-location:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.weather-location h3 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.weather-data {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-icon i {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.weather-temp {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.weather-desc {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.weather-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.weather-loading i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    animation: weatherPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes weatherPulse {
+    0% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+/* Enhanced contact section */
+.contact-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.contact-info {
+    padding: 40px;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.contact-info h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.contact-list {
+    margin: 30px 0;
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-list i {
+    margin-right: 15px;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+.contact-form {
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.form-group i {
+    margin-right: 8px;
+    color: var(--accent-color);
+}
+
+/* Enhanced Language Selector Styling */
+.language-selector {
+    position: relative;
+    z-index: 1001;
+}
+
+.language-current {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 1px solid rgba(44, 62, 80, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-current:hover {
+    background-color: rgba(44, 62, 80, 0.05);
+    border-color: rgba(44, 62, 80, 0.3);
+}
+
+.flag-icon {
+    height: 16px;
+    width: auto;
+    margin-right: 8px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.language-current span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.language-current i {
+    font-size: 0.7rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.language-current.active i {
+    transform: rotate(180deg);
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 8px 0;
+    min-width: 160px;
+    display: none;
+    margin-top: 5px;
+    border: 1px solid rgba(44, 62, 80, 0.1);
+}
+
+.language-dropdown.show {
+    display: block;
+    animation: fadeInDown 0.3s ease;
+}
+
+.language-dropdown li {
+    margin: 0;
+    padding: 0;
+}
+
+.language-dropdown a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.language-dropdown a:hover {
+    background-color: rgba(44, 62, 80, 0.05);
+}
+
+.language-dropdown a span {
+    font-size: 0.9rem;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Improved mobile styling */
+@media (max-width: 991.98px) {
+    .language-selector {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .language-current {
+        padding: 6px 10px;
+    }
+}
+
+/* Media Queries for About Page */
+@media (max-width: 991.98px) {
+
+    .about-intro-wrapper,
+    .mission-vision-wrapper,
+    .testimonial-highlight-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experience-badge {
+        bottom: 20px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .timeline::before {
+        left: 20px;
+        margin-left: 0;
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0;
+        padding-left: 50px;
+        padding-right: 15px;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-dot {
+        left: 11px;
+        right: auto;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 11px;
+    }
+
+    .timeline-date {
+        position: relative;
+        top: 0;
+        right: auto;
+        left: 0;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .timeline-item:nth-child(even) .timeline-date {
+        right: auto;
+        left: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .values-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .certifications-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title {
+        padding: 70px 0;
+    }
+
+    .page-title h1 {
+        font-size: 2rem;
+    }
+
+    .team-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .certifications-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-author img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .experience-badge {
+        width: 80px;
+        height: 80px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .experience-badge .years {
+        font-size: 1.5rem;
+    }
+
+    .experience-badge .text {
+        font-size: 0.7rem;
+    }
+}
+
+/* Enhanced Timeline Interaction */
+.timeline-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--accent-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.timeline-content:hover::before {
+    opacity: 1;
+}
+
+.timeline-item .timeline-date {
+    transition: color 0.3s ease;
+}
+
+.timeline-item:hover .timeline-date {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* Journey Stats Counter Section */
+.journey-stats {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.stats-counter-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.stats-counter {
+    position: relative;
+    text-align: center;
+}
+
+.counter {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.counter::after {
+    content: '+';
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: -20px;
+    color: var(--accent-color);
+}
+
+.counter-title {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 767.98px) {
+    .stats-counter-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .stats-counter-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FAQ Section Styles */
+.about-faq {
+    padding: 80px 0;
+}
+
+.faq-wrapper {
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+}
+
+.faq-question {
+    padding: 20px 25px;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: rgba(44, 62, 80, 0.03);
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.faq-question i {
+    color: var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 25px 20px;
+    max-height: 1000px;
+}
+
+/* Footer Style Consistency Fixes */
+.footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 70px 0 20px;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-logo {
+    max-width: 160px;
+    margin-bottom: 20px;
+}
+
+.footer-info p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.footer-links ul,
+.footer-services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-services li {
+    margin-bottom: 12px;
+}
+
+.footer-links a,
+.footer-services a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover,
+.footer-services a:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.footer-links a i,
+.footer-services a i {
+    margin-right: 8px;
+    font-size: 0.8rem;
+}
+
+.footer .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.newsletter-form {
+    margin-top: 20px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-form button {
+    border: none;
+    font-weight: 600;
+}
+
+.newsletter-message {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+.footer-bottom-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--accent-color);
+}
+
+@media (max-width: 767.98px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        margin-bottom: 15px;
+    }
+
+    .footer-bottom-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-bottom-links a {
+        margin: 0;
+    }
+}
+
+/* Comparison Table Styling Continued */
+.price-row td {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    padding: 20px 15px;
+}
+
+.comparison-note {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+    font-style: italic;
+}
+
+.comparison-note i {
+    color: var(--accent-color);
+    margin-right: 5px;
+}
+
+/* Services FAQ Section */
+.services-faq {
+    padding: 80px 0;
+}
+
+.services-faq .faq-wrapper {
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.services-faq .faq-item {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-faq .faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonial Highlight for Services */
+.testimonial-highlight {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.testimonial-highlight-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.testimonial-highlight-quote {
+    position: relative;
+    padding: 30px 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-highlight-quote i.fa-quote-left {
+    font-size: 2rem;
+    color: var(--accent-color);
+    opacity: 0.3;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.testimonial-highlight-quote blockquote {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-style: italic;
+    margin: 0 0 25px 0;
+    color: #333;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid var(--accent-color);
+}
+
+.testimonial-author h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.testimonial-author p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.testimonial-highlight-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    height: 400px;
+}
+
+.testimonial-highlight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-highlight-image:hover img {
+    transform: scale(1.05);
+}
+
+/* CTA Section for Services */
+.cta {
+    padding: 100px 0;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Responsive Styles for Services Page */
+@media (max-width: 991.98px) {
+
+    .service-wrapper,
+    .service-wrapper.reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .service-image {
+        height: 400px;
+    }
+
+    .service-features {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonial-highlight-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-highlight-image {
+        order: -1;
+        height: 350px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 12px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .service-features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-image {
+        height: 350px;
+    }
+
+    .service-badge {
+        width: 70px;
+        height: 70px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .service-badge i {
+        font-size: 2rem;
+    }
+
+    .service-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-tagline {
+        font-size: 1.1rem;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-content p {
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .comparison-table {
+        font-size: 0.8rem;
+    }
+
+    .price-row td {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .service-image {
+        height: 250px;
+    }
+
+    .service-badge {
+        width: 60px;
+        height: 60px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .service-badge i {
+        font-size: 1.5rem;
+    }
+
+    .comparison-table_wrapper {
+        margin: 20px -15px;
+        width: calc(100% + 30px);
+    }
+
+    .comparison-table th:first-child,
+    .comparison-table td:first-child {
+        position: sticky;
+        left: 0;
+        background-color: var(--primary-color);
+        color: #fff;
+        z-index: 1;
+    }
+
+    .comparison-table td:first-child {
+        background-color: #f9f9f9;
+        color: var(--primary-color);
+    }
+
+    .testimonial-highlight-quote {
+        padding: 25px;
+    }
+
+    .testimonial-highlight-quote blockquote {
+        font-size: 1rem;
+    }
+}

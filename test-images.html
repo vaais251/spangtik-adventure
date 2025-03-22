@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .image-test {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Test Page</h1>
+    
+    <div class="image-test">
+        <h3>Local Image Test</h3>
+        <img src="images/logo/logo.png" alt="Logo">
+        <p>Path: images/logo/logo.png</p>
+    </div>
+    
+    <div class="image-test">
+        <h3>Placeholder Image Test</h3>
+        <img src="https://via.placeholder.com/300x100/2c3e50/ffffff?text=Test+Image" alt="Placeholder">
+        <p>This should always display if your internet is working</p>
+    </div>
+</body>
+</html> 

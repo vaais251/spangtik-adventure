@@ -1,0 +1,2703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover premium trekking, mountaineering, and tour services offered by Spantik Adventure in Gilgit Baltistan, Northern Pakistan">
+    <title>Our Services - Spantik Adventure</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Pannellum for Virtual Tours -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/additional-styles.css">
+    <link rel="stylesheet" href="css/services-fallback.css">
+    
+    <!-- Critical CSS Variables -->
+    <style>
+      :root {
+        --primary-color: #2c3e50;
+        --primary-dark: #1a252f;
+        --primary-light: #34495e;
+        --secondary-color: #34495e;
+        --accent-color: #e67e22;
+        --accent-dark: #d35400;
+        --accent-light: #f39c12;
+        --text-color: #333;
+        --text-light: #666;
+        --light-color: #f8f9f9;
+        --light-gray: #f1f1f1;
+        --dark-color: #1a252f;
+        --success-color: #2ecc71;
+        --error-color: #e74c3c;
+        --border-color: #ddd;
+        --gray-color: #6c757d;
+        --shadow-sm: 0 2px 10px rgba(0,0,0,0.05);
+        --shadow-md: 0 5px 15px rgba(0,0,0,0.1);
+        --shadow-lg: 0 15px 30px rgba(0,0,0,0.15);
+        --radius-sm: 4px;
+        --radius-md: 8px;
+        --radius-lg: 12px;
+        --transition: all 0.3s ease;
+        --font-heading: 'Montserrat', sans-serif;
+        --font-body: 'Open Sans', sans-serif;
+      }
+    </style>
+
+    <!-- Add this after the existing style block in the head section -->
+    <style>
+        /* Essential Services Page Styling */
+        .page-title {
+            padding: 100px 0;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        
+        .page-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .breadcrumb a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .breadcrumb .separator {
+            margin: 0 10px;
+        }
+        
+        .breadcrumb .current {
+            color: var(--accent-color);
+        }
+        
+        .service-section {
+            padding: 80px 0;
+        }
+        
+        .service-section.alternate {
+            background-color: #f9f9f9;
+        }
+        
+        .service-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .service-wrapper.reverse {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .service-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .service-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 70px;
+            height: 70px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .service-badge i {
+            font-size: 2rem;
+            color: #fff;
+        }
+        
+        .service-content h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-tagline {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .service-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .feature {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .feature i {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+        
+        .feature h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .feature ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .feature ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .feature ul li:before {
+            content: "✓";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        /* FAQ Styles */
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            background-color: #fff;
+        }
+        
+        .faq-question {
+            padding: 15px 20px;
+            background-color: #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question h4 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 20px 15px;
+            max-height: 500px;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 991px) {
+            .service-wrapper, .service-wrapper.reverse {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-image {
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .service-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-title h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+    <!-- Add this to your head section, before the existing style blocks -->
+    <style>
+        /* Service Introduction Styles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+            transform: translateX(-50%);
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--gray-color);
+        }
+        
+        .service-intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Service Image Styles */
+        .service-image {
+            position: relative;
+        }
+        
+        /* Testimonial Styles */
+        .testimonial-highlight-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .testimonial-highlight-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            height: 400px;
+        }
+        
+        .testimonial-highlight-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial-highlight-quote {
+            position: relative;
+            padding: 30px 40px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-highlight-quote i.fa-quote-left {
+            font-size: 2rem;
+            color: var(--accent-color);
+            opacity: 0.3;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .testimonial-highlight-quote blockquote {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            font-style: italic;
+            margin: 0 0 25px 0;
+            color: #333;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 3px solid var(--accent-color);
+        }
+        
+        /* Package Comparison Styles */
+        .packages-comparison {
+            padding: 80px 0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comparison-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+        
+        .btn-sm {
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 991px) {
+            .testimonial-highlight-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-highlight-image {
+                order: -1;
+                height: 300px;
+            }
+        }
+    </style>
+
+    <!-- Add this style block to the head section of your services.html file -->
+    <style>
+        /* Enhanced FAQ Styling */
+        .faq-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .faq-section::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(230, 126, 34, 0.05);
+            border-radius: 50%;
+            top: -50px;
+            left: -50px;
+            z-index: 0;
+        }
+        
+        .faq-section::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(44, 62, 80, 0.05);
+            border-radius: 50%;
+            bottom: -50px;
+            right: -50px;
+            z-index: 0;
+        }
+        
+        .faq-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .faq-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 15px;
+        }
+        
+        .faq-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-question {
+            position: relative;
+            padding: 20px 50px 20px 25px;
+        }
+        
+        .faq-question h4 {
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .faq-question i {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question {
+            background-color: rgba(230, 126, 34, 0.05);
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 25px 20px;
+            max-height: 1000px;
+        }
+        
+        .faq-answer p {
+            line-height: 1.7;
+        }
+        
+        @media (max-width: 767px) {
+            .faq-question {
+                padding: 15px 40px 15px 20px;
+            }
+            
+            .faq-question i {
+                right: 15px;
+            }
+            
+            .faq-answer, .faq-item.active .faq-answer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    </style>
+
+    <!-- Add this style block to your head section -->
+    <style>
+        /* Additional FAQ text visibility fixes */
+        .faq-question h4 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+            display: block;
+            width: 90%; /* Prevent overlap with icon */
+        }
+        
+        .faq-answer p {
+            margin: 0;
+            padding: 5px 0;
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        .faq-answer {
+            color: #555;
+            visibility: visible !important;
+            display: block;
+        }
+        
+        .faq-item.active .faq-answer {
+            visibility: visible !important;
+            display: block;
+        }
+        
+        /* Force text visibility */
+        .faq-question h4, .faq-answer p {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
+
+    <!-- Add this style block to your head section -->
+    <style>
+        /* Simplified, reliable FAQ styling */
+        .faq-item {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            transition: background-color 0.3s;
+        }
+        
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .faq-question h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #2c3e50;
+            font-weight: 600;
+            padding-right: 30px;
+        }
+        
+        .faq-question i {
+            color: #e67e22;
+            transition: transform 0.3s;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 20px;
+        }
+        
+        .faq-answer p {
+            margin: 0;
+            padding: 0;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .faq-item.active .faq-question {
+            background-color: rgba(230, 126, 34, 0.05);
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+            padding: 0 20px 20px;
+        }
+    </style>
+
+    <!-- Add this to your existing styles -->
+    <style>
+        /* Force visibility for FAQ content */
+        .faq-answer p {
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        .faq-item.active .faq-answer {
+            height: auto !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            display: block !important;
+        }
+    </style>
+
+    <!-- Add this to the head section as a temporary fix -->
+    <style>
+      /* Temporary image placeholders for services */
+      .service-img[src="images/services/trekking.jpg"],
+      img[src="images/services/trekking.jpg"] {
+        background: #3498db url('https://placehold.co/1200x800/3498db/ffffff?text=Trekking+Services') no-repeat center/cover;
+        min-height: 300px;
+      }
+      
+      .service-img[src="images/services/mountaineering.jpg"],
+      img[src="images/services/mountaineering.jpg"] {
+        background: #2c3e50 url('https://placehold.co/1200x800/2c3e50/ffffff?text=Mountaineering+Services') no-repeat center/cover;
+        min-height: 300px;
+      }
+      
+      .service-img[src="images/services/cultural-tour.jpg"],
+      img[src="images/services/cultural-tour.jpg"] {
+        background: #e67e22 url('https://placehold.co/1200x800/e67e22/ffffff?text=Cultural+Tour') no-repeat center/cover;
+        min-height: 300px;
+      }
+      
+      .service-img[src="images/services/transportation.jpg"],
+      img[src="images/services/transportation.jpg"] {
+        background: #7f8c8d url('https://placehold.co/1200x800/7f8c8d/ffffff?text=Transportation+Services') no-repeat center/cover;
+        min-height: 300px;
+      }
+      
+      .service-img[src="images/services/custom-tour.jpg"],
+      img[src="images/services/custom-tour.jpg"] {
+        background: #16a085 url('https://placehold.co/1200x800/16a085/ffffff?text=Custom+Adventure') no-repeat center/cover;
+        min-height: 300px;
+      }
+    </style>
+
+    <!-- Add this to your existing image placeholder styles -->
+    <style>
+      /* Add testimonial image fallback */
+      .testimonial-highlight-image img[src="images/services/testimonial-services.jpg"] {
+        background: #8e44ad url('https://placehold.co/1200x800/8e44ad/ffffff?text=Testimonial+Image') no-repeat center/cover;
+        min-height: 400px;
+        display: block;
+      }
+    </style>
+
+    <!-- Add this in the head section, before your other CSS links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Add this style block to improve the overall appearance -->
+    <style>
+      /* Global Typography Improvements */
+      body {
+        font-family: var(--font-body);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+      
+      p {
+        margin-bottom: 1.2rem;
+      }
+      
+      /* Enhanced Header */
+      .header {
+        box-shadow: var(--shadow-sm);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: white;
+      }
+      
+      .nav-link.active {
+        color: var(--accent-color);
+        font-weight: 600;
+      }
+      
+      /* Improved Page Title */
+      .page-title {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .page-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+      }
+      
+      .page-title h1 {
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        margin-bottom: 20px;
+      }
+      
+      /* Enhanced Service Sections */
+      .service-section {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .service-section::before {
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: rgba(44, 62, 80, 0.03);
+        top: -150px;
+        right: -150px;
+        z-index: 0;
+      }
+      
+      .service-wrapper {
+        position: relative;
+        z-index: 1;
+      }
+      
+      .service-image {
+        transform: perspective(1000px) rotateY(0deg);
+        transition: transform 0.5s ease;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-lg);
+        overflow: hidden;
+      }
+      
+      .service-image:hover {
+        transform: perspective(1000px) rotateY(2deg);
+      }
+      
+      .service-image img {
+        transition: transform 0.5s ease;
+      }
+      
+      .service-image:hover img {
+        transform: scale(1.05);
+      }
+      
+      .service-badge {
+        backdrop-filter: blur(5px);
+        background-color: rgba(230, 126, 34, 0.8);
+      }
+      
+      .service-content h2 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+      }
+      
+      .service-content h2::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: var(--accent-color);
+      }
+      
+      .service-tagline {
+        color: var(--accent-color);
+        font-weight: 500;
+        margin-bottom: 25px;
+      }
+      
+      .service-description {
+        margin-bottom: 30px;
+        font-size: 1.05rem;
+      }
+      
+      /* Better Features Display */
+      .service-features {
+        margin-bottom: 35px;
+      }
+      
+      .feature {
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition);
+        border-top: 3px solid transparent;
+      }
+      
+      .feature:hover {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-5px);
+        border-top: 3px solid var(--accent-color);
+      }
+      
+      .feature i {
+        background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2rem;
+      }
+      
+      .feature h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+      }
+      
+      .feature ul li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 25px;
+      }
+      
+      .feature ul li:before {
+        content: "✓";
+        color: var(--accent-color);
+        position: absolute;
+        left: 0;
+        top: 2px;
+        font-weight: bold;
+      }
+      
+      /* Enhanced FAQ Section */
+      .faq-section {
+        position: relative;
+      }
+      
+      .faq-item {
+        transition: var(--transition);
+        box-shadow: var(--shadow-sm);
+        border-left: 3px solid transparent;
+      }
+      
+      .faq-item:hover {
+        box-shadow: var(--shadow-md);
+        border-left: 3px solid var(--accent-color);
+      }
+      
+      .faq-item.active {
+        border-left: 3px solid var(--accent-color);
+      }
+      
+      .faq-question {
+        padding: 20px 25px;
+      }
+      
+      .faq-question h4 {
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        transition: var(--transition);
+      }
+      
+      .faq-item.active .faq-question h4 {
+        color: var(--accent-color);
+      }
+      
+      .faq-search-container input {
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition);
+        border: 1px solid var(--border-color);
+        font-size: 1.05rem;
+      }
+      
+      .faq-search-container input:focus {
+        box-shadow: var(--shadow-md);
+        border-color: var(--accent-color);
+        outline: none;
+      }
+      
+      /* Testimonial Section Improvements */
+      .testimonial-highlight-wrapper {
+        position: relative;
+      }
+      
+      .testimonial-highlight-image {
+        box-shadow: var(--shadow-lg);
+        transition: var(--transition);
+        border-radius: var(--radius-md);
+      }
+      
+      .testimonial-highlight-image:hover {
+        transform: translateY(-10px);
+      }
+      
+      .testimonial-highlight-quote {
+        background-color: white;
+        box-shadow: var(--shadow-md);
+        border-radius: var(--radius-md);
+        border-left: 4px solid var(--accent-color);
+      }
+      
+      .testimonial-highlight-quote blockquote {
+        font-size: 1.15rem;
+        line-height: 1.8;
+      }
+      
+      .testimonial-author {
+        margin-top: 25px;
+      }
+      
+      .testimonial-author img {
+        box-shadow: var(--shadow-sm);
+      }
+      
+      /* Comparison Table Enhancement */
+      .comparison-table {
+        box-shadow: var(--shadow-md);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+      }
+      
+      .comparison-table th {
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        font-family: var(--font-heading);
+        padding: 18px 15px;
+      }
+      
+      .comparison-table tr:nth-child(even) td {
+        background-color: var(--light-gray);
+      }
+      
+      .comparison-table tr:hover td {
+        background-color: rgba(230, 126, 34, 0.05);
+      }
+      
+      .price-row {
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+      
+      .price-row td {
+        color: var(--primary-color);
+      }
+      
+      /* CTA Section Improvement */
+      .cta {
+        position: relative;
+      }
+      
+      .cta::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(44, 62, 80, 0.8), rgba(52, 73, 94, 0.8));
+        z-index: 1;
+      }
+      
+      .cta-content {
+        position: relative;
+        z-index: 2;
+      }
+      
+      .cta h2 {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        font-weight: 700;
+      }
+      
+      /* Modern Button Styles */
+      .btn {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        border-radius: var(--radius-sm);
+        transition: var(--transition);
+        padding: 12px 28px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+      
+      .btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,0.1);
+        transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+        z-index: -1;
+      }
+      
+      .btn:hover::before {
+        left: 0;
+      }
+      
+      .btn-primary {
+        background-color: var(--accent-color);
+        border: none;
+        color: white;
+      }
+      
+      .btn-primary:hover {
+        background-color: var(--accent-dark);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+      }
+      
+      .btn-secondary {
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+      
+      .btn-secondary:hover {
+        background-color: rgba(255,255,255,0.1);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      }
+      
+      /* Improved animations */
+      .pre-animation {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+      
+      .animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Additional Mobile Responsiveness */
+      @media (max-width: 991px) {
+        .service-content h2 {
+          font-size: 1.8rem;
+        }
+        
+        .service-image, .service-content {
+          max-width: 600px;
+          margin: 0 auto;
+        }
+        
+        .service-features {
+          grid-template-columns: 1fr;
+        }
+        
+        .feature:nth-child(2) {
+          margin-top: 20px;
+        }
+        
+        .comparison-table {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .page-title {
+          padding: 60px 0;
+        }
+        
+        .page-title h1 {
+          font-size: 2rem;
+        }
+        
+        .service-content h2 {
+          font-size: 1.6rem;
+        }
+        
+        .service-image, .testimonial-highlight-image {
+          height: 300px;
+        }
+        
+        .cta h2 {
+          font-size: 1.8rem;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .service-section, .packages-comparison, .testimonial-highlight {
+          padding: 50px 0;
+        }
+        
+        .btn {
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        
+        .section-header h2 {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+
+    <!-- Replace your existing animation script with this improved version -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Enhanced animations for service sections
+        const animateElements = () => {
+          const elements = document.querySelectorAll('.service-image, .service-content h2, .service-features, .feature, .testimonial-highlight-image, .testimonial-highlight-quote, .faq-item, .section-header');
+          
+          if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('animate-in');
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, {
+              threshold: 0.15,
+              rootMargin: '0px 0px -50px 0px'
+            });
+            
+            elements.forEach((el, index) => {
+              el.classList.add('pre-animation');
+              // Add staggered delay for items in same container
+              el.style.transitionDelay = `${index % 3 * 0.1}s`;
+              observer.observe(el);
+            });
+          } else {
+            // Fallback
+            elements.forEach(el => {
+              el.classList.add('animate-in');
+            });
+          }
+        };
+        
+        // Initialize animations
+        animateElements();
+        
+        // Image error handling with better fallbacks
+        const serviceImages = document.querySelectorAll('.service-image img, .testimonial-highlight-image img');
+        serviceImages.forEach(img => {
+          img.addEventListener('error', function() {
+            console.log('Image failed to load:', this.src);
+            
+            // Add filter to parent to create better visual when image fails
+            this.parentElement.classList.add('image-fallback');
+            
+            // Add text label
+            const label = document.createElement('div');
+            label.className = 'image-label';
+            label.textContent = this.alt || 'Adventure Image';
+            this.parentElement.appendChild(label);
+          });
+        });
+      });
+    </script>
+
+    <!-- Add this style for image fallbacks -->
+    <style>
+      .image-fallback {
+        position: relative;
+        background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+      }
+      
+      .image-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+    </style>
+
+    <!-- Add this right before the closing </head> tag -->
+    <style>
+      /* Accessibility Enhancements */
+      :focus {
+        outline: 3px solid rgba(230, 126, 34, 0.5);
+        outline-offset: 2px;
+      }
+      
+      .btn:focus, a:focus {
+        outline: 3px solid rgba(230, 126, 34, 0.5);
+      }
+      
+      /* High contrast mode improvements */
+      @media (forced-colors: active) {
+        .service-badge, .btn-primary, .btn-secondary {
+          border: 2px solid transparent;
+        }
+        
+        .feature:hover {
+          border: 2px solid currentColor;
+        }
+      }
+      
+      /* Reduced motion preference */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition-duration: 0.001ms !important;
+          animation-duration: 0.001ms !important;
+        }
+      }
+    </style>
+
+    <!-- Add this to the end of your style blocks -->
+    <style>
+      /* Enhanced Footer */
+      .footer {
+        background-color: var(--primary-color);
+        color: white;
+        padding-top: 70px;
+      }
+      
+      .footer-top {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+        gap: 40px;
+      }
+      
+      .footer h3 {
+        color: white;
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 10px;
+        display: inline-block;
+      }
+      
+      .footer h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: var(--accent-color);
+      }
+      
+      .footer a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: var(--transition);
+      }
+      
+      .footer a:hover {
+        color: var(--accent-color);
+        text-decoration: none;
+        transform: translateX(5px);
+      }
+      
+      .footer-info p {
+        margin-bottom: 25px;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+      
+      .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: var(--transition);
+        color: white;
+      }
+      
+      .social-links a:hover {
+        background-color: var(--accent-color);
+        transform: translateY(-5px);
+      }
+      
+      .footer-links ul, .footer-services ul {
+        padding-left: 0;
+        list-style: none;
+      }
+      
+      .footer-links li, .footer-services li {
+        margin-bottom: 12px;
+      }
+      
+      .footer-links i, .footer-services i {
+        margin-right: 10px;
+        color: var(--accent-color);
+      }
+      
+      .newsletter-form .form-group {
+        margin-bottom: 15px;
+      }
+      
+      .newsletter-form input {
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: var(--radius-sm);
+        border: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+      }
+      
+      .newsletter-form input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      
+      .newsletter-form input:focus {
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.3);
+      }
+      
+      .footer-bottom {
+        margin-top: 60px;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .footer-bottom p {
+        margin: 0;
+      }
+      
+      .footer-bottom-links a {
+        margin-left: 20px;
+      }
+      
+      @media (max-width: 991px) {
+        .footer-top {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .footer-top {
+          grid-template-columns: 1fr;
+        }
+        
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+        
+        .footer-bottom-links {
+          margin-top: 15px;
+        }
+        
+        .footer-bottom-links a {
+          margin: 0 10px;
+        }
+      }
+    </style>
+
+    <!-- Add this style for a better back-to-top button -->
+    <style>
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: var(--accent-color);
+        color: white;
+        border-radius: 50%;
+        box-shadow: var(--shadow-md);
+        text-decoration: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 99;
+      }
+      
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .back-to-top:hover {
+        background-color: var(--accent-dark);
+        transform: translateY(-5px);
+      }
+      
+      @media (max-width: 767px) {
+        .back-to-top {
+          bottom: 20px;
+          right: 20px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    </style>
+
+    <!-- Add this script for the back-to-top button functionality -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 300) {
+            backToTopButton.classList.add('visible');
+          } else {
+            backToTopButton.classList.remove('visible');
+          }
+        });
+        
+        // Smooth scroll to top when clicked
+        backToTopButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+
+    <!-- Add this to your existing CSS styles if they're missing -->
+    <style>
+      /* Header Styles */
+      .header {
+        background-color: white;
+        padding: 20px 0;
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s ease;
+      }
+      
+      .header-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .logo img {
+        height: 50px;
+        transition: all 0.3s ease;
+      }
+      
+      .logo .white-logo {
+        display: none;
+      }
+      
+      .nav-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .nav-link {
+        color: var(--primary-color);
+        text-decoration: none;
+        padding: 10px 15px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: block;
+        font-family: var(--font-heading);
+      }
+      
+      .nav-link:hover, .nav-link.active {
+        color: var(--accent-color);
+      }
+      
+      .nav-link i {
+        margin-right: 5px;
+      }
+      
+      .header-right {
+        display: flex;
+        align-items: center;
+      }
+      
+      .language-selector {
+        position: relative;
+        margin-right: 20px;
+      }
+      
+      .selected-language {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: var(--radius-sm);
+        transition: all 0.3s ease;
+      }
+      
+      .selected-language:hover {
+        background-color: var(--light-gray);
+      }
+      
+      .selected-language span {
+        margin: 0 5px;
+        font-weight: 600;
+      }
+      
+      .flag-icon {
+        width: 20px;
+        height: 15px;
+        object-fit: cover;
+      }
+      
+      .language-dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        box-shadow: var(--shadow-md);
+        border-radius: var(--radius-md);
+        width: 150px;
+        padding: 10px 0;
+        margin-top: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        list-style: none;
+      }
+      
+      .language-dropdown.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .language-dropdown li a {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        color: var(--text-color);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      
+      .language-dropdown li a:hover {
+        background-color: var(--light-gray);
+      }
+      
+      .language-dropdown .flag-icon {
+        margin-right: 10px;
+      }
+      
+      .book-btn {
+        padding: 10px 20px;
+      }
+      
+      .mobile-toggle {
+        display: none;
+        flex-direction: column;
+        width: 30px;
+        cursor: pointer;
+      }
+      
+      .mobile-toggle span {
+        height: 3px;
+        width: 100%;
+        background-color: var(--primary-color);
+        margin-bottom: 5px;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+      
+      .mobile-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+      }
+      
+      .mobile-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .mobile-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+      }
+      
+      /* Sticky Header */
+      .header.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: var(--shadow-md);
+        padding: 10px 0;
+        background-color: var(--primary-color);
+        animation: slideDown 0.5s forwards;
+      }
+      
+      @keyframes slideDown {
+        from {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      
+      .header.sticky .logo .main-logo {
+        display: none;
+      }
+      
+      .header.sticky .logo .white-logo {
+        display: block;
+      }
+      
+      .header.sticky .nav-link {
+        color: white;
+      }
+      
+      .header.sticky .nav-link:hover, .header.sticky .nav-link.active {
+        color: var(--accent-color);
+      }
+      
+      .header.sticky .mobile-toggle span {
+        background-color: white;
+      }
+      
+      .header.sticky .selected-language {
+        color: white;
+      }
+      
+      .header.sticky .selected-language:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      /* Responsive Header */
+      @media (max-width: 991px) {
+        .main-nav {
+          position: fixed;
+          top: 80px;
+          right: -280px;
+          width: 280px;
+          height: calc(100vh - 80px);
+          background-color: white;
+          padding: 20px;
+          box-shadow: var(--shadow-md);
+          transition: all 0.3s ease;
+          z-index: 999;
+          overflow-y: auto;
+        }
+        
+        .header.sticky .main-nav {
+          top: 70px;
+          height: calc(100vh - 70px);
+          background-color: var(--primary-color);
+        }
+        
+        .main-nav.active {
+          right: 0;
+        }
+        
+        .nav-list {
+          flex-direction: column;
+        }
+        
+        .nav-link {
+          padding: 15px 0;
+          border-bottom: 1px solid var(--border-color);
+        }
+        
+        .header.sticky .nav-link {
+          border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .mobile-toggle {
+          display: flex;
+          margin-left: 20px;
+        }
+        
+        .book-btn {
+          padding: 8px 15px;
+          font-size: 0.9rem;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .header-right {
+          margin-right: 10px;
+        }
+        
+        .book-btn span {
+          display: none;
+        }
+        
+        .logo img {
+          height: 40px;
+        }
+      }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation - Add this at the beginning of the body -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo/logo.png" alt="Spantik Adventure" class="main-logo">
+                        <img src="images/logo/logo-white.png" alt="Spantik Adventure" class="white-logo">
+                    </a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="services.html" class="nav-link active"><i class="fas fa-mountain"></i> Services</a></li>
+                        <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+                        <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Header Right - Language & CTA -->
+                <div class="header-right">
+                    <div class="language-selector">
+                        <div class="selected-language">
+                            <img src="images/flags/en.svg" alt="English" class="flag-icon">
+                            <span>EN</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <ul class="language-dropdown">
+                            <li><a href="#"><img src="images/flags/en.svg" alt="English" class="flag-icon"> English</a></li>
+                            <li><a href="#"><img src="images/flags/ru.svg" alt="Russian" class="flag-icon"> Russian</a></li>
+                            <li><a href="#"><img src="images/flags/fr.svg" alt="French" class="flag-icon"> French</a></li>
+                        </ul>
+                    </div>
+                    
+                    <a href="contact.html#booking" class="btn btn-primary book-btn">
+                        <i class="fas fa-calendar-check"></i> Book Now
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Page Title - Add this after the header -->
+    <section class="page-title" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/backgrounds/services-bg.jpg');">
+        <div class="container">
+            <h1>Our Services</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                <span class="current">Services</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Service Introduction - Add after page title section -->
+    <section class="service-intro">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-compass"></i> Adventure Services</h2>
+                <p>Discover the extraordinary with our specialized adventure offerings</p>
+            </div>
+            <div class="service-intro-content">
+                <p>At Spantik Adventure, we offer a range of carefully crafted services designed to provide unforgettable experiences in the spectacular landscapes of Northern Pakistan. Whether you're seeking the thrill of high-altitude trekking, the cultural richness of sightseeing tours, or custom adventure packages tailored to your specific desires, our team of experienced professionals is dedicated to exceeding your expectations.</p>
+                <p>Each of our services reflects our commitment to safety, quality, and environmental stewardship. We invite you to explore the possibilities and embark on an adventure that will stay with you for a lifetime.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Trekking Services -->
+    <section id="trekking" class="service-section">
+        <div class="container">
+            <div class="service-wrapper">
+                <div class="service-image">
+                    <img src="images/services/trekking.jpg" alt="Trekking in Gilgit Baltistan">
+                    <div class="service-badge">
+                        <i class="fas fa-hiking"></i>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h2>Trekking Expeditions</h2>
+                    <p class="service-tagline">Explore breathtaking trails through the world's most majestic mountain ranges</p>
+                    
+                    <div class="service-description">
+                        <p>Our trekking expeditions offer unparalleled access to some of the most stunning landscapes on earth. From the famous K2 Base Camp trek to the serene valleys of Hunza, our expert guides will lead you through ancient routes and pristine wilderness.</p>
+                    </div>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-mountain"></i>
+                            <h3>Popular Treks</h3>
+                            <ul>
+                                <li>K2 Base Camp Trek (18-21 days)</li>
+                                <li>Snow Lake Expedition (14 days)</li>
+                                <li>Nanga Parbat Base Camp (12 days)</li>
+                                <li>Spantik Base Camp (10 days)</li>
+                                <li>Rakaposhi Base Camp (7 days)</li>
+                            </ul>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clipboard-check"></i>
+                            <h3>What's Included</h3>
+                            <ul>
+                                <li>Professional trekking guides</li>
+                                <li>Porter service for equipment</li>
+                                <li>Quality camping equipment</li>
+                                <li>All meals during the trek</li>
+                                <li>Permits and entry fees</li>
+                                <li>Safety and first aid supplies</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="trekking-details.html" class="btn btn-primary"><i class="fas fa-info-circle"></i> Explore Trekking Packages</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mountaineering Services -->
+    <section id="expeditions" class="service-section alternate">
+        <div class="container">
+            <div class="service-wrapper reverse">
+                <div class="service-content">
+                    <h2>Mountaineering Expeditions</h2>
+                    <p class="service-tagline">Conquer some of the world's most challenging peaks with our expert guidance</p>
+                    
+                    <div class="service-description">
+                        <p>For the most adventurous souls, our mountaineering expeditions provide the opportunity to challenge yourself on Pakistan's famous peaks. With safety as our top priority, our experienced mountaineering guides will support your summit ambitions on peaks ranging from beginner-friendly to the world's most challenging.</p>
+                    </div>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-flag"></i>
+                            <h3>Available Expeditions</h3>
+                            <ul>
+                                <li>Spantik Peak (7,027m)</li>
+                                <li>Broad Peak (8,051m)</li>
+                                <li>Gasherbrum II (8,035m)</li>
+                                <li>Diran Peak (7,257m)</li>
+                                <li>Laila Peak (6,096m)</li>
+                            </ul>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Safety Measures</h3>
+                            <ul>
+                                <li>UIAGM/IFMGA certified guides</li>
+                                <li>Comprehensive safety equipment</li>
+                                <li>Satellite communication devices</li>
+                                <li>Detailed weather forecasting</li>
+                                <li>Emergency evacuation planning</li>
+                                <li>High-altitude medical support</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="mountaineering-details.html" class="btn btn-primary"><i class="fas fa-info-circle"></i> Explore Mountaineering Options</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/services/mountaineering.jpg" alt="Mountaineering Expedition in Karakoram">
+                    <div class="service-badge">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Cultural Tours -->
+    <section id="sightseeing" class="service-section">
+        <div class="container">
+            <div class="service-wrapper">
+                <div class="service-image">
+                    <img src="images/services/cultural-tour.jpg" alt="Cultural Tour in Northern Pakistan">
+                    <div class="service-badge">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h2>Cultural & Sightseeing Tours</h2>
+                    <p class="service-tagline">Immerse yourself in the rich cultural heritage of Northern Pakistan</p>
+                    
+                    <div class="service-description">
+                        <p>Our cultural tours offer a window into the diverse traditions, ancient history, and unique way of life in the mountain communities of Northern Pakistan. Visit historic forts, traditional villages, ancient rock carvings, and vibrant local markets while experiencing the legendary hospitality of the mountain people.</p>
+                    </div>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h3>Popular Destinations</h3>
+                            <ul>
+                                <li>Hunza Valley Cultural Tour</li>
+                                <li>Kalash Valley Festival Visit</li>
+                                <li>Silk Road Heritage Tour</li>
+                                <li>Skardu & Shigar Valley Explorer</li>
+                                <li>Baltistan Historical Sites</li>
+                            </ul>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-camera"></i>
+                            <h3>Highlights</h3>
+                            <ul>
+                                <li>Ancient forts and palaces</li>
+                                <li>Traditional music and dance</li>
+                                <li>Local craft demonstrations</li>
+                                <li>Authentic cuisine experiences</li>
+                                <li>Photography opportunities</li>
+                                <li>Interaction with local families</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="cultural-tours.html" class="btn btn-primary"><i class="fas fa-info-circle"></i> Discover Cultural Tours</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Transportation Services -->
+    <section id="transportation" class="service-section alternate">
+        <div class="container">
+            <div class="service-wrapper reverse">
+                <div class="service-content">
+                    <h2>Transportation Services</h2>
+                    <p class="service-tagline">Safe, reliable transportation throughout Northern Pakistan</p>
+                    
+                    <div class="service-description">
+                        <p>We offer comprehensive transportation services to ensure your journey through Northern Pakistan is comfortable and hassle-free. From airport pickups to mountain transfers, our fleet of well-maintained vehicles and professional drivers will get you safely to your destination, allowing you to relax and enjoy the spectacular scenery along the way.</p>
+                    </div>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-car"></i>
+                            <h3>Vehicle Options</h3>
+                            <ul>
+                                <li>4x4 Jeeps for mountain roads</li>
+                                <li>Comfortable cars for highway travel</li>
+                                <li>Minivans for group transfers</li>
+                                <li>Luxury vehicles upon request</li>
+                            </ul>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-route"></i>
+                            <h3>Available Routes</h3>
+                            <ul>
+                                <li>Islamabad to Gilgit/Skardu</li>
+                                <li>Gilgit to Hunza Valley</li>
+                                <li>Skardu to Askole</li>
+                                <li>Chilas to Fairy Meadows</li>
+                                <li>Custom routes on request</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="transportation.html" class="btn btn-primary"><i class="fas fa-info-circle"></i> View Transportation Options</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/services/transportation.jpg" alt="4x4 Jeep in Karakoram Highway">
+                    <div class="service-badge">
+                        <i class="fas fa-car"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Custom Tours -->
+    <section id="custom" class="service-section">
+        <div class="container">
+            <div class="service-wrapper">
+                <div class="service-image">
+                    <img src="images/services/custom-tour.jpg" alt="Custom Adventure Tour">
+                    <div class="service-badge">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h2>Custom Adventure Packages</h2>
+                    <p class="service-tagline">Tailor-made adventures designed around your specific interests and requirements</p>
+                    
+                    <div class="service-description">
+                        <p>Our custom adventure packages are designed for travelers seeking a personalized experience. Whether you're looking to combine trekking with cultural exploration, arrange a photography-focused journey, or organize a special group adventure, our team will work with you to create the perfect itinerary that aligns with your interests, time frame, and fitness level.</p>
+                    </div>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Popular Customizations</h3>
+                            <ul>
+                                <li>Photography-focused expeditions</li>
+                                <li>Family-friendly adventures</li>
+                                <li>Combined trekking & cultural tours</li>
+                                <li>Corporate team-building trips</li>
+                                <li>Special occasion celebrations</li>
+                            </ul>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-list-alt"></i>
+                            <h3>Process</h3>
+                            <ul>
+                                <li>Initial consultation</li>
+                                <li>Personalized itinerary design</li>
+                                <li>Detailed proposal and quotation</li>
+                                <li>Refinement based on feedback</li>
+                                <li>Comprehensive pre-trip briefing</li>
+                                <li>24/7 support during your adventure</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary"><i class="fas fa-envelope"></i> Inquire About Custom Packages</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Packages Comparison -->
+    <section class="packages-comparison">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-bar"></i> Service Packages Comparison</h2>
+                <p>Find the adventure that's right for you</p>
+            </div>
+            
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Standard Package</th>
+                            <th>Premium Package</th>
+                            <th>Luxury Experience</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Group Size</td>
+                            <td>8-12 people</td>
+                            <td>4-8 people</td>
+                            <td>2-4 people</td>
+                        </tr>
+                        <tr>
+                            <td>Guide-to-Client Ratio</td>
+                            <td>1:6</td>
+                            <td>1:4</td>
+                            <td>1:2</td>
+                        </tr>
+                        <tr>
+                            <td>Accommodation</td>
+                            <td>Standard hotels & camping</td>
+                            <td>Superior hotels & quality camping</td>
+                            <td>Luxury lodges & premium camping</td>
+                        </tr>
+                        <tr>
+                            <td>Meals</td>
+                            <td>Nutritious local cuisine</td>
+                            <td>Enhanced menu with variety</td>
+                            <td>Gourmet options & special requests</td>
+                        </tr>
+                        <tr>
+                            <td>Transportation</td>
+                            <td>Shared transfers</td>
+                            <td>Private vehicles</td>
+                            <td>Luxury 4x4s & special arrangements</td>
+                        </tr>
+                        <tr>
+                            <td>Equipment</td>
+                            <td>Quality standard gear</td>
+                            <td>Premium equipment</td>
+                            <td>Top-of-the-line gear & personal options</td>
+                        </tr>
+                        <tr>
+                            <td>Extras</td>
+                            <td>Basic photography tips</td>
+                            <td>Photography guide, cultural activities</td>
+                            <td>Personal photographer, helicopter options</td>
+                        </tr>
+                        <tr class="price-row">
+                            <td>Starting Price</td>
+                            <td>$1,800 USD</td>
+                            <td>$3,200 USD</td>
+                            <td>$5,500 USD</td>
+                        </tr>
+                        <tr class="cta-row">
+                            <td></td>
+                            <td><a href="contact.html" class="btn btn-sm btn-secondary">Book Standard</a></td>
+                            <td><a href="contact.html" class="btn btn-sm btn-primary">Book Premium</a></td>
+                            <td><a href="contact.html" class="btn btn-sm btn-secondary">Book Luxury</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="comparison-note">
+                <p><i class="fas fa-info-circle"></i> Note: All packages include necessary permits, safety equipment, and access to emergency services. Prices vary based on specific itinerary, season, and group size. Contact us for a detailed quote.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonial Highlight - Add before FAQ section -->
+    <section class="testimonial-highlight">
+        <div class="container">
+            <div class="testimonial-highlight-wrapper">
+                <div class="testimonial-highlight-quote">
+                    <i class="fas fa-quote-left"></i>
+                    <blockquote>
+                        The Spantik Adventure team took care of every detail of our K2 Base Camp trek. Their expert guides, excellent food, and attention to safety made what could have been a challenging journey into an incredible adventure. I've trekked with many companies around the world, and Spantik ranks among the very best.
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/person-1.jpg" alt="John Demetriou">
+                        <div>
+                            <h4>John Demetriou</h4>
+                            <p>Mountain Enthusiast, United States</p>
+                        </div>
+                    </div>
+                    <a href="testimonials.html" class="btn btn-outline"><i class="fas fa-comments"></i> Read More Stories</a>
+                </div>
+                <div class="testimonial-highlight-image">
+                    <img src="images/services/testimonial-services.jpg" alt="K2 Base Camp Trek">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq-section" style="background-color: #f9f9f9; padding: 80px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+                <p>Everything you need to know about our adventure services</p>
+            </div>
+            
+            <div class="faq-search-container" style="max-width: 600px; margin: 0 auto 40px; position: relative;">
+                <input type="text" id="faqSearch" placeholder="Search for questions..." style="width: 100%; padding: 12px 20px; border: 1px solid #ddd; border-radius: 30px;">
+                <i class="fas fa-search" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%);"></i>
+            </div>
+            
+            <div class="faq-wrapper" style="max-width: 900px; margin: 0 auto;">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What is included in your trek packages?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our packages typically include: professional guides, porters/support staff, camping equipment (tents, sleeping mats), meals during the trek, transportation from meeting point to trailhead and back, permits and fees. Personal equipment (sleeping bags, hiking boots, clothing) is not included but can be rented for an additional fee.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do I need a visa to visit Pakistan?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, most nationalities require a visa to visit Pakistan. The good news is that Pakistan has introduced an e-visa system which makes the process much easier. We can provide a letter of invitation to support your visa application. We recommend applying at least 4-6 weeks before your planned trip.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What is the best time of year for trekking in Gilgit Baltistan?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The best time for trekking in Gilgit Baltistan is from June to September, with July and August being the peak months. This period offers the most stable weather conditions with clear views of the mountains. Some lower-altitude treks and valley tours can be done from April to October, while winter activities are available from December to February.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do I book a tour or trek with Spantik Adventure?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Booking is simple! Contact us through our online form, email, or phone to discuss your interests. We'll create a customized itinerary based on your preferences. Once you're satisfied, a 30% deposit secures your booking, with the balance due 30 days before the start date. For last-minute bookings (less than 30 days in advance), full payment is required at the time of booking.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How physically demanding are your treks?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our treks vary in difficulty from easy cultural tours to challenging high-altitude expeditions. Each tour is clearly labeled with a difficulty rating from 1 (easy) to 5 (extremely challenging). For treks rated 3 and above, we recommend a good level of fitness and some prior hiking experience. For more challenging treks, we suggest specific training for at least 3 months before your trip.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What about safety and emergency procedures?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Safety is our top priority. All our guides are trained in wilderness first aid and carry comprehensive medical kits. On remote treks, we carry satellite communication devices for emergencies. We maintain regular contact with local authorities and monitor weather conditions closely. For high-altitude treks, we follow careful acclimatization protocols and can arrange helicopter evacuation if necessary (subject to weather conditions).</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 7 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What is your cancellation and refund policy?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our cancellation policy is as follows: Cancellations made 60+ days before the trip start date receive a 90% refund (10% administrative fee). Cancellations 30-59 days before receive a 50% refund. Cancellations less than 30 days before the trip start date are non-refundable. We strongly recommend purchasing comprehensive travel insurance that includes trip cancellation coverage. In case of emergency situations or extreme weather conditions, we work with clients on a case-by-case basis to reschedule when possible.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 8 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Is there Wi-Fi or cell service during treks?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Cell service and Wi-Fi availability vary significantly throughout Gilgit Baltistan. Major towns like Gilgit, Skardu, and Hunza have reasonable 3G/4G coverage and some accommodations offer Wi-Fi. Once on the trail, connectivity becomes limited or non-existent, especially on high-altitude treks. Our guides carry satellite phones for emergency communications. We recommend informing family and friends about your limited connectivity before your trip, downloading offline maps, and bringing a power bank for your devices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/backgrounds/cta-bg.jpg'); padding: 100px 0; background-size: cover; background-position: center; text-align: center; color: #fff;">
+        <div class="container">
+            <div class="cta-content" style="max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #fff;">Ready for Your Next Adventure?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Book your unforgettable Gilgit Baltistan experience today!</p>
+                <div style="display: flex; justify-content: center; gap: 20px;">
+                    <a href="contact.html" class="btn btn-primary" style="display: inline-block; padding: 12px 25px; background-color: var(--accent-color); color: #fff; border-radius: 4px; text-decoration: none; font-weight: 600;"><i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Contact Us Now</a>
+                    <a href="gallery.html" class="btn btn-secondary" style="display: inline-block; padding: 12px 25px; background-color: transparent; border: 2px solid #fff; color: #fff; border-radius: 4px; text-decoration: none; font-weight: 600;"><i class="fas fa-images" style="margin-right: 8px;"></i> View Gallery</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-info">
+                    <img src="images/logo/logo-white.png" alt="Spantik Adventure" class="footer-logo">
+                    <p>Providing exceptional adventure tourism services in Northern Pakistan since 2010. We specialize in trekking, mountaineering, and cultural experiences in Gilgit Baltistan.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3><i class="fas fa-link"></i> Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3><i class="fas fa-hiking"></i> Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#trekking"><i class="fas fa-chevron-right"></i> Trekking Packages</a></li>
+                        <li><a href="services.html#expeditions"><i class="fas fa-chevron-right"></i> Mountain Expeditions</a></li>
+                        <li><a href="services.html#sightseeing"><i class="fas fa-chevron-right"></i> Sightseeing Tours</a></li>
+                        <li><a href="services.html#transportation"><i class="fas fa-chevron-right"></i> Transportation</a></li>
+                        <li><a href="services.html#custom"><i class="fas fa-chevron-right"></i> Custom Adventures</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3><i class="far fa-envelope"></i> Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates and special offers.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email Address" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                    </form>
+                    <div class="newsletter-message"></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Spantik Adventure. All rights reserved.</p>
+                <div class="footer-bottom-links a">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Virtual Tour Modal -->
+    <div class="virtual-tour-modal" id="virtualTourModal">
+        <div class="virtual-tour-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="virtualTourTitle">Virtual Tour</h2>
+            <div class="panorama-container" id="panoramaContainer"></div>
+        </div>
+    </div>
+
+    <!-- Virtual Tour Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+
+    <!-- Update your CSS links with version parameters -->
+    <link rel="stylesheet" href="css/styles.css?v=2.7.1">
+    <link rel="stylesheet" href="css/additional-styles.css?v=2.7.1">
+    <link rel="stylesheet" href="css/services-styles.css?v=2.7.1">
+    <link rel="stylesheet" href="css/services-fallback.css?v=2.7.1">
+
+    <!-- Add this after your other CSS links -->
+    <link rel="stylesheet" href="css/services-fallback.css">
+
+    <!-- Add this code right after the opening <body> tag to check if images are loading properly -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if service images are loading
+        const serviceImages = document.querySelectorAll('.service-image img');
+        serviceImages.forEach(img => {
+            img.addEventListener('error', function() {
+                console.error('Failed to load image:', this.src);
+                this.src = "https://via.placeholder.com/800x500/2c3e50/ffffff?text=Service+Image";
+            });
+        });
+    });
+    </script>
+
+    <!-- Add this at the end of your <body> but before other scripts -->
+    <script>
+      // Debug CSS loading
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('Checking CSS files loading status:');
+        
+        const cssFiles = [
+          'css/styles.css',
+          'css/additional-styles.css',
+          'css/services-styles.css',
+          'css/services-fallback.css'
+        ];
+        
+        cssFiles.forEach(file => {
+          // Check if the stylesheet is loaded
+          const isLoaded = Array.from(document.styleSheets).some(sheet => {
+            try {
+              return sheet.href && sheet.href.includes(file);
+            } catch (e) {
+              return false;
+            }
+          });
+          
+          console.log(`${file}: ${isLoaded ? 'LOADED' : 'FAILED TO LOAD'}`);
+        });
+        
+        // Add basic styling via JavaScript as a last resort
+        if (!document.querySelector('.service-style-applied')) {
+          console.log('Applying emergency styles via JavaScript...');
+          const style = document.createElement('style');
+          style.className = 'service-style-applied';
+          style.textContent = `
+            .service-section { padding: 100px 0; position: relative; }
+            .service-section.alternate { background-color: #f9f9f9; }
+            .service-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+            .service-image { border-radius: 10px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+            .service-image img { width: 100%; height: 500px; object-fit: cover; }
+            .feature { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+            @media (max-width: 991.98px) {
+              .service-wrapper { grid-template-columns: 1fr; }
+            }
+          `;
+          document.head.appendChild(style);
+        }
+      });
+    </script>
+
+    <!-- Add this before the closing body tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            // First check if any FAQ items exist
+            if (faqItems.length === 0) {
+                console.error('No FAQ items found on the page!');
+                return;
+            }
+            
+            console.log('Found', faqItems.length, 'FAQ items');
+            
+            // Check if each FAQ item has content
+            faqItems.forEach((item, index) => {
+                const question = item.querySelector('.faq-question h4');
+                const answer = item.querySelector('.faq-answer p');
+                
+                console.log(`FAQ #${index + 1}:`, 
+                    'Question:', question ? question.textContent.trim() : 'MISSING',
+                    'Answer:', answer ? answer.textContent.trim() : 'MISSING');
+                
+                // Check for empty content
+                if (question && question.textContent.trim() === '') {
+                    question.textContent = 'Question text missing - please add content';
+                    question.style.color = 'red';
+                }
+                
+                if (answer && answer.textContent.trim() === '') {
+                    answer.textContent = 'Answer text missing - please add content';
+                    answer.style.color = 'red';
+                }
+                
+                // Add click functionality
+                const questionEl = item.querySelector('.faq-question');
+                if (questionEl) {
+                    questionEl.addEventListener('click', function() {
+                        console.log('FAQ clicked:', question ? question.textContent : 'unknown');
+                        item.classList.toggle('active');
+                        
+                        // Close other FAQs
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item && otherItem.classList.contains('active')) {
+                                otherItem.classList.remove('active');
+                            }
+                        });
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Add this before the closing body tag, after your existing scripts -->
+    <script>
+        // Service Page Feature Animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle smooth scrolling for service anchor links
+            const serviceLinks = document.querySelectorAll('a[href^="#"]');
+            serviceLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Only process anchors that exist on this page
+                    const targetId = this.getAttribute('href');
+                    if (targetId.startsWith('#') && document.querySelector(targetId)) {
+                        e.preventDefault();
+                        
+                        const targetElement = document.querySelector(targetId);
+                        const headerOffset = 80; // Adjust based on your sticky header height
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerOffset;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Animate service feature sections on scroll
+            const animatedElements = document.querySelectorAll('.service-image, .feature, .service-content h2');
+            
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-in');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.2
+                });
+                
+                animatedElements.forEach(el => {
+                    el.classList.add('pre-animation');
+                    observer.observe(el);
+                });
+            } else {
+                // Fallback for browsers that don't support IntersectionObserver
+                animatedElements.forEach(el => {
+                    el.classList.add('animate-in');
+                });
+            }
+        });
+    </script>
+
+    <!-- Animation styles -->
+    <style>
+        .pre-animation {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .service-image.pre-animation {
+            transform: translateY(30px) scale(0.95);
+        }
+        
+        .service-image.animate-in {
+            transform: translateY(0) scale(1);
+        }
+        
+        .feature.pre-animation {
+            transition-delay: 0.1s;
+        }
+        
+        .feature:nth-child(2).pre-animation {
+            transition-delay: 0.2s;
+        }
+    </style>
+
+    <!-- Replace your FAQ script with this more reliable version -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Improved FAQ functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        const faqSearch = document.getElementById('faqSearch');
+        
+        // Function to handle FAQ toggling
+        const toggleFaq = (item) => {
+          const isActive = item.classList.contains('active');
+          
+          // Close all FAQ items
+          faqItems.forEach(faq => {
+            faq.classList.remove('active');
+            const answer = faq.querySelector('.faq-answer');
+            answer.style.maxHeight = null;
+          });
+          
+          // If the clicked item wasn't active, open it
+          if (!isActive) {
+            item.classList.add('active');
+            const answer = item.querySelector('.faq-answer');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+        };
+        
+        // Add click event to all FAQ questions
+        faqItems.forEach(item => {
+          const question = item.querySelector('.faq-question');
+          question.addEventListener('click', () => toggleFaq(item));
+        });
+        
+        // Search functionality
+        if (faqSearch) {
+          faqSearch.addEventListener('input', () => {
+            const searchTerm = faqSearch.value.toLowerCase().trim();
+            
+            faqItems.forEach(item => {
+              const questionText = item.querySelector('.faq-question h4').textContent.toLowerCase();
+              const answerText = item.querySelector('.faq-answer p').textContent.toLowerCase();
+              
+              if (searchTerm === '' || questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+                item.style.display = '';
+                
+                // Open items that match search criteria
+                if (searchTerm !== '' && (questionText.includes(searchTerm) || answerText.includes(searchTerm))) {
+                  item.classList.add('active');
+                  const answer = item.querySelector('.faq-answer');
+                  answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+              } else {
+                item.style.display = 'none';
+              }
+            });
+          });
+        }
+        
+        // Open first FAQ by default
+        if (faqItems.length > 0) {
+          toggleFaq(faqItems[0]);
+        }
+      });
+    </script>
+
+    <!-- Add this before your closing </body> tag if it's not already there -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        const header = document.querySelector('.header');
+        
+        mobileToggle.addEventListener('click', function() {
+          this.classList.toggle('active');
+          mainNav.classList.toggle('active');
+        });
+        
+        // Sticky header on scroll
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 100) {
+            header.classList.add('sticky');
+          } else {
+            header.classList.remove('sticky');
+          }
+        });
+        
+        // Language selector dropdown
+        const selectedLanguage = document.querySelector('.selected-language');
+        const languageDropdown = document.querySelector('.language-dropdown');
+        
+        selectedLanguage.addEventListener('click', function(e) {
+          e.stopPropagation();
+          languageDropdown.classList.toggle('show');
+        });
+        
+        // Close language dropdown when clicking elsewhere
+        document.addEventListener('click', function() {
+          languageDropdown.classList.remove('show');
+        });
+        
+        // Prevent closing when clicking on the dropdown itself
+        languageDropdown.addEventListener('click', function(e) {
+          e.stopPropagation();
+        });
+      });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spantik Adventure - Premium trekking and tour services in Gilgit Baltistan, Northern Pakistan">
+    <title>Spantik Adventure - Trekking & Tours in Gilgit Baltistan, Pakistan</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Swiper Slider CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    
+    <!-- CSS Links - IMPORTANT ORDER -->
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Add this style block to replace all previous slider-related CSS -->
+    <style>
+        /* Basic hero styles */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+        }
+        
+        /* Clean Swiper styles with no conflicts */
+        .hero-slider {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .hero-slider .swiper-slide {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .hero-slider .swiper-slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            padding: 3rem;
+            color: #fff;
+        }
+        
+        /* Navigation styles that don't conflict with Swiper */
+        .hero-slider .swiper-button-next,
+        .hero-slider .swiper-button-prev {
+            color: #fff;
+            background: rgba(0,0,0,0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .hero-slider .swiper-button-next:hover,
+        .hero-slider .swiper-button-prev:hover {
+            opacity: 1;
+        }
+        
+        .hero-slider .swiper-button-next:after,
+        .hero-slider .swiper-button-prev:after {
+            font-size: 1.2rem;
+        }
+        
+        .hero-slider .swiper-pagination-bullet {
+            background: #fff;
+            opacity: 0.7;
+        }
+        
+        .hero-slider .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #0066cc;
+        }
+        
+        /* Fallback image style */
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+    </style>
+
+    <!-- Add this style block before the closing </head> tag -->
+    <style>
+        /* Enhanced "What We Offer" Section Styling */
+        .features {
+            padding: 5rem 0;
+            background: linear-gradient(to bottom, #ffffff, #f7f9fc);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        
+        .section-header h2 {
+            position: relative;
+            display: inline-block;
+            color: #222;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--primary-color, #0066cc);
+            border-radius: 2px;
+        }
+        
+        .section-header h2 i {
+            color: var(--primary-color, #0066cc);
+            margin-right: 0.5rem;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .feature-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            padding: 2.5rem 1.8rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-color: rgba(0, 102, 204, 0.2);
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: var(--primary-color, #0066cc);
+            transition: height 0.5s ease;
+        }
+        
+        .feature-card:hover::before {
+            height: 100%;
+        }
+        
+        .feature-icon {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--primary-color, #0066cc);
+            background: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            background: var(--primary-color, #0066cc);
+            color: #fff;
+            transform: rotateY(180deg);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        
+        .feature-card:hover h3 {
+            color: var(--primary-color, #0066cc);
+        }
+        
+        .feature-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .feature-card .btn-outline {
+            background: transparent;
+            color: var(--primary-color, #0066cc);
+            border: 1px solid var(--primary-color, #0066cc);
+            font-weight: 500;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .feature-card .btn-outline i {
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card .btn-outline:hover {
+            background: var(--primary-color, #0066cc);
+            color: #fff;
+        }
+        
+        .feature-card .btn-outline:hover i {
+            transform: translateX(4px);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .features {
+                padding: 3rem 0;
+            }
+            
+            .features-wrapper {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .feature-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .feature-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation - Simple Version -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo/logo.png" alt="Spantik Adventure" class="main-logo">
+                        <img src="images/logo/logo-white.png" alt="Spantik Adventure" class="white-logo">
+                    </a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="services.html" class="nav-link"><i class="fas fa-mountain"></i> Services</a></li>
+                        <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+                        <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Header Right - Language & CTA -->
+                <div class="header-right">
+                    <div class="language-selector">
+                        <div class="selected-language">
+                            <img src="images/flags/en.svg" alt="English" class="flag-icon">
+                            <span>EN</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <ul class="language-dropdown">
+                            <li><a href="#"><img src="images/flags/en.svg" alt="English" class="flag-icon"> English</a></li>
+                            <li><a href="#"><img src="images/flags/ru.svg" alt="Russian" class="flag-icon"> Russian</a></li>
+                            <li><a href="#"><img src="images/flags/fr.svg" alt="French" class="flag-icon"> French</a></li>
+                        </ul>
+                    </div>
+                    
+                    <a href="contact.html#booking" class="btn btn-primary book-btn">
+                        <i class="fas fa-calendar-check"></i> Book Now
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider swiper">
+            <div class="swiper-wrapper">
+                <!-- First slide - with explicit img element as fallback -->
+                <div class="swiper-slide" data-background="images/hero/hero-1.jpg">
+                    <img src="images/hero/hero-1.jpg" alt="Hero Image 1" class="hero-bg-image">
+                    <div class="hero-content">
+                        <h1>Discover the Majestic Beauty of Gilgit Baltistan</h1>
+                        <p>Experience thrilling adventures and breathtaking landscapes with Spantik Adventure</p>
+                        <div class="hero-cta">
+                            <a href="services.html" class="btn btn-primary"><i class="fas fa-compass"></i> Explore Our Tours</a>
+                            <a href="contact.html" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second slide - with explicit img element as fallback -->
+                <div class="swiper-slide" data-background="images/hero/hero-2.jpg">
+                    <img src="images/hero/hero-2.jpg" alt="Hero Image 2" class="hero-bg-image">
+                    <div class="hero-content">
+                        <h1>Trek to the World's Most Beautiful Peaks</h1>
+                        <p>Professional guided treks to K2, Nanga Parbat and other majestic mountains</p>
+                        <div class="hero-cta">
+                            <a href="services.html" class="btn btn-primary"><i class="fas fa-mountain"></i> Our Expeditions</a>
+                            <a href="contact.html" class="btn btn-secondary"><i class="fas fa-calendar-check"></i> Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Third slide - with explicit img element as fallback -->
+                <div class="swiper-slide" data-background="images/hero/hero-3.jpg">
+                    <img src="images/hero/hero-3.jpg" alt="Hero Image 3" class="hero-bg-image">
+                    <div class="hero-content">
+                        <h1>Experience Local Culture and Traditions</h1>
+                        <p>Immerse yourself in the rich heritage of Northern Pakistan</p>
+                        <div class="hero-cta">
+                            <a href="services.html" class="btn btn-primary"><i class="fas fa-landmark"></i> Cultural Tours</a>
+                            <a href="gallery.html" class="btn btn-secondary"><i class="fas fa-images"></i> View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Add this right after the hero section for testing purposes (you can remove later) -->
+    
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('test-prev').addEventListener('click', function() {
+            console.log('Manual prev clicked');
+            if (window.heroSlider) {
+                window.heroSlider.slidePrev();
+            } else {
+                console.error('Slider instance not available');
+            }
+        });
+        
+        document.getElementById('test-next').addEventListener('click', function() {
+            console.log('Manual next clicked');
+            if (window.heroSlider) {
+                window.heroSlider.slideNext();
+            } else {
+                console.error('Slider instance not available');
+            }
+        });
+    });
+    </script>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-check-circle"></i> What We Offer</h2>
+                <p>Premium adventure services in Northern Pakistan</p>
+            </div>
+            <div class="features-wrapper">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Trekking & Expeditions</h3>
+                    <p>Professional guided treks to majestic peaks and valleys. Experience the thrill of conquering some of the world's most challenging terrains.</p>
+                    <a href="services.html#trekking" class="btn btn-sm btn-outline"><i class="fas fa-arrow-right"></i> Learn More</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Sightseeing Tours</h3>
+                    <p>Explore cultural landmarks and natural wonders. Discover the hidden gems of Gilgit Baltistan with our experienced local guides.</p>
+                    <a href="services.html#sightseeing" class="btn btn-sm btn-outline"><i class="fas fa-arrow-right"></i> Learn More</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shuttle-van"></i>
+                    </div>
+                    <h3>Transportation</h3>
+                    <p>Reliable transportation to all destinations. Our fleet of comfortable vehicles ensures safe journeys through mountainous terrain.</p>
+                    <a href="services.html#transportation" class="btn btn-sm btn-outline"><i class="fas fa-arrow-right"></i> Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-preview-wrapper">
+                <div class="about-preview-content">
+                    <div class="section-header text-left">
+                        <h2>About Spantik Adventure</h2>
+                    </div>
+                    <p>Founded in 2010, Spantik Adventure is a premier adventure tourism company based in Gilgit Baltistan, Northern Pakistan. Our team of experienced local guides and mountaineers is dedicated to providing authentic, safe, and unforgettable adventures.</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check-circle"></i> Local expertise and knowledge</li>
+                        <li><i class="fas fa-check-circle"></i> Safety-focused expeditions</li>
+                        <li><i class="fas fa-check-circle"></i> Personalized adventure packages</li>
+                        <li><i class="fas fa-check-circle"></i> Support for local communities</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-secondary"><i class="fas fa-users"></i> Learn More About Us</a>
+                </div>
+                <div class="about-preview-image">
+                    <img src="images/team/team-group.jpg" alt="Spantik Adventure Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Tours Section -->
+    <section class="popular-tours" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-compass"></i> Popular Adventures</h2>
+                <p>Discover our most sought-after experiences</p>
+            </div>
+            <div class="tours-wrapper">
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/tours/k2-basecamp.jpg" alt="K2 Base Camp Trek">
+                        <div class="tour-tag">Popular</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>K2 Base Camp Trek</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-calendar-alt"></i> 21 Days</span>
+                            <span><i class="fas fa-mountain"></i> Challenging</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Gilgit Baltistan</span>
+                        </div>
+                        <p>Experience the journey to the base of the world's second-highest mountain through breathtaking landscapes.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-utensils"></i> Meals Included</span>
+                            <span><i class="fas fa-campground"></i> Camping</span>
+                            <span><i class="fas fa-user-shield"></i> Expert Guides</span>
+                        </div>
+                        <div class="tour-info">
+                            <div class="tour-price"><span>From</span> $2,800</div>
+                            <a href="services.html" class="btn btn-outline"><i class="fas fa-arrow-right"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/tours/hunza-valley.jpg" alt="Hunza Valley Tour">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Hunza Valley Tour</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 7 Days</span>
+                            <span><i class="fas fa-signal"></i> Easy to Moderate</span>
+                        </div>
+                        <p>Discover the beauty of Hunza Valley with its ancient forts, terraced fields, and snow-capped peaks.</p>
+                        <div class="tour-info">
+                            <div class="tour-price"><span>From</span> $900</div>
+                            <a href="services.html" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="images/tours/baltoro-glacier.jpg" alt="Baltoro Glacier Trek">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Baltoro Glacier Trek</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 14 Days</span>
+                            <span><i class="fas fa-signal"></i> Challenging</span>
+                        </div>
+                        <p>Trek along one of the world's largest glaciers with views of multiple 7000m+ peaks.</p>
+                        <div class="tour-info">
+                            <div class="tour-price"><span>From</span> $1,800</div>
+                            <a href="services.html" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-cta">
+                <a href="services.html" class="btn btn-primary">View All Adventures</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add upcoming dates section with calendar icons -->
+    <section class="upcoming-dates">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="far fa-calendar-check"></i> Upcoming Tour Dates</h2>
+                <p>Secure your spot on our scheduled expeditions</p>
+            </div>
+            <div class="dates-container">
+                <div class="date-card">
+                    <div class="date-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="date-content">
+                        <h3>K2 Base Camp Trek</h3>
+                        <p class="date"><i class="far fa-calendar-alt"></i> June 15 - July 5, 2024</p>
+                        <p class="spots"><i class="fas fa-users"></i> 5 spots left</p>
+                        <a href="contact.html" class="btn btn-sm btn-outline"><i class="fas fa-bookmark"></i> Reserve Now</a>
+                    </div>
+                </div>
+                <div class="date-card">
+                    <div class="date-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="date-content">
+                        <h3>Hunza Valley Tour</h3>
+                        <p class="date"><i class="far fa-calendar-alt"></i> July 10 - July 17, 2024</p>
+                        <p class="spots"><i class="fas fa-users"></i> 8 spots left</p>
+                        <a href="contact.html" class="btn btn-sm btn-outline"><i class="fas fa-bookmark"></i> Reserve Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add weather widget after dates for logical grouping -->
+    <section class="weather-widget">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-cloud-sun"></i> Current Weather Conditions</h2>
+                <p>Plan your adventure with real-time weather information</p>
+            </div>
+            
+            <div class="weather-locations">
+                <div class="weather-location">
+                    <h3>Gilgit</h3>
+                    <div class="weather-data" id="gilgit-weather">
+                        <div class="weather-loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Loading weather data...</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="weather-location">
+                    <h3>K2 Base Camp</h3>
+                    <div class="weather-data" id="k2-weather">
+                        <div class="weather-loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Loading weather data...</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="weather-location">
+                    <h3>Hunza Valley</h3>
+                    <div class="weather-data" id="hunza-weather">
+                        <div class="weather-loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Loading weather data...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="weather-disclaimer">
+                <p>Weather data is updated every 3 hours. For more detailed forecasts, please <a href="contact.html">contact us</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview -->
+    <section class="gallery-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-camera"></i> Adventure Gallery</h2>
+                <p>Glimpses of our expeditions and tours</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <a href="images/gallery/large/mountains-1.jpg" class="gallery-link">
+                        <img src="images/gallery/thumbnails/mountains-1.jpg" alt="Mountain Expedition">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/gallery/large/camping-1.jpg" class="gallery-link">
+                        <img src="images/gallery/thumbnails/camping-1.jpg" alt="Camping">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/gallery/large/trail-1.jpg" class="gallery-link">
+                        <img src="images/gallery/thumbnails/trail-1.jpg" alt="Trek Path">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="images/gallery/large/culture-1.jpg" class="gallery-link">
+                        <img src="images/gallery/thumbnails/culture-1.jpg" alt="Local Culture">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="view-all-cta">
+                <a href="gallery.html" class="btn btn-secondary"><i class="fas fa-images"></i> View Full Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-quote-left"></i> What Our Adventurers Say</h2>
+                <p>Hear from those who've experienced our services</p>
+            </div>
+            <div class="testimonials-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>"The K2 Base Camp trek with Spantik Adventure was life-changing. The guides were knowledgeable and safety was their priority. Unforgettable experience!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="images/testimonials/person-1.jpg" alt="John Smith">
+                                <div class="author-info">
+                                    <h4>John Smith</h4>
+                                    <p>From United Kingdom</p>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>"Our Hunza Valley tour exceeded all expectations. The team was professional, accommodating, and showed us hidden gems we wouldn't have found otherwise."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="images/testimonials/person-2.jpg" alt="Sarah Johnson">
+                                <div class="author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>From Canada</p>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>"The Baltoro Glacier trek was physically demanding but incredibly rewarding. Spantik's team took care of all logistics perfectly, letting us focus on the amazing views."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="images/testimonials/person-3.jpg" alt="Michael Chen">
+                                <div class="author-info">
+                                    <h4>Michael Chen</h4>
+                                    <p>From Australia</p>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA before contact for a strong call-to-action -->
+    <section class="cta" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/backgrounds/cta-bg.jpg');">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Your Next Adventure?</h2>
+                <p>Book your unforgettable Gilgit Baltistan experience today!</p>
+                <a href="contact.html" class="btn btn-primary"><i class="fas fa-envelope"></i> Contact Us Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-preview">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Contact us today to plan your perfect adventure in Gilgit Baltistan.</p>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-phone"></i> +92 123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@spantikadventure.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Main Street, Gilgit, Pakistan</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="quick-contact-form">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inquiry"><i class="fas fa-question-circle"></i> Inquiry Type</label>
+                            <select id="inquiry" name="inquiry" required>
+                                <option value="" disabled selected>Select Inquiry Type</option>
+                                <option value="trekking">Trekking & Expeditions</option>
+                                <option value="tour">Sightseeing Tours</option>
+                                <option value="transport">Transportation</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Your Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your inquiry" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-about">
+                    <img src="images/logo/logo-white.png" alt="Spantik Adventure" class="footer-logo">
+                    <p>Spantik Adventure provides premium trekking, expedition, and tour services in the breathtaking regions of Gilgit Baltistan, Northern Pakistan.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3><i class="fas fa-link"></i> Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3><i class="fas fa-hiking"></i> Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#trekking"><i class="fas fa-chevron-right"></i> Trekking Packages</a></li>
+                        <li><a href="services.html#expeditions"><i class="fas fa-chevron-right"></i> Mountain Expeditions</a></li>
+                        <li><a href="services.html#sightseeing"><i class="fas fa-chevron-right"></i> Sightseeing Tours</a></li>
+                        <li><a href="services.html#transportation"><i class="fas fa-chevron-right"></i> Transportation</a></li>
+                        <li><a href="services.html#custom"><i class="fas fa-chevron-right"></i> Custom Adventures</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3><i class="far fa-envelope"></i> Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates and special offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Spantik Adventure. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript - Keep the header functionality -->
+    <script>
+    // Simplified JavaScript for header functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', function() {
+                mobileToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            });
+        }
+        
+        // Sticky header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+        
+        // Language selector
+        const selectedLanguage = document.querySelector('.selected-language');
+        const languageDropdown = document.querySelector('.language-dropdown');
+        
+        if (selectedLanguage) {
+            selectedLanguage.addEventListener('click', function(e) {
+                e.preventDefault();
+                languageDropdown.classList.toggle('active');
+            });
+            
+            // Close language dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.language-selector')) {
+                    languageDropdown.classList.remove('active');
+                }
+            });
+        }
+    });
+    </script>
+    
+    <!-- Load Swiper JS before script.js -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- Replace ALL previous Swiper initialization scripts with this single clean version -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM loaded, preparing to initialize slider...');
+        
+        // Wait for Swiper to be fully loaded
+        function checkSwiperLoaded() {
+            if (typeof Swiper === 'undefined') {
+                console.log('Waiting for Swiper to load...');
+                setTimeout(checkSwiperLoaded, 100);
+                return;
+            }
+            
+            console.log('Swiper loaded, initializing slider...');
+            initSwiper();
+        }
+        
+        function initSwiper() {
+            // Clean up any existing instances
+            if (window.heroSlider) {
+                try {
+                    window.heroSlider.destroy(true, true);
+                    console.log('Destroyed previous slider instance');
+                } catch (e) {
+                    console.log('No previous instance to destroy');
+                }
+            }
+            
+            // Create fresh Swiper instance with minimal, clean configuration
+            try {
+                window.heroSlider = new Swiper('.hero-slider', {
+                    // Basic configuration
+                    slidesPerView: 1,
+                    effect: 'fade',
+                    speed: 1000,
+                    loop: true,
+                    
+                    // Navigation
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    
+                    // Pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    
+                    // Auto play
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    
+                    // Events
+                    on: {
+                        init: function() {
+                            console.log('Swiper initialized successfully');
+                        },
+                        slideChange: function() {
+                            console.log('Slide changed to', this.activeIndex);
+                        }
+                    }
+                });
+                
+                console.log('Hero slider initialized');
+                
+                // Add manual control via test buttons
+                document.getElementById('test-prev').addEventListener('click', function() {
+                    console.log('Manual prev button clicked');
+                    if (window.heroSlider) {
+                        window.heroSlider.slidePrev();
+                    }
+                });
+                
+                document.getElementById('test-next').addEventListener('click', function() {
+                    console.log('Manual next button clicked');
+                    if (window.heroSlider) {
+                        window.heroSlider.slideNext();
+                    }
+                });
+            } catch (err) {
+                console.error('Error initializing Swiper:', err);
+            }
+        }
+        
+        // Start the initialization process
+        checkSwiperLoaded();
+    });
+    </script>
+
+    <!-- Main Script with defer to load after DOM -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Add this script at the bottom before the closing </body> tag -->
+    <script>
+        // Image load debugging
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Debugging hero image loading...');
+            
+            // Check if images folder exists
+            const heroSlides = document.querySelectorAll('.hero-slider .swiper-slide');
+            console.log('Found ' + heroSlides.length + ' hero slides');
+            
+            heroSlides.forEach((slide, index) => {
+                const bgImage = slide.style.backgroundImage;
+                console.log('Slide ' + (index+1) + ' background:', bgImage);
+                
+                if (bgImage && bgImage !== '') {
+                    // Extract the URL from the backgroundImage property
+                    const imageUrl = bgImage.replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+                    console.log('Checking image URL:', imageUrl);
+                    
+                    // Create a test image to check if the background image loads
+                    const testImg = new Image();
+                    testImg.onload = function() {
+                        console.log('✅ Background image loaded successfully:', imageUrl);
+                    };
+                    testImg.onerror = function() {
+                        console.error('❌ Failed to load background image:', imageUrl);
+                        slide.classList.add('no-bg'); // Apply fallback background
+                    };
+                    testImg.src = imageUrl;
+                } else {
+                    console.warn('⚠️ No background image found for slide ' + (index+1));
+                    slide.classList.add('no-bg'); // Apply fallback background
+                }
+            });
+        });
+    </script>
+
+    <!-- Add this to the bottom of your page right before the closing </body> tag -->
+    <script>
+        // Error handler to prevent silent failures
+        window.addEventListener('error', function(e) {
+            console.error('JavaScript Error:', e.message);
+            
+            // Make sure hero content is visible even if there's an error
+            document.querySelectorAll('.hero-content').forEach(function(content) {
+                content.style.opacity = '1';
+                content.style.transform = 'translateY(0)';
+            });
+            
+            return false;
+        });
+        
+        // Additional safeguard to ensure hero is visible
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelectorAll('.hero-content').forEach(function(content) {
+                    content.style.opacity = '1';
+                    content.style.transform = 'translateY(0)';
+                });
+                
+                console.log('Final safeguard applied to ensure hero visibility');
+            }, 1000);
+        });
+    </script>
+
+    <!-- Add this script to load backgrounds properly -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set background images programmatically
+        document.querySelectorAll('.hero-slider .swiper-slide[data-background]').forEach(function(slide) {
+            var bgUrl = slide.getAttribute('data-background');
+            if (bgUrl) {
+                slide.style.backgroundImage = 'url(' + bgUrl + ')';
+            }
+        });
+    });
+    </script>
+
+    <!-- Add this debugging script at the bottom of the page -->
+    <script>
+    // Debug script to help identify slider issues
+    function debugSlider() {
+        console.log('---- SLIDER DEBUG INFO ----');
+        
+        // Check if Swiper is loaded
+        console.log('Swiper loaded:', typeof Swiper !== 'undefined');
+        
+        // Check if slider elements exist
+        const sliderContainer = document.querySelector('.hero-slider');
+        console.log('Slider container exists:', !!sliderContainer);
+        
+        if (sliderContainer) {
+            console.log('Slider container dimensions:', sliderContainer.offsetWidth + 'x' + sliderContainer.offsetHeight);
+            
+            // Check slides
+            const slides = sliderContainer.querySelectorAll('.swiper-slide');
+            console.log('Number of slides:', slides.length);
+            
+            slides.forEach((slide, index) => {
+                console.log(`Slide ${index+1}:`, {
+                    visible: !(slide.offsetParent === null),
+                    backgroundImage: slide.style.backgroundImage,
+                    width: slide.offsetWidth,
+                    height: slide.offsetHeight
+                });
+                
+                // Check for background image loading
+                if (slide.style.backgroundImage) {
+                    const imgUrl = slide.style.backgroundImage.replace(/url\(['"]?(.*?)['"]?\)/, '$1');
+                    const img = new Image();
+                    img.onload = () => console.log(`Slide ${index+1} image loaded successfully`);
+                    img.onerror = () => console.error(`Slide ${index+1} image failed to load`);
+                    img.src = imgUrl;
+                }
+            });
+        }
+        
+        console.log('------------------------');
+    }
+
+    // Run debug after everything is loaded
+    window.addEventListener('load', function() {
+        setTimeout(debugSlider, 1000);
+    });
+    </script>
+
+    <!-- Add this verification script at the bottom of the page -->
+    <script>
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            console.log('VERIFICATION CHECK:');
+            // Check if Swiper instance exists and is functional
+            if (!window.heroSlider) {
+                console.error('❌ Hero slider instance not found - troubleshooting needed');
+                
+                // Try to create a new instance as a last resort
+                try {
+                    console.log('Attempting emergency initialization...');
+                    window.heroSlider = new Swiper('.hero-slider', {
+                        slidesPerView: 1,
+                        loop: true,
+                        autoplay: {
+                            delay: 5000
+                        }
+                    });
+                    console.log('Emergency initialization complete');
+                } catch (e) {
+                    console.error('Emergency initialization failed:', e);
+                }
+            } else {
+                console.log('✅ Hero slider instance exists');
+                
+                // Test the API to make sure it's functional
+                try {
+                    window.heroSlider.slideNext(800);
+                    console.log('✅ Slide navigation working');
+                    
+                    // Reset to first slide after a moment
+                    setTimeout(function() {
+                        window.heroSlider.slideTo(0);
+                    }, 1500);
+                } catch (e) {
+                    console.error('❌ Slide navigation failed:', e);
+                }
+            }
+        }, 2000);
+    });
+    </script>
+
+    <!-- Add this script at the very end before closing body tag -->
+    <script>
+    window.addEventListener('load', function() {
+        // Final check to ensure slider works
+        setTimeout(function() {
+            if (window.heroSlider) {
+                console.log('Final check: slider exists');
+                
+                // Test if the slider methods work
+                try {
+                    // Try to access a method to verify instance is valid
+                    var currentSlide = window.heroSlider.activeIndex;
+                    console.log('Current slide:', currentSlide);
+                    
+                    // Try manual navigation for final test
+                    window.heroSlider.slideNext();
+                    console.log('Test navigation successful');
+                } catch (e) {
+                    console.error('Slider instance exists but methods are not working:', e);
+                    // Attempt emergency reinitialize
+                    if (typeof Swiper !== 'undefined') {
+                        window.heroSlider = new Swiper('.hero-slider', {
+                            slidesPerView: 1,
+                            loop: true,
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                        });
+                        console.log('Emergency slider initialization complete');
+                    }
+                }
+            } else {
+                console.error('Final check: slider does NOT exist. Emergency initialization needed.');
+                // Attempt emergency initialize
+                if (typeof Swiper !== 'undefined') {
+                    window.heroSlider = new Swiper('.hero-slider', {
+                        slidesPerView: 1,
+                        loop: true,
+                    });
+                    console.log('Emergency slider initialization complete');
+                }
+            }
+        }, 2000);
+    });
+    </script>
+</body>
+</html>

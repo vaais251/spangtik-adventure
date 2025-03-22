@@ -1,0 +1,109 @@
+<header class="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo/logo.png" alt="Spantik Adventure" class="main-logo">
+                    <img src="images/logo/logo-white.png" alt="Spantik Adventure" class="white-logo">
+                </a>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" id="nav-home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html" class="nav-link" id="nav-about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="services.html" class="nav-link" id="nav-services"><i class="fas fa-mountain"></i> Services</a></li>
+                    <li><a href="gallery.html" class="nav-link" id="nav-gallery"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link" id="nav-contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Header Right - Language & CTA -->
+            <div class="header-right">
+                <div class="language-selector">
+                    <div class="selected-language">
+                        <img src="images/flags/en.svg" alt="English" class="flag-icon">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <ul class="language-dropdown">
+                        <li><a href="#"><img src="images/flags/en.svg" alt="English" class="flag-icon"> English</a></li>
+                        <li><a href="#"><img src="images/flags/ru.svg" alt="Russian" class="flag-icon"> Russian</a></li>
+                        <li><a href="#"><img src="images/flags/fr.svg" alt="French" class="flag-icon"> French</a></li>
+                    </ul>
+                </div>
+                
+                <a href="contact.html#booking" class="btn btn-primary book-btn">
+                    <i class="fas fa-calendar-check"></i> Book Now
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    // Set active nav link based on current page
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPath = window.location.pathname;
+        const filename = currentPath.substring(currentPath.lastIndexOf('/')+1);
+        
+        if (filename === 'index.html' || filename === '') {
+            document.getElementById('nav-home').classList.add('active');
+        } else if (filename === 'about.html') {
+            document.getElementById('nav-about').classList.add('active');
+        } else if (filename === 'services.html') {
+            document.getElementById('nav-services').classList.add('active');
+        } else if (filename === 'gallery.html') {
+            document.getElementById('nav-gallery').classList.add('active');
+        } else if (filename === 'contact.html') {
+            document.getElementById('nav-contact').classList.add('active');
+        }
+        
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        const header = document.querySelector('.header');
+        
+        mobileToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+        
+        // Sticky header on scroll
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+        
+        // Language selector dropdown
+        const selectedLanguage = document.querySelector('.selected-language');
+        const languageDropdown = document.querySelector('.language-dropdown');
+        
+        selectedLanguage.addEventListener('click', function(e) {
+            e.stopPropagation();
+            languageDropdown.classList.toggle('show');
+        });
+        
+        // Close language dropdown when clicking elsewhere
+        document.addEventListener('click', function() {
+            languageDropdown.classList.remove('show');
+        });
+        
+        // Prevent closing when clicking on the dropdown itself
+        languageDropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+</script> 
