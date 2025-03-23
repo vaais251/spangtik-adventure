@@ -400,34 +400,27 @@
     font-size: 0.9rem;
 }
 
-.attribution-content h4 {
-    margin-bottom: 15px;
-    color: var(--primary-color);
+/* Page Title Background Images */
+.about-page-title {
+    background-image: url('../images/backgrounds/about-bg.jpg');
 }
 
-.attribution-content i {
-    margin-right: 8px;
-    color: var(--accent-color);
+.services-page-title {
+    background-image: url('../images/backgrounds/services-bg.jpg');
 }
 
-.attribution-list {
-    list-style: disc;
-    margin-left: 20px;
-    margin-top: 10px;
+.gallery-page-title {
+    background-image: url('../images/backgrounds/gallery-bg.jpg');
 }
 
-.attribution-list li {
-    margin-bottom: 8px;
+.contact-page-title {
+    background-image: url('../images/backgrounds/contact-bg.jpg');
 }
 
-.attribution-list a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.attribution-list a:hover {
-    text-decoration: underline;
+/* Add this to make sure the page title backgrounds are properly sized */
+.page-title {
+    background-size: cover;
+    background-position: center;
 }
 
 /* Consistent section spacing */
