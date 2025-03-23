@@ -1,0 +1,81 @@
+/* Journey Stats Section Styling */
+.journey-stats {
+    background-color: #f9f9f9;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/backgrounds/cta-bg.jpg');
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+}
+
+.journey-stats .section-header {
+    color: #fff;
+}
+
+/* Company Timeline Section Styling */
+.company-timeline {
+    background-color: #f9f9f9;
+}
+
+/* Call to Action Section Styling */
+.cta {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/backgrounds/cta-bg.jpg');
+}
+
+/* Certifications Section Styling */
+.certifications-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.certification-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.certification-item img {
+    max-width: 150px;
+    max-height: 100px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.certification-item h4 {
+    margin-top: 15px;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* Responsive Styles for Certifications */
+@media (max-width: 992px) {
+    .certifications-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .certification-item img {
+        max-width: 120px;
+        max-height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .certifications-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .certifications-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

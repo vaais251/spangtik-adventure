@@ -1,0 +1,21 @@
+/* Fix for background-clip compatibility */
+.service-icon {
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* FAQ Section Styling */
+.faq-section {
+    background-color: #f9f9f9; 
+    padding: 80px 0;
+}
+
+/* Call to Action Section Styling */
+.cta {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/backgrounds/cta-bg.jpg');
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+}

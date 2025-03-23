@@ -24,340 +24,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/additional-styles.css">
     <link rel="stylesheet" href="css/responsive.css">
-    
-    <style>
-        /* Contact Page Specific Styles */
-        .contact-section {
-            padding: 80px 0;
-        }
-        
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .contact-info {
-            background-color: #f8f9fa;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .contact-info-item {
-            margin-bottom: 30px;
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .contact-info-item i {
-            font-size: 24px;
-            color: var(--primary-color);
-            margin-right: 15px;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(var(--primary-rgb), 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .contact-info-item h4 {
-            margin-bottom: 5px;
-            font-size: 18px;
-            font-weight: 600;
-        }
-        
-        .contact-info-item p, .contact-info-item a {
-            color: #666;
-            line-height: 1.6;
-            margin: 0;
-        }
-        
-        .contact-info-item a:hover {
-            color: var(--primary-color);
-        }
-        
-        .contact-form {
-            padding: 40px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #333;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-        
-        .form-control:focus {
-            border-color: var(--primary-color);
-            outline: none;
-        }
-        
-        textarea.form-control {
-            height: 150px;
-            resize: vertical;
-        }
-        
-        .map-container {
-            height: 450px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        
-        .booking-section {
-            padding: 80px 0;
-            background-color: #f8f9fa;
-            background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(248, 249, 250, 0.9) 100%), url('images/backgrounds/services-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .booking-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .booking-form {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        
-        .booking-form .form-group.full-width {
-            grid-column: span 2;
-        }
-        
-        .booking-form label {
-            font-weight: 600;
-            margin-bottom: 8px;
-            display: block;
-            color: var(--primary-color);
-        }
-        
-        .booking-form .form-control {
-            padding: 14px 18px;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            background-color: #f9f9f9;
-        }
-        
-        .booking-form .form-control:focus {
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
-            background-color: #fff;
-        }
-        
-        .booking-form select.form-control {
-            appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-            background-repeat: no-repeat;
-            background-position: right 15px center;
-            background-size: 15px;
-            padding-right: 45px;
-        }
-        
-        .booking-form .btn-submit {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .booking-form .btn-submit i {
-            margin-right: 10px;
-        }
-        
-        .booking-form .btn-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
-        }
-        
-        .booking-section .section-header {
-            text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        
-        .booking-section .section-header h2 {
-            color: var(--primary-color);
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .booking-section .section-header h2:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-            border-radius: 3px;
-        }
-        
-        .booking-section .section-header p {
-            color: #666;
-            font-size: 18px;
-            max-width: 600px;
-            margin: 15px auto 0;
-        }
-        
-        .booking-section .section-header h2 i {
-            margin-right: 10px;
-            color: var(--accent-color);
-        }
-        
-        .social-links-section {
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .social-links-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
-        }
-        
-        .social-link-item {
-            width: 60px;
-            height: 60px;
-            background-color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .social-link-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-        
-        .social-link-item i {
-            font-size: 24px;
-            color: var(--primary-color);
-        }
-        
-        .faq-section {
-            padding: 80px 0;
-            background-color: #f8f9fa;
-        }
-        
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            background-color: #fff;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            overflow: hidden;
-        }
-        
-        .faq-question {
-            padding: 20px;
-            font-weight: 600;
-            color: #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-        }
-        
-        .faq-question i {
-            transition: transform 0.3s;
-        }
-        
-        .faq-question.active i {
-            transform: rotate(180deg);
-        }
-        
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s, padding 0.3s;
-        }
-        
-        .faq-answer.active {
-            padding: 0 20px 20px;
-            max-height: 500px;
-        }
-        
-        @media (max-width: 767px) {
-            .contact-section, .booking-section, .map-section {
-                padding: 50px 0;
-            }
-            
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .booking-form {
-                grid-template-columns: 1fr;
-            }
-            
-            .booking-form .form-group.full-width {
-                grid-column: span 1;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/contact-page.css">
 </head>
 <body>
     <!-- Page Title -->
@@ -378,6 +45,9 @@
             <div class="section-header">
                 <h2><i class="fas fa-envelope"></i> Get In Touch</h2>
                 <p>We're here to answer any questions you may have</p>
+                <div class="section-divider">
+                    <span class="divider-icon"><i class="fas fa-mountain"></i></span>
+                </div>
             </div>
             
             <div class="contact-container">
@@ -469,10 +139,23 @@
             <div class="section-header">
                 <h2><i class="fas fa-map-marked-alt"></i> Find Us</h2>
                 <p>Our location in the heart of Gilgit Baltistan</p>
+                <div class="section-divider">
+                    <span class="divider-icon"><i class="fas fa-compass"></i></span>
+                </div>
             </div>
             
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104485.95938889436!2d74.35699844335938!3d35.920194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e649e3642f0671%3A0x40fd0ca3ca17282b!2sGilgit%2C%20Gilgit-Baltistan%2C%20Pakistan!5e0!3m2!1sen!2s!4v1616661626904!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104485.95938889436!2d74.35699844335938!3d35.920194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e649e3642f0671%3A0x40fd0ca3ca17282b!2sGilgit%2C%20Gilgit-Baltistan%2C%20Pakistan!5e0!3m2!1sen!2s!4v1616661626904!5m2!1sen!2s" allowfullscreen loading="lazy"></iframe>
+                
+                <div class="map-info-box">
+                    <h3><i class="fas fa-location-arrow"></i> Our Office</h3>
+                    <p><strong>Address:</strong> 123 Mountain View Road, Gilgit City</p>
+                    <p><strong>Landmarks:</strong> Near Central Bazaar</p>
+                    <p><strong>Hours:</strong> Mon-Fri 9AM-6PM, Sat 10AM-4PM</p>
+                    <a href="https://goo.gl/maps/YourActualGoogleMapsLink" target="_blank" class="directions-btn">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </a>
+                </div>
             </div>
         </div>
     </section>
