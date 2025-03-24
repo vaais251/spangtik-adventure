@@ -22,7 +22,72 @@
     <!-- Swiper Slider CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     
-    <!-- CSS Links - CONSISTENT ORDER -->
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- CRITICAL HERO VISIBILITY - Inline Styles -->
+    <style>
+        /* Aggressive override to force hero visibility */
+        body .hero {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            height: 100vh !important;
+            min-height: 600px !important;
+            width: 100% !important;
+            position: relative !important;
+            z-index: 1 !important;
+            background-color: #1c3144 !important;
+            overflow: hidden !important;
+        }
+        
+        /* Ensure all hero children are visible */
+        body .hero * {
+            visibility: visible !important;
+        }
+        
+        /* Force hero background images to show */
+        body .swiper-slide[data-background] {
+            background-size: cover !important;
+            background-position: center !important;
+        }
+        
+        /* Force hero content to display properly */
+        body .hero-content {
+            position: relative !important;
+            z-index: 2 !important;
+            color: white !important;
+            text-align: center !important;
+            max-width: 800px !important;
+            margin: 0 auto !important;
+            padding: 0 20px !important;
+        }
+        
+        /* Force first slide to be visible if Swiper fails */
+        body .hero-slider .swiper-slide:first-child {
+            display: flex !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* Force fallback image to be visible */
+        body .hero-bg-image {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            z-index: 0 !important;
+        }
+        
+        /* Hide other slides initially */
+        body .hero-slider .swiper-slide:not(:first-child) {
+            display: none;
+        }
+    </style>
+    
+    <!-- CSS Links - AFTER Tailwind and critical overrides -->
     <link rel="stylesheet" href="css/header-footer.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/additional-styles.css">
@@ -31,24 +96,28 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-slider swiper">
-            <div class="swiper-wrapper">
-                <!-- First slide - with explicit img element as fallback -->
-                <div class="swiper-slide" data-background="images/hero/hero-1.jpg">
-                    <img src="images/hero/hero-1.jpg" alt="Hero Image 1" class="hero-bg-image">
-                    <div class="hero-content">
-                        <h1>Discover the Majestic Beauty of Gilgit Baltistan</h1>
-                        <p>Experience thrilling adventures and breathtaking landscapes with Spantik Adventure</p>
-                        <div class="hero-cta">
-                            <a href="services.html" class="btn btn-primary"><i class="fas fa-compass"></i> Explore Our Tours</a>
-                            <a href="contact.html" class="btn btn-secondary"><i class="fas fa-phone"></i> Contact Us</a>
+    <!-- EMERGENCY FIXED HERO SECTION - NO TAILWIND -->
+    <section class="hero" style="display:block !important; visibility:visible !important; height:100vh !important; opacity:1 !important;">
+        <div class="hero-slider swiper" style="position:absolute !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important;">
+            <div class="swiper-wrapper" style="height:100% !important;">
+                <!-- First slide with inline styles for guaranteed visibility -->
+                <div class="swiper-slide" data-background="images/hero/hero-1.jpg" style="display:flex !important; position:relative !important; align-items:center !important; justify-content:center !important; width:100% !important; height:100% !important; background-image:url('images/hero/hero-1.jpg') !important; background-size:cover !important; background-position:center !important;">
+                    <img src="images/hero/hero-1.jpg" alt="Hero Image 1" class="hero-bg-image" style="position:absolute !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important; object-fit:cover !important; z-index:0 !important;">
+                    <div class="hero-content" style="position:relative !important; z-index:2 !important; text-align:center !important; max-width:800px !important; color:white !important; padding:0 20px !important;">
+                        <h1 style="font-size:2.5rem !important; font-weight:bold !important; margin-bottom:1rem !important; color:white !important;">Discover the Majestic Beauty of Gilgit Baltistan</h1>
+                        <p style="font-size:1.2rem !important; margin-bottom:2rem !important; color:white !important;">Experience thrilling adventures and breathtaking landscapes with Spantik Adventure</p>
+                        <div class="hero-cta" style="display:flex !important; flex-wrap:wrap !important; justify-content:center !important; gap:1rem !important;">
+                            <a href="services.html" style="background-color:#2563eb !important; color:white !important; padding:0.75rem 1.5rem !important; border-radius:0.5rem !important; display:inline-flex !important; align-items:center !important; font-weight:500 !important;">
+                                <i class="fas fa-compass" style="margin-right:0.5rem !important;"></i> Explore Our Tours
+                            </a>
+                            <a href="contact.html" style="background-color:transparent !important; color:white !important; padding:0.75rem 1.5rem !important; border-radius:0.5rem !important; border:2px solid white !important; display:inline-flex !important; align-items:center !important; font-weight:500 !important;">
+                                <i class="fas fa-phone" style="margin-right:0.5rem !important;"></i> Contact Us
+                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Second slide -->
+                <!-- Other slides can be kept simple - they'll be controlled by Swiper if working -->
                 <div class="swiper-slide" data-background="images/hero/hero-2.jpg">
                     <img src="images/hero/hero-2.jpg" alt="Hero Image 2" class="hero-bg-image">
                     <div class="hero-content">
@@ -61,7 +130,6 @@
                     </div>
                 </div>
                 
-                <!-- Third slide -->
                 <div class="swiper-slide" data-background="images/hero/hero-3.jpg">
                     <img src="images/hero/hero-3.jpg" alt="Hero Image 3" class="hero-bg-image">
                     <div class="hero-content">
@@ -75,12 +143,10 @@
                 </div>
             </div>
             
-            <!-- Navigation buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
+            <!-- Navigation elements -->
+            <div class="swiper-button-next" style="color:white !important; z-index:20 !important;"></div>
+            <div class="swiper-button-prev" style="color:white !important; z-index:20 !important;"></div>
+            <div class="swiper-pagination" style="z-index:20 !important;"></div>
         </div>
     </section>
 
@@ -439,118 +505,34 @@
     <!-- Load Swiper JS before script.js -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-    <!-- Replace ALL previous Swiper initialization scripts with this single clean version -->
+    <!-- Add this immediate visibility script -->
     <script>
-    // Immediately ensure hero section is visible
+    // Force immediate visibility regardless of page load state
     document.addEventListener('DOMContentLoaded', function() {
-        console.log('DOM loaded, making hero visible immediately');
+        // Force immediate visibility
+        document.querySelector('.hero').style.cssText = 'display:block !important; visibility:visible !important; opacity:1 !important; height:100vh !important;';
         
-        // Force the hero section to be visible with inline styles
-        const heroSection = document.querySelector('.hero');
-        if (heroSection) {
-            heroSection.style.display = 'block';
-            heroSection.style.visibility = 'visible';
-            heroSection.style.opacity = '1';
-        }
-        
-        // Apply background images to slides immediately
-        document.querySelectorAll('.swiper-slide[data-background]').forEach(function(slide) {
-            var bgUrl = slide.getAttribute('data-background');
-            if (bgUrl) {
-                slide.style.backgroundImage = 'url(' + bgUrl + ')';
-                console.log('Applied background:', bgUrl);
-                
-                // Also ensure the fallback image is ready
-                const bgImage = slide.querySelector('.hero-bg-image');
-                if (bgImage) {
-                    bgImage.style.display = 'block';
-                    bgImage.style.position = 'absolute';
-                    bgImage.style.width = '100%';
-                    bgImage.style.height = '100%';
-                    bgImage.style.objectFit = 'cover';
-                    bgImage.style.zIndex = '0';
-                }
-            }
-        });
-        
-        // Make all hero content visible immediately
-        document.querySelectorAll('.hero-content').forEach(function(content) {
-            content.style.opacity = '1';
-            content.style.visibility = 'visible';
-            content.style.transform = 'translateY(0)';
-        });
-        
-        // Simplified Swiper initialization function
-        function initSwiper() {
-            if (typeof Swiper === 'undefined') {
-                console.log('Swiper not loaded yet, waiting...');
-                // Still show first slide even if Swiper isn't loaded
-                const firstSlide = document.querySelector('.swiper-slide');
-                if (firstSlide) {
-                    firstSlide.style.display = 'block';
-                }
-                setTimeout(initSwiper, 100);
-                return;
-            }
-            
-            console.log('Initializing Swiper...');
-            
-            try {
-                // Try to initialize Swiper
-                window.heroSlider = new Swiper('.hero-slider', {
-                    slidesPerView: 1,
-                    effect: 'fade',
-                    loop: true,
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    }
-                });
-                console.log('Swiper initialized successfully');
-            } catch (err) {
-                console.error('Error initializing Swiper:', err);
-                
-                // If Swiper fails, manually make first slide visible
-                const slides = document.querySelectorAll('.swiper-slide');
-                slides.forEach(function(slide, index) {
-                    if (index === 0) {
-                        slide.style.display = 'flex';
-                    } else {
-                        slide.style.display = 'none';
-                    }
-                });
-            }
-        }
-        
-        // Start initialization
-        initSwiper();
-    });
-
-    // Fallback to make hero visible if page load completes
-    window.addEventListener('load', function() {
-        console.log('Window loaded, ensuring hero is visible');
-        
-        const heroSection = document.querySelector('.hero');
-        if (heroSection) {
-            heroSection.style.display = 'block';
-            heroSection.style.visibility = 'visible';
-            heroSection.style.opacity = '1';
-        }
-        
-        // Show the first slide if others aren't visible
-        const firstSlide = document.querySelector('.swiper-slide');
+        // Manually apply background image to first slide if needed
+        var firstSlide = document.querySelector('.swiper-slide[data-background]');
         if (firstSlide) {
-            firstSlide.style.display = 'flex';
+            var bgUrl = firstSlide.getAttribute('data-background');
+            firstSlide.style.backgroundImage = 'url(' + bgUrl + ')';
+        }
+        
+        // Show first slide as fallback
+        var slides = document.querySelectorAll('.swiper-slide');
+        if (slides.length > 0) {
+            slides[0].style.cssText = 'display:flex !important; visibility:visible !important; opacity:1 !important;';
         }
     });
+    
+    // Also run immediately (don't wait for DOMContentLoaded)
+    (function() {
+        var hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.cssText = 'display:block !important; visibility:visible !important; opacity:1 !important; height:100vh !important;';
+        }
+    })();
     </script>
 
     <!-- Load critical resources as early as possible -->
