@@ -1,9 +1,10 @@
 /* Add these styles at the beginning of your file */
 :root {
-    /* Color Variables */
-    --primary-color: #2c3e50;
-    --secondary-color: #34495e;
-    --accent-color: #e67e22;
+    /* Color Variables - Enhanced Adventure Theme */
+    --primary-color: #1c3144;    /* Deep blue for mountains/sky */
+    --secondary-color: #3a6351;  /* Forest green for nature */
+    --accent-color: #e67e22;     /* Orange for adventure/excitement */
+    --accent-secondary: #d35400; /* Darker orange for contrast */
     --background-color: #F5F5F5;
     --text-color: #333;
     --light-text: #FFFFFF;
@@ -14,6 +15,8 @@
     --success-color: #2ecc71;
     --error-color: #e74c3c;
     --gray-color: #6c757d;
+    --adventure-brown: #8b5a2b;  /* Earth tone for natural elements */
+    --adventure-tan: #d2b48c;    /* Sandy color for terrain */
 
     /* Typography */
     --heading-font: 'Montserrat', sans-serif;
@@ -22,6 +25,11 @@
     /* Spacing */
     --section-spacing: 80px;
     --element-spacing: 20px;
+    
+    /* Shadows and Effects */
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -35,6 +43,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     background-color: var(--background-color);
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -95,7 +104,7 @@ section {
     padding: var(--section-spacing) 0;
 }
 
-/* Buttons */
+/* Buttons - Enhanced for Adventure Theme */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -106,6 +115,26 @@ section {
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    transition: height 0.3s ease;
+}
+
+.btn:hover::after {
+    height: 100%;
 }
 
 .btn-primary {
@@ -114,18 +143,22 @@ section {
 }
 
 .btn-primary:hover {
-    background-color: #1e2b3a;
+    background-color: #152536;
     color: var(--light-text);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btn-secondary {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
     color: var(--light-text);
 }
 
 .btn-secondary:hover {
-    background-color: #2980b9;
+    background-color: var(--accent-secondary);
     color: var(--light-text);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btn-outline {
@@ -137,9 +170,40 @@ section {
 .btn-outline:hover {
     background-color: var(--primary-color);
     color: var(--light-text);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Section Headers */
+/* Adventure-themed Button */
+.btn-adventure {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+    color: var(--light-text);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-adventure:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-adventure::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.btn-adventure:hover::before {
+    left: 100%;
+}
+
+/* Section Headers - Enhanced with Adventure Theme */
 .section-header {
     text-align: center;
     margin-bottom: 50px;
@@ -149,6 +213,7 @@ section {
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 15px;
+    color: var(--primary-color);
 }
 
 .section-header h2::after {
@@ -159,13 +224,165 @@ section {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background-color: var(--accent-color);
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
 }
 
 .section-header p {
     max-width: 600px;
     margin: 0 auto;
     font-size: 1.1rem;
+    color: var(--gray-color);
+}
+
+/* Adventure-themed Cards */
+.feature-card, .tour-card, .testimonial {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    background-color: #fff;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.feature-card:hover, .tour-card:hover, .testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--hover-shadow);
+}
+
+/* Nature-inspired decorative elements */
+.nature-divider {
+    height: 60px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="%231c3144" d="M0,50 C150,100 350,0 500,50 C650,100 850,0 1000,50 C1150,100 1350,0 1440,50 L1440,100 L0,100 Z"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -1px;
+}
+
+.mountain-divider {
+    height: 100px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="%233a6351" d="M0,100 L360,0 L720,100 L1080,0 L1440,100 L1440,100 L0,100 Z"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -1px;
+}
+
+/* Hero Section Enhancement */
+.hero {
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="%23F5F5F5" d="M0,50 C150,100 350,0 500,50 C650,100 850,0 1000,50 C1150,100 1350,0 1440,50 L1440,100 L0,100 Z"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    text-shadow: var(--text-shadow);
+}
+
+.hero-content p {
+    text-shadow: var(--text-shadow);
+}
+
+/* Adventure Icons */
+.feature-icon {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Image Enhancements */
+.tour-image, .about-preview-image, .gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tour-image::after, .about-preview-image::after, .gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.5));
+    z-index: 1;
+}
+
+.tour-image img, .about-preview-image img, .gallery-item img {
+    transition: transform 0.5s ease;
+}
+
+.tour-image:hover img, .about-preview-image:hover img, .gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* CTA Section Enhancement */
+.cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(28, 49, 68, 0.8), rgba(58, 99, 81, 0.8));
+    z-index: 1;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.cta h2 {
+    text-shadow: var(--text-shadow);
+}
+
+.cta p {
+    text-shadow: var(--text-shadow);
 }
 
 /* Header */

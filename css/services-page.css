@@ -19,3 +19,590 @@
     text-align: center;
     color: #fff;
 }
+
+/* Services Page Styling - Spantik Adventure */
+
+/* Page Title Section */
+.services-page-title {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/backgrounds/services-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.services-page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="%23ffffff" d="M0,60 L1440,60 L1440,30 C1296,40 1200,50 1080,45 C960,40 840,30 720,35 C600,40 480,50 360,45 C240,40 120,30 0,35 L0,60 Z"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Service Introduction Section */
+.service-intro {
+    padding: 70px 0 50px;
+    background-color: #fff;
+}
+
+.service-intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.service-intro-content p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+/* Section Header Styling */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2 i {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.section-header p {
+    color: #777;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Service Section Styling */
+.service-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-section.alternate {
+    background-color: #f8f9fa;
+}
+
+.service-section.alternate::before,
+.service-section.alternate::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+}
+
+.service-section.alternate::before {
+    top: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 50" preserveAspectRatio="none"><path fill="%23ffffff" d="M0,0 L1440,0 L1440,50 C1296,30 1200,20 1080,25 C960,30 840,40 720,35 C600,30 480,20 360,25 C240,30 120,40 0,35 L0,0 Z"></path></svg>');
+}
+
+.service-section.alternate::after {
+    bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 50" preserveAspectRatio="none"><path fill="%23ffffff" d="M0,50 L1440,50 L1440,0 C1296,20 1200,30 1080,25 C960,20 840,10 720,15 C600,20 480,30 360,25 C240,20 120,10 0,15 L0,50 Z"></path></svg>');
+}
+
+/* Service Wrapper */
+.service-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.service-wrapper.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Service Image */
+.service-image {
+    flex: 1;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.service-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.service-image:hover img {
+    transform: scale(1.05);
+}
+
+.service-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+/* Service Content */
+.service-content {
+    flex: 1;
+}
+
+.service-content h2 {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.service-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.service-tagline {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.service-description {
+    margin-bottom: 30px;
+}
+
+.service-description p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Service Features */
+.service-features {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.feature {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature i {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-family: var(--font-heading);
+}
+
+.feature ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.feature ul li {
+    margin-bottom: 8px;
+    color: #555;
+    position: relative;
+}
+
+.feature ul li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--accent-color);
+    position: absolute;
+    left: -20px;
+    font-size: 0.8rem;
+}
+
+/* Packages Comparison Section */
+.packages-comparison {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    background-color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.comparison-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.comparison-table .feature-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.comparison-table .check {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+.comparison-table .price {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* Testimonial Highlight */
+.testimonial-highlight {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.testimonial-highlight-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-highlight-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--accent-color);
+}
+
+.testimonial-highlight-quote {
+    flex: 2;
+}
+
+.testimonial-highlight-quote i {
+    color: var(--accent-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.testimonial-highlight-quote p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-highlight-author {
+    flex: 1;
+    text-align: center;
+}
+
+.testimonial-highlight-author img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.testimonial-highlight-author h4 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.testimonial-highlight-author p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.faq-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f8f9fa;
+}
+
+.faq-question h4 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.faq-question i {
+    color: var(--accent-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 25px 20px;
+    max-height: 1000px;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Call to Action */
+.cta {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/backgrounds/cta-bg.jpg');
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 50" preserveAspectRatio="none"><path fill="%23f9f9f9" d="M0,0 L1440,0 L1440,50 C1296,30 1200,20 1080,25 C960,30 840,40 720,35 C600,30 480,20 360,25 C240,30 120,40 0,35 L0,0 Z"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+}
+
+.cta p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Responsive Styles for Services Page */
+@media (max-width: 991.98px) {
+    .service-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .service-wrapper.reverse {
+        flex-direction: column;
+    }
+    
+    .service-features {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .testimonial-highlight-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .testimonial-highlight-wrapper::before {
+        width: 100%;
+        height: 5px;
+        top: 0;
+        left: 0;
+    }
+    
+    .comparison-table {
+        font-size: 0.9rem;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .services-page-title {
+        padding: 80px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .service-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .service-section {
+        padding: 60px 0;
+    }
+    
+    .cta h2 {
+        font-size: 2rem;
+    }
+    
+    .comparison-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .services-page-title {
+        padding: 60px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .service-content h2 {
+        font-size: 1.4rem;
+    }
+    
+    .feature {
+        padding: 15px;
+    }
+    
+    .cta {
+        padding: 70px 0;
+    }
+    
+    .cta h2 {
+        font-size: 1.8rem;
+    }
+}

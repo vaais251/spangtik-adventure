@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Highlight the current page in the navigation
             highlightCurrentPage();
+            
+            // Initialize mobile menu functionality after header is loaded
+            initializeMobileMenu();
         })
         .catch(error => {
             console.error('Error loading header:', error);
@@ -50,22 +53,138 @@ document.addEventListener('DOMContentLoaded', function() {
 function highlightCurrentPage() {
     const currentPage = window.location.pathname.split('/').pop();
     
-    // Remove 'active' class from all navigation links
+    // Default to index.html if no page is specified
+    const currentUrl = currentPage || 'index.html';
+    
+    // Find the corresponding nav link
     const navLinks = document.querySelectorAll('.nav-link');
+    
     navLinks.forEach(link => {
-        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        
+        if (href === currentUrl) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Function to initialize mobile menu functionality
+function initializeMobileMenu() {
+    console.log('Initializing mobile menu after header is loaded');
+    
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNavButton = document.querySelector('.mobile-nav-button');
+    const mainNav = document.querySelector('.main-nav');
+    
+    // Debug logs for element detection
+    console.log('Mobile Menu Toggle found:', mobileMenuToggle !== null);
+    console.log('Mobile Nav Button found:', mobileNavButton !== null);
+    console.log('Main Nav found:', mainNav !== null);
+    
+    // Add mobile navigation header
+    if (mainNav) {
+        // Create mobile nav header
+        const mobileNavHeader = document.createElement('div');
+        mobileNavHeader.className = 'mobile-nav-header';
+        
+        // Add title
+        const mobileNavTitle = document.createElement('div');
+        mobileNavTitle.className = 'mobile-nav-title';
+        mobileNavTitle.textContent = 'Navigation';
+        
+        // Add close button
+        const mobileNavClose = document.createElement('button');
+        mobileNavClose.className = 'mobile-nav-close';
+        mobileNavClose.innerHTML = '<i class="fas fa-times"></i>';
+        mobileNavClose.addEventListener('click', function() {
+            mainNav.classList.remove('active');
+            if (mobileMenuToggle) {
+                mobileMenuToggle.classList.remove('active');
+            }
+        });
+        
+        // Append elements to header
+        mobileNavHeader.appendChild(mobileNavTitle);
+        mobileNavHeader.appendChild(mobileNavClose);
+        
+        // Add header to main nav
+        mainNav.insertBefore(mobileNavHeader, mainNav.firstChild);
+    }
+    
+    // Mobile menu toggle functionality
+    function toggleMobileMenu(e) {
+        console.log('Toggle mobile menu called by:', e ? e.currentTarget.className : 'Unknown');
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation(); // Prevent document click from immediately closing it
+        }
+        
+        if (mainNav) {
+            mainNav.classList.toggle('active');
+            console.log('Main nav toggled, active state:', mainNav.classList.contains('active'));
+        } else {
+            console.error('Main nav element not found!');
+        }
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.classList.toggle('active');
+        }
+    }
+    
+    // Add click event to mobile menu toggle
+    if (mobileMenuToggle) {
+        console.log('Adding click event to mobile menu toggle');
+        mobileMenuToggle.addEventListener('click', function(e) {
+            console.log('Mobile menu toggle clicked');
+            toggleMobileMenu(e);
+        });
+    } else {
+        console.error('Mobile menu toggle element not found!');
+    }
+    
+    // Add click event to mobile nav button
+    if (mobileNavButton) {
+        console.log('Adding click event to mobile nav button');
+        mobileNavButton.addEventListener('click', function(e) {
+            console.log('Mobile nav button clicked');
+            toggleMobileMenu(e);
+        });
+    } else {
+        console.error('Mobile nav button element not found!');
+    }
+    
+    // Handle click outside menu to close it
+    document.addEventListener('click', function(e) {
+        if (!mainNav) return;
+        
+        const isClickInside = (mainNav.contains(e.target)) || 
+                             (mobileMenuToggle && mobileMenuToggle.contains(e.target)) || 
+                             (mobileNavButton && mobileNavButton.contains(e.target));
+        
+        if (!isClickInside && mainNav.classList.contains('active')) {
+            console.log('Clicked outside menu, closing it');
+            mainNav.classList.remove('active');
+            if (mobileMenuToggle) {
+                mobileMenuToggle.classList.remove('active');
+            }
+        }
     });
     
-    // Add 'active' class to the current page's navigation link
-    if (currentPage === '' || currentPage === 'index.html') {
-        document.getElementById('nav-home').classList.add('active');
-    } else if (currentPage === 'about.html') {
-        document.getElementById('nav-about').classList.add('active');
-    } else if (currentPage === 'services.html') {
-        document.getElementById('nav-services').classList.add('active');
-    } else if (currentPage === 'gallery.html') {
-        document.getElementById('nav-gallery').classList.add('active');
-    } else if (currentPage === 'contact.html') {
-        document.getElementById('nav-contact').classList.add('active');
+    // Close menu when clicking a nav link
+    if (mainNav) {
+        const navLinks = mainNav.querySelectorAll('.nav-link');
+        console.log('Found', navLinks.length, 'nav links');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 992) {
+                    console.log('Nav link clicked, closing menu');
+                    mainNav.classList.remove('active');
+                    if (mobileMenuToggle) {
+                        mobileMenuToggle.classList.remove('active');
+                    }
+                }
+            });
+        });
     }
 }
