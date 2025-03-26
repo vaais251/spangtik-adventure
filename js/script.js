@@ -538,6 +538,222 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Script initialization complete');
 });
 
+// Enhanced JavaScript for Spantik Adventure Website
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize animation on scroll
+    initAnimations();
+    
+    // Initialize weather widget
+    initWeatherWidget();
+    
+    // Initialize testimonial slider if it exists
+    if (document.querySelector('.testimonials-slider')) {
+        initTestimonialSlider();
+    }
+    
+    // Initialize gallery lightbox if it exists
+    if (document.querySelector('.gallery-item')) {
+        initGalleryLightbox();
+    }
+    
+    // Initialize smooth scrolling
+    initSmoothScroll();
+    
+    // Initialize counters if they exist
+    if (document.querySelector('.counter')) {
+        initCounters();
+    }
+});
+
+// Animation on scroll
+function initAnimations() {
+    const animatedElements = document.querySelectorAll('.animated-element');
+    
+    // Add visible class to elements in viewport on load
+    checkVisibility(animatedElements);
+    
+    // Add visible class to elements when they enter viewport on scroll
+    window.addEventListener('scroll', function() {
+        checkVisibility(animatedElements);
+    });
+    
+    // Helper function to check if element is in viewport
+    function checkVisibility(elements) {
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementVisible = 150;
+            
+            if (elementTop < window.innerHeight - elementVisible) {
+                element.classList.add('visible');
+            }
+        });
+    }
+    
+    // Add fade-in-up animation to section headers
+    document.querySelectorAll('.section-header').forEach((header, index) => {
+        header.classList.add('fade-in-up');
+        header.style.animationDelay = `${0.1 * index}s`;
+    });
+}
+
+// Weather widget
+function initWeatherWidget() {
+    const gilgitWeather = document.getElementById('gilgit-weather');
+    const k2Weather = document.getElementById('k2-weather');
+    
+    if (gilgitWeather) {
+        // This is a placeholder for actual API implementation
+        // In a real project, you would fetch data from a weather API
+        setTimeout(() => {
+            gilgitWeather.innerHTML = `
+                <div class="weather-icon"><i class="fas fa-sun"></i></div>
+                <div class="weather-temp">18°C</div>
+                <div class="weather-desc">Sunny</div>
+                <div class="weather-details">
+                    <div class="weather-detail"><i class="fas fa-wind"></i> 5 km/h</div>
+                    <div class="weather-detail"><i class="fas fa-tint"></i> 20%</div>
+                    <div class="weather-detail"><i class="fas fa-compress-arrows-alt"></i> 1015 hPa</div>
+                    <div class="weather-detail"><i class="fas fa-eye"></i> 10 km</div>
+                </div>
+            `;
+        }, 1000);
+    }
+    
+    if (k2Weather) {
+        // Placeholder for K2 weather data
+        setTimeout(() => {
+            k2Weather.innerHTML = `
+                <div class="weather-icon"><i class="fas fa-snowflake"></i></div>
+                <div class="weather-temp">-15°C</div>
+                <div class="weather-desc">Snow</div>
+                <div class="weather-details">
+                    <div class="weather-detail"><i class="fas fa-wind"></i> 30 km/h</div>
+                    <div class="weather-detail"><i class="fas fa-tint"></i> 70%</div>
+                    <div class="weather-detail"><i class="fas fa-compress-arrows-alt"></i> 980 hPa</div>
+                    <div class="weather-detail"><i class="fas fa-eye"></i> 2 km</div>
+                </div>
+            `;
+        }, 1500);
+    }
+}
+
+// Testimonial slider
+function initTestimonialSlider() {
+    new Swiper('.testimonials-slider', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        }
+    });
+}
+
+// Gallery lightbox
+function initGalleryLightbox() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const imgSrc = this.querySelector('img').getAttribute('src');
+            const imgAlt = this.querySelector('img').getAttribute('alt');
+            
+            const lightbox = document.createElement('div');
+            lightbox.classList.add('lightbox');
+            lightbox.innerHTML = `
+                <div class="lightbox-content">
+                    <span class="lightbox-close">&times;</span>
+                    <img src="${imgSrc}" alt="${imgAlt}">
+                    <div class="lightbox-caption">${imgAlt}</div>
+                </div>
+            `;
+            
+            document.body.appendChild(lightbox);
+            document.body.style.overflow = 'hidden';
+            
+            // Close lightbox when clicking on the close button or outside the image
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === this || e.target.classList.contains('lightbox-close')) {
+                    document.body.removeChild(lightbox);
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    });
+}
+
+// Smooth scrolling
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+// Counter animation
+function initCounters() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the slower
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-target'));
+                let count = 0;
+                
+                const updateCount = () => {
+                    const increment = target / speed;
+                    
+                    if (count < target) {
+                        count += increment;
+                        counter.innerText = Math.ceil(count);
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                
+                updateCount();
+                observer.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.4 });
+    
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+}
+
 // Add custom styles
 const customStyles = `
 <style>
