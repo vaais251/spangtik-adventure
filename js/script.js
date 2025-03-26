@@ -265,6 +265,171 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Stats Counter Animation
+    const statsSection = document.querySelector('.journey-stats');
+    const counters = document.querySelectorAll('.counter');
+    
+    if (statsSection && counters.length > 0) {
+        let counted = false;
+        
+        function startCounting() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                counter.innerText = '0';
+                
+                function updateCounter() {
+                    const count = +counter.innerText;
+                    // Calculate increment based on target value for smooth animation
+                    const increment = target / 100;
+                    
+                    // If count is less than target, keep incrementing
+                    if (count < target) {
+                        // Use Math.ceil to ensure we always add at least 1
+                        counter.innerText = Math.min(Math.ceil(count + increment), target);
+                        // Continue animation
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        // Ensure we display the exact target value
+                        counter.innerText = target;
+                    }
+                }
+                
+                // Start updating this counter
+                updateCounter();
+            });
+            
+            // Mark as counted
+            counted = true;
+        }
+        
+        // Check if stats section is in viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+                rect.bottom >= 0
+            );
+        }
+        
+        // Function to check visibility and start counting if visible
+        function checkVisibility() {
+            if (!counted && isInViewport(statsSection)) {
+                startCounting();
+            }
+        }
+        
+        // Initial check and add scroll event
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility(); // Check on page load
+        
+        // Also check visibility after a short delay to ensure it works
+        setTimeout(checkVisibility, 500);
+    }
+    
+    // Weather Widget Functionality
+    const weatherWidgets = {
+        'gilgit-weather': {
+            location: 'Gilgit,PK',
+            lat: 35.9221,
+            lon: 74.3087
+        },
+        'k2-weather': {
+            location: 'K2 Base Camp',
+            lat: 35.8800,
+            lon: 76.5151
+        },
+        'hunza-weather': {
+            location: 'Hunza,PK',
+            lat: 36.3167,
+            lon: 74.6500
+        }
+    };
+    
+    // Function to fetch and display weather data
+    function fetchWeatherData() {
+        // Loop through each weather widget
+        Object.entries(weatherWidgets).forEach(([widgetId, data]) => {
+            const weatherContainer = document.getElementById(widgetId);
+            if (!weatherContainer) return;
+            
+            // Show loading state
+            weatherContainer.innerHTML = `
+                <div class="weather-loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading weather data...</p>
+                </div>
+            `;
+            
+            // Since we can't rely on an external API key, we'll use mock data
+            // This simulates a successful API response with realistic weather data
+            setTimeout(() => {
+                // Create mock weather data based on location
+                const mockWeatherData = getMockWeatherData(data.location);
+                
+                // Display the mock weather data
+                weatherContainer.innerHTML = `
+                    <div class="weather-info">
+                        <div class="weather-main">
+                            <img src="https://openweathermap.org/img/wn/${mockWeatherData.icon}@2x.png" alt="${mockWeatherData.description}">
+                            <div class="weather-temp">${mockWeatherData.temp}°C</div>
+                        </div>
+                        <div class="weather-details">
+                            <p class="weather-desc">${mockWeatherData.description}</p>
+                            <p><i class="fas fa-tint"></i> Humidity: ${mockWeatherData.humidity}%</p>
+                            <p><i class="fas fa-wind"></i> Wind: ${mockWeatherData.windSpeed} m/s</p>
+                        </div>
+                    </div>
+                `;
+            }, 1500); // Simulate network delay
+        });
+    }
+    
+    // Function to generate realistic mock weather data based on location
+    function getMockWeatherData(location) {
+        // Create different weather patterns based on location
+        const weatherPatterns = {
+            'Gilgit,PK': {
+                temp: Math.floor(Math.random() * 10) + 15, // 15-25°C
+                description: 'partly cloudy',
+                icon: '02d',
+                humidity: Math.floor(Math.random() * 20) + 40, // 40-60%
+                windSpeed: (Math.random() * 3 + 1).toFixed(1) // 1-4 m/s
+            },
+            'K2 Base Camp': {
+                temp: Math.floor(Math.random() * 10) - 10, // -10 to 0°C
+                description: 'light snow',
+                icon: '13d',
+                humidity: Math.floor(Math.random() * 10) + 70, // 70-80%
+                windSpeed: (Math.random() * 5 + 5).toFixed(1) // 5-10 m/s
+            },
+            'Hunza,PK': {
+                temp: Math.floor(Math.random() * 10) + 10, // 10-20°C
+                description: 'clear sky',
+                icon: '01d',
+                humidity: Math.floor(Math.random() * 15) + 35, // 35-50%
+                windSpeed: (Math.random() * 2 + 1).toFixed(1) // 1-3 m/s
+            }
+        };
+        
+        // Return the weather pattern for the specified location or a default one
+        return weatherPatterns[location] || {
+            temp: Math.floor(Math.random() * 15) + 10, // 10-25°C
+            description: 'scattered clouds',
+            icon: '03d',
+            humidity: Math.floor(Math.random() * 30) + 40, // 40-70%
+            windSpeed: (Math.random() * 4 + 1).toFixed(1) // 1-5 m/s
+        };
+    }
+    
+    // Initialize weather widget if it exists on the page
+    const weatherWidget = document.querySelector('.weather-widget');
+    if (weatherWidget) {
+        fetchWeatherData();
+        
+        // Refresh weather data every 30 minutes
+        setInterval(fetchWeatherData, 30 * 60 * 1000);
+    }
+    
     // LightGallery Initialization
     if (typeof lightGallery !== 'undefined') {
         const galleryContainer = document.getElementById('gallery-container');
@@ -482,6 +647,73 @@ const customStyles = `
 
 .delay-2 {
     transition-delay: 0.2s;
+}
+
+/* Weather Widget Styles */
+.weather-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.weather-loading i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.weather-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.weather-main img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.weather-temp {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-desc {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.weather-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.weather-error i {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 </style>
 `;
