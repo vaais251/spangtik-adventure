@@ -1311,7 +1311,6 @@ label {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     background-color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .services-faq .faq-item:hover {
@@ -1359,7 +1358,6 @@ label {
 .testimonial-author {
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
 }
 
 .testimonial-author img {
@@ -2657,3 +2655,64 @@ label {
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
+
+/* Install App Button */
+.install-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(76, 175, 80, 0.3);
+  width: 50px;
+  height: 50px;
+}
+
+.install-button:hover {
+  background-color: #388e3c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+.install-button .fas {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.install-button-fixed {
+  position: absolute;
+  top: -25px;
+  right: 20px;
+  z-index: 100;
+}
+
+/* Install Button Animation */
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
+}
+
+.install-button.pulse {
+  animation: pulse-green 2s infinite;
+}
+
+/* Hide install button by default (will be shown via JS when installable) */
+.install-button {
+  display: inline-flex;
+}
+
+/* When install button is available */
+.install-button.available {
+  display: inline-flex;
+}
