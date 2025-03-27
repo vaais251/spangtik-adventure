@@ -28,21 +28,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
+            // Basic email validation
+            if (!isValidEmail(email)) {
+                showNotification('Please enter a valid email address.', 'error');
+                return;
+            }
+            
             // Show loading indicator
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
             
-            // Prepare form data for EmailJS
-            const templateParams = {
-                from_name: name,
-                reply_to: email,
-                subject: subject,
-                message: message
-            };
+            // Prepare additional template parameters (helps with spam filtering)
+            const date = new Date();
+            const formattedDate = date.toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
             
-            console.log('Sending email with params:', templateParams);
+            // Set form field values with improved naming to avoid spam triggers
+            contactForm.querySelector('#name').setAttribute('name', 'from_name');
+            contactForm.querySelector('#email').setAttribute('name', 'reply_to');
+            contactForm.querySelector('#subject').setAttribute('name', 'subject');
+            contactForm.querySelector('#message').setAttribute('name', 'message');
+            
+            // Add hidden fields for additional information
+            addHiddenField(contactForm, 'website', 'Spantik Adventure');
+            addHiddenField(contactForm, 'submission_date', formattedDate);
+            addHiddenField(contactForm, 'form_type', 'Contact Inquiry');
             
             // Send email using EmailJS
             emailjs.sendForm('service_gnw9foe', 'template_4ni90an', contactForm)
@@ -54,12 +70,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Reset form
                     contactForm.reset();
+                    // Remove hidden fields
+                    removeHiddenFields(contactForm);
                 })
                 .catch(function(error) {
                     console.error('EmailJS Error:', error);
                     
                     // Display error message
                     showNotification('Oops! Something went wrong. Please try again later.', 'error');
+                    // Remove hidden fields
+                    removeHiddenFields(contactForm);
                 })
                 .finally(function() {
                     // Restore button text
@@ -79,11 +99,42 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             console.log('Booking form submitted');
             
+            // Basic validation
+            const bookingEmail = bookingForm.querySelector('#bookingEmail').value;
+            if (!isValidEmail(bookingEmail)) {
+                showNotification('Please enter a valid email address.', 'error');
+                return;
+            }
+            
             // Show loading indicator
             const submitBtn = bookingForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
             submitBtn.disabled = true;
+            
+            // Set proper field names for EmailJS template
+            bookingForm.querySelector('#bookingName').setAttribute('name', 'from_name');
+            bookingForm.querySelector('#bookingEmail').setAttribute('name', 'reply_to');
+            bookingForm.querySelector('#bookingPhone').setAttribute('name', 'phone');
+            bookingForm.querySelector('#adventureType').setAttribute('name', 'adventure_type');
+            bookingForm.querySelector('#startDate').setAttribute('name', 'start_date');
+            bookingForm.querySelector('#duration').setAttribute('name', 'duration');
+            bookingForm.querySelector('#groupSize').setAttribute('name', 'group_size');
+            bookingForm.querySelector('#accommodation').setAttribute('name', 'accommodation');
+            bookingForm.querySelector('#specialRequirements').setAttribute('name', 'special_requirements');
+            
+            // Add hidden fields for additional information
+            const date = new Date();
+            const formattedDate = date.toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            addHiddenField(bookingForm, 'website', 'Spantik Adventure');
+            addHiddenField(bookingForm, 'submission_date', formattedDate);
+            addHiddenField(bookingForm, 'form_type', 'Adventure Booking Request');
             
             // Send email using EmailJS - use sendForm method instead of send
             emailjs.sendForm('service_gnw9foe', 'template_qmvvfjd', bookingForm)
@@ -95,12 +146,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Reset form
                     bookingForm.reset();
+                    // Remove hidden fields
+                    removeHiddenFields(bookingForm);
                 })
                 .catch(function(error) {
                     console.error('EmailJS Error:', error);
                     
                     // Display error message
                     showNotification('Oops! Something went wrong with your booking request. Please try again later.', 'error');
+                    // Remove hidden fields
+                    removeHiddenFields(bookingForm);
                 })
                 .finally(function() {
                     // Restore button text
@@ -156,4 +211,38 @@ function showNotification(message, type) {
             }, 300);
         }
     }, 5000);
+}
+
+/**
+ * Add a hidden field to a form
+ * @param {HTMLFormElement} form - The form element
+ * @param {string} name - Field name
+ * @param {string} value - Field value
+ */
+function addHiddenField(form, name, value) {
+    const hiddenField = document.createElement('input');
+    hiddenField.type = 'hidden';
+    hiddenField.name = name;
+    hiddenField.value = value;
+    hiddenField.className = 'dynamic-hidden-field';
+    form.appendChild(hiddenField);
+}
+
+/**
+ * Remove all dynamically added hidden fields
+ * @param {HTMLFormElement} form - The form element
+ */
+function removeHiddenFields(form) {
+    const hiddenFields = form.querySelectorAll('.dynamic-hidden-field');
+    hiddenFields.forEach(field => field.remove());
+}
+
+/**
+ * Basic email validation
+ * @param {string} email - Email to validate
+ * @returns {boolean} - True if valid
+ */
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
 }
