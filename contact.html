@@ -26,6 +26,17 @@
     <link rel="stylesheet" href="css/contact-page.css">
     <link rel="stylesheet" href="css/mobile-nav.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/notifications.css">
+    
+    <!-- EmailJS Library - Latest version -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Replace with your actual EmailJS Public Key from your dashboard
+            // You'll find this in your EmailJS account under "API Keys" or "Account" 
+            emailjs.init("QG59-dL_65xGmLM80");
+        })();
+    </script>
 </head>
 <body>
     <!-- Page Title -->
@@ -358,6 +369,9 @@
     
     <!-- Google Maps API (replace YOUR_API_KEY with actual key) -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    
+    <!-- Contact Forms Script -->
+    <script src="js/contact-forms.js"></script>
     
     <script>
         // Initialize Google Map
