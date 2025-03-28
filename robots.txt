@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /images/raw/
+Disallow: /js/
+Disallow: /css/
+
+Sitemap: https://spantikadventure.com/sitemap.xml

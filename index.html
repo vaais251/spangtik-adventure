@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Spantik Adventure - Premium trekking and tour services in Skardu, Northern Pakistan">
+    <meta name="description" content="Spantik Adventure offers premium trekking, tours, and expedition services in Skardu and Gilgit Baltistan, Pakistan. Explore K2 Base Camp, Hunza Valley, and more with experienced local guides.">
+    <meta name="keywords" content="trekking in Pakistan, Skardu tours, K2 Base Camp, Gilgit Baltistan, hiking, mountaineering, adventure travel, Hunza Valley, Deosai, expedition services">
+    <meta name="author" content="Spantik Adventure">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Spantik Adventure - Premier Trekking & Tours in Skardu, Pakistan">
+    <meta property="og:description" content="Discover the majestic landscapes of Northern Pakistan with Spantik Adventure's expert-guided tours and treks. Book your adventure today!">
+    <meta property="og:image" content="images/hero/hero-1.jpg">
+    <meta property="og:url" content="https://spantikadventure.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#2563eb">
-    <title>Spantik Adventure - Trekking & Tours in Skardu, Pakistan</title>
+    <title>Spantik Adventure - Premium Trekking & Tours in Skardu, Pakistan</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon/logo.png">
@@ -26,68 +35,6 @@
     <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     
-    <!-- CRITICAL HERO VISIBILITY - Inline Styles -->
-    <style>
-        /* Aggressive override to force hero visibility */
-        body .hero {
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            height: 100vh !important;
-            min-height: 600px !important;
-            width: 100% !important;
-            position: relative !important;
-            z-index: 1 !important;
-            background-color: #1c3144 !important;
-            overflow: hidden !important;
-        }
-        
-        /* Ensure all hero children are visible */
-        body .hero * {
-            visibility: visible !important;
-        }
-        
-        /* Force hero background images to show */
-        body .swiper-slide[data-background] {
-            background-size: cover !important;
-            background-position: center !important;
-        }
-        
-        /* Force hero content to display properly */
-        body .hero-content {
-            position: relative !important;
-            z-index: 2 !important;
-            color: white !important;
-            text-align: center !important;
-            max-width: 800px !important;
-            margin: 0 auto !important;
-            padding: 0 20px !important;
-        }
-        
-        /* Force first slide to be visible if Swiper fails */
-        body .hero-slider .swiper-slide:first-child {
-            display: flex !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-        }
-        
-        /* Force fallback image to be visible */
-        body .hero-bg-image {
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-            z-index: 0 !important;
-        }
-        
-        /* Hide other slides initially */
-        body .hero-slider .swiper-slide:not(:first-child) {
-            display: none;
-        }
-    </style>
-    
     <!-- CSS Links - AFTER Tailwind and critical overrides -->
     <link rel="stylesheet" href="css/header-footer.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -99,21 +46,21 @@
 </head>
 <body>
     <!-- EMERGENCY FIXED HERO SECTION - NO TAILWIND -->
-    <section class="hero" style="display:block !important; visibility:visible !important; height:100vh !important; opacity:1 !important;">
-        <div class="hero-slider swiper" style="position:absolute !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important;">
-            <div class="swiper-wrapper" style="height:100% !important;">
+    <section class="hero">
+        <div class="hero-slider swiper">
+            <div class="swiper-wrapper">
                 <!-- First slide with inline styles for guaranteed visibility -->
-                <div class="swiper-slide" data-background="images/hero/hero-1.jpg" style="display:flex !important; position:relative !important; align-items:center !important; justify-content:center !important; width:100% !important; height:100% !important; background-image:url('images/hero/hero-1.jpg') !important; background-size:cover !important; background-position:center !important;">
-                    <img src="images/hero/hero-1.jpg" alt="Hero Image 1" class="hero-bg-image" style="position:absolute !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important; object-fit:cover !important; z-index:0 !important;">
-                    <div class="hero-content" style="position:relative !important; z-index:2 !important; text-align:center !important; max-width:800px !important; color:white !important; padding:0 20px !important;">
-                        <h1 style="font-size:2.5rem !important; font-weight:bold !important; margin-bottom:1rem !important; color:white !important;">Discover the Majestic Beauty of Skardu</h1>
-                        <p style="font-size:1.2rem !important; margin-bottom:2rem !important; color:white !important;">Experience thrilling adventures and breathtaking landscapes with Spantik Adventure</p>
-                        <div class="hero-cta" style="display:flex !important; flex-wrap:wrap !important; justify-content:center !important; gap:1rem !important;">
-                            <a href="services.html" style="background-color:#2563eb !important; color:white !important; padding:0.75rem 1.5rem !important; border-radius:0.5rem !important; display:inline-flex !important; align-items:center !important; font-weight:500 !important;">
-                                <i class="fas fa-compass" style="margin-right:0.5rem !important;"></i> Explore Our Tours
+                <div class="swiper-slide" data-background="images/hero/hero-1.jpg">
+                    <img src="images/hero/hero-1.jpg" alt="Hero Image 1" class="hero-bg-image">
+                    <div class="hero-content">
+                        <h1>Discover the Majestic Beauty of Skardu</h1>
+                        <p>Experience thrilling adventures and breathtaking landscapes with Spantik Adventure</p>
+                        <div class="hero-cta">
+                            <a href="services.html" class="btn btn-primary">
+                                <i class="fas fa-compass"></i> Explore Our Tours
                             </a>
-                            <a href="contact.html" style="background-color:transparent !important; color:white !important; padding:0.75rem 1.5rem !important; border-radius:0.5rem !important; border:2px solid white !important; display:inline-flex !important; align-items:center !important; font-weight:500 !important;">
-                                <i class="fas fa-phone" style="margin-right:0.5rem !important;"></i> Contact Us
+                            <a href="contact.html" class="btn btn-secondary">
+                                <i class="fas fa-phone"></i> Contact Us
                             </a>
                         </div>
                     </div>
@@ -126,8 +73,12 @@
                         <h1>Expert-Led Trekking & Hiking Tours</h1>
                         <p>Trek with confidence alongside our experienced guides in Pakistan's Northern Areas</p>
                         <div class="hero-cta">
-                            <a href="trekking.html" class="btn btn-primary"><i class="fas fa-hiking"></i> View Treks</a>
-                            <a href="contact.html#booking" class="btn btn-secondary"><i class="far fa-calendar-check"></i> Book Now</a>
+                            <a href="trekking.html" class="btn btn-primary">
+                                <i class="fas fa-hiking"></i> View Treks
+                            </a>
+                            <a href="contact.html#booking" class="btn btn-secondary">
+                                <i class="far fa-calendar-check"></i> Book Now
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -138,17 +89,21 @@
                         <h1>Cultural Expeditions & Historical Adventures</h1>
                         <p>Immerse yourself in the rich cultural heritage of Northern Pakistan</p>
                         <div class="hero-cta">
-                            <a href="cultural-tours.html" class="btn btn-primary"><i class="fas fa-landmark"></i> Cultural Tours</a>
-                            <a href="gallery.html" class="btn btn-secondary"><i class="fas fa-camera"></i> View Gallery</a>
+                            <a href="cultural-tours.html" class="btn btn-primary">
+                                <i class="fas fa-landmark"></i> Cultural Tours
+                            </a>
+                            <a href="gallery.html" class="btn btn-secondary">
+                                <i class="fas fa-camera"></i> View Gallery
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
             
             <!-- Navigation elements -->
-            <div class="swiper-button-next" style="color:white !important; z-index:20 !important;"></div>
-            <div class="swiper-button-prev" style="color:white !important; z-index:20 !important;"></div>
-            <div class="swiper-pagination" style="z-index:20 !important;"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -166,7 +121,9 @@
                     </div>
                     <h3>Trekking & Expeditions</h3>
                     <p>Professional guided treks to majestic peaks and valleys. Experience the thrill of conquering some of the world's most challenging terrains.</p>
-                    <a href="services.html#trekking" class="btn btn-sm btn-outline"><i class="fas fa-arrow-right"></i> Learn More</a>
+                    <a href="services.html#trekking" class="btn btn-sm btn-outline">
+                        <i class="fas fa-arrow-right"></i> Learn More
+                    </a>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -174,7 +131,9 @@
                     </div>
                     <h3>Sightseeing Tours</h3>
                     <p>Explore cultural landmarks and natural wonders. Discover the hidden gems of Skardu with our experienced local guides.</p>
-                    <a href="services.html#sightseeing" class="btn btn-sm btn-outline"><i class="fas fa-arrow-right"></i> Learn More</a>
+                    <a href="services.html#sightseeing" class="btn btn-sm btn-outline">
+                        <i class="fas fa-arrow-right"></i> Learn More
+                    </a>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -182,7 +141,9 @@
                     </div>
                     <h3>Transportation</h3>
                     <p>Reliable transportation to all destinations. Our fleet of comfortable vehicles ensures safe journeys through mountainous terrain.</p>
-                    <a href="services.html#transportation" class="btn btn-sm btn-outline"><i class="fas fa-arrow-right"></i> Learn More</a>
+                    <a href="services.html#transportation" class="btn btn-sm btn-outline">
+                        <i class="fas fa-arrow-right"></i> Learn More
+                    </a>
                 </div>
             </div>
         </div>
@@ -203,7 +164,9 @@
                         <li><i class="fas fa-check-circle"></i> Personalized adventure packages</li>
                         <li><i class="fas fa-check-circle"></i> Support for local communities</li>
                     </ul>
-                    <a href="about.html" class="btn btn-secondary"><i class="fas fa-users"></i> Learn More About Us</a>
+                    <a href="about.html" class="btn btn-secondary">
+                        <i class="fas fa-users"></i> Learn More About Us
+                    </a>
                 </div>
                 <div class="about-preview-image">
                     <img src="images/team/team-group.jpg" alt="Spantik Adventure Team">
@@ -240,7 +203,9 @@
                         </div>
                         <div class="tour-info">
                             <div class="tour-price"><span>From</span> $2,800</div>
-                            <a href="services.html" class="btn btn-outline"><i class="fas fa-arrow-right"></i> View Details</a>
+                            <a href="services.html" class="btn btn-outline">
+                                <i class="fas fa-arrow-right"></i> View Details
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -289,8 +254,8 @@
     <section class="upcoming-dates">
         <div class="container">
             <div class="section-header">
-                <h2><i class="far fa-calendar-check"></i> Upcoming Tour Dates</h2>
-                <p>Secure your spot on our scheduled expeditions</p>
+                <h2><i class="far fa-calendar-check"></i> Upcoming Tours</h2>
+                <p>Secure your spot on our expeditions</p>
             </div>
             <div class="dates-container">
                 <div class="date-card">
@@ -299,9 +264,11 @@
                     </div>
                     <div class="date-content">
                         <h3>K2 Base Camp Trek</h3>
-                        <p class="date"><i class="far fa-calendar-alt"></i> June 15 - July 5, 2024</p>
-                        <p class="spots"><i class="fas fa-users"></i> 5 spots left</p>
-                        <a href="contact.html" class="btn btn-sm btn-outline"><i class="fas fa-bookmark"></i> Reserve Now</a>
+                        <p class="availability"><i class="fas fa-info-circle"></i> Available year-round</p>
+                        <p class="spots"><i class="fas fa-users"></i> Limited spots available</p>
+                        <a href="contact.html" class="btn btn-sm btn-outline">
+                            <i class="fas fa-bookmark"></i> Reserve Now
+                        </a>
                     </div>
                 </div>
                 <div class="date-card">
@@ -310,9 +277,11 @@
                     </div>
                     <div class="date-content">
                         <h3>Hunza Valley Tour</h3>
-                        <p class="date"><i class="far fa-calendar-alt"></i> July 10 - July 17, 2024</p>
-                        <p class="spots"><i class="fas fa-users"></i> 8 spots left</p>
-                        <a href="contact.html" class="btn btn-sm btn-outline"><i class="fas fa-bookmark"></i> Reserve Now</a>
+                        <p class="availability"><i class="fas fa-info-circle"></i> Available year-round</p>
+                        <p class="spots"><i class="fas fa-users"></i> Limited spots available</p>
+                        <a href="contact.html" class="btn btn-sm btn-outline">
+                            <i class="fas fa-bookmark"></i> Reserve Now
+                        </a>
                     </div>
                 </div>
             </div>
@@ -407,7 +376,9 @@
                 </div>
             </div>
             <div class="view-all-cta">
-                <a href="gallery.html" class="btn btn-secondary"><i class="fas fa-images"></i> View Full Gallery</a>
+                <a href="gallery.html" class="btn btn-secondary">
+                    <i class="fas fa-images"></i> View Full Gallery
+                </a>
             </div>
         </div>
     </section>
@@ -496,7 +467,9 @@
             <div class="cta-content">
                 <h2>Ready for Your Next Adventure?</h2>
                 <p>Book your unforgettable Skardu experience today!</p>
-                <a href="contact.html" class="btn btn-primary"><i class="fas fa-envelope"></i> Contact Us Now</a>
+                <a href="contact.html" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Contact Us Now
+                </a>
             </div>
         </div>
     </section>

@@ -12,6 +12,11 @@
     background-color: #1c3144; /* Fallback background color */
 }
 
+/* Ensure all hero children are visible */
+.hero * {
+    visibility: visible !important;
+}
+
 /* Hero Slider - Always visible */
 .hero-slider {
     position: absolute;
@@ -22,65 +27,21 @@
     display: block !important;
 }
 
-.hero-slider .swiper-wrapper {
-    height: 100%;
-}
-
-/* Static positioning for slides to prevent disappearing */
-.hero-slider .swiper-slide {
-    position: relative;
-    width: 100%;
-    height: 100%;
+/* Force hero background images to show */
+.swiper-slide[data-background] {
     background-size: cover !important;
     background-position: center !important;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    transition: transform 1s ease, opacity 0.8s ease;
 }
 
-/* First slide must always be visible as a fallback */
-.hero-slider .swiper-slide:first-child {
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-/* Dark overlay for better text readability */
-.hero-slider .swiper-slide::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
-    z-index: 1;
-}
-
-/* Fallback image in case background fails */
-.hero-bg-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-    display: block !important;
-}
-
-/* Hero Content - Always visible and properly positioned */
+/* Force hero content to display properly */
 .hero-content {
-    position: relative;
-    max-width: 800px;
-    text-align: center;
-    padding: 0 20px;
-    color: #fff;
-    z-index: 2;
+    position: relative !important;
+    z-index: 2 !important;
+    color: white !important;
+    text-align: center !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
     opacity: 1 !important;
     visibility: visible !important;
     transform: translateY(0) !important;
@@ -98,6 +59,60 @@
     }
 }
 
+/* Force first slide to be visible if Swiper fails */
+.hero-slider .swiper-slide:first-child {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 1 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+}
+
+/* Force fallback image to be visible */
+.hero-bg-image {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    z-index: 0 !important;
+    display: block !important;
+}
+
+/* Hide other slides initially */
+.hero-slider .swiper-slide:not(:first-child) {
+    display: none;
+}
+
+/* Static positioning for slides to prevent disappearing */
+.hero-slider .swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s ease, opacity 0.8s ease;
+}
+
+/* Dark overlay for better text readability */
+.hero-slider .swiper-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+    z-index: 1;
+}
+
+/* Hero Content - Always visible and properly positioned */
 .hero-content h1 {
     font-size: 3.5rem;
     font-weight: 700;
