@@ -32,205 +32,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lg-zoom.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lg-thumbnail.css">
-    
-    <style>
-        /* Gallery specific styles */
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-        
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid #2c3e50;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .gallery-section {
-            padding: 80px 0;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .section-header h2 {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-        
-        .section-header p {
-            font-size: 1.1rem;
-            color: #6c757d;
-        }
-        
-        .gallery-filters {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-        
-        .filter-btn {
-            background: none;
-            border: none;
-            padding: 8px 20px;
-            margin: 5px;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #6c757d;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-radius: 30px;
-        }
-        
-        .filter-btn:hover, .filter-btn.active {
-            background-color: #e67e22;
-            color: #fff;
-        }
-        
-        .gallery-masonry {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            grid-gap: 20px;
-        }
-        
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(44, 62, 80, 0.7);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-        
-        .gallery-overlay i {
-            font-size: 2rem;
-            color: #fff;
-            margin-bottom: 10px;
-        }
-        
-        .gallery-overlay h4 {
-            color: #fff;
-            font-size: 1.1rem;
-            text-align: center;
-            padding: 0 15px;
-            margin: 0;
-        }
-        
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background-color: #e67e22;
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 99;
-        }
-        
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .back-to-top:hover {
-            background-color: #d35400;
-            transform: translateY(-5px);
-        }
-        
-        @media (max-width: 991px) {
-            .gallery-masonry {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-        }
-        
-        @media (max-width: 767px) {
-            .gallery-masonry {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            }
-            
-            .gallery-item img {
-                height: 200px;
-            }
-            
-            .section-header h2 {
-                font-size: 1.8rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .gallery-masonry {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery-item img {
-                height: 250px;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Preloader -->
@@ -238,15 +39,11 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Page Title -->
-    <section class="page-title gallery-page-title">
+    <!-- Gallery Header -->
+    <section class="gallery-header">
         <div class="container">
-            <h1>Our Gallery</h1>
-            <div class="breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="separator"><i class="fas fa-chevron-right"></i></span>
-                <span class="current">Gallery</span>
-            </div>
+            <h1>Our Adventure Gallery</h1>
+            <p>Immerse yourself in the breathtaking beauty of Northern Pakistan through our curated collection of adventure photography</p>
         </div>
     </section>
     
@@ -254,244 +51,273 @@
     <section class="gallery-section">
         <div class="container">
             <div class="section-header">
-                <h2>Adventure Gallery</h2>
-                <p>Visual memories from our expeditions and tours</p>
+                <h2>Adventure Photography</h2>
+                <p>Visual memories from our expeditions and tours across the majestic landscapes of Gilgit Baltistan</p>
             </div>
             
+            <!-- Gallery Filters -->
             <div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn active" data-filter="all">All Adventures</button>
                 <button class="filter-btn" data-filter="mountains">Mountains</button>
                 <button class="filter-btn" data-filter="trekking">Trekking</button>
+                <button class="filter-btn" data-filter="camping">Camping</button>
                 <button class="filter-btn" data-filter="culture">Culture</button>
-                <button class="filter-btn" data-filter="landscapes">Landscapes</button>
             </div>
             
+            <!-- Gallery Items -->
             <div class="gallery-masonry" id="lightgallery">
-                <div class="gallery-item mountains">
-                    <a href="images/gallery/large/gallery-1.jpg" class="gallery-link">
-                        <img src="images/gallery/thumbnails/gallery-1.jpg" alt="K2 Mountain View">
+                <div class="gallery-item mountains large">
+                    <span class="category-badge">Mountains</span>
+                    <span class="image-counter">1</span>
+                    <a href="images/gallery/large/mountains-1.jpg" class="gallery-link" data-sub-html="<h4>K2 Mountain View</h4><p>The magnificent K2, the second-highest mountain on Earth</p>">
+                        <img src="images/gallery/thumbnails/mountains-1.jpg" alt="K2 Mountain View">
                         <div class="gallery-overlay">
                             <i class="fas fa-search-plus"></i>
                             <h4>K2 Mountain View</h4>
+                            <p>The magnificent K2, the second-highest mountain on Earth</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item trekking medium">
+                    <span class="category-badge">Trekking</span>
+                    <span class="image-counter">2</span>
+                    <a href="images/gallery/large/trail-1.jpg" class="gallery-link" data-sub-html="<h4>Fairy Meadows Trail</h4><p>The breathtaking trail to Fairy Meadows with Nanga Parbat views</p>">
+                        <img src="images/gallery/thumbnails/trail-1.jpg" alt="Fairy Meadows Trail">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <h4>Fairy Meadows Trail</h4>
+                            <p>The breathtaking trail to Fairy Meadows with Nanga Parbat views</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item camping">
+                    <span class="category-badge">Camping</span>
+                    <span class="image-counter">3</span>
+                    <a href="images/gallery/large/camping-1.jpg" class="gallery-link" data-sub-html="<h4>Rakaposhi Base Camp</h4><p>Our expedition camping at the base of the majestic Rakaposhi</p>">
+                        <img src="images/gallery/thumbnails/camping-1.jpg" alt="Rakaposhi Base Camp">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <h4>Rakaposhi Base Camp</h4>
+                            <p>Our expedition camping at the base of the majestic Rakaposhi</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item culture large">
+                    <span class="category-badge">Culture</span>
+                    <span class="image-counter">4</span>
+                    <a href="images/gallery/large/culture-1.jpg" class="gallery-link" data-sub-html="<h4>Hunza Valley Culture</h4><p>Traditional Hunza cultural celebration with local dance and music</p>">
+                        <img src="images/gallery/thumbnails/culture-1.jpg" alt="Hunza Valley Culture">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <h4>Hunza Valley Culture</h4>
+                            <p>Traditional Hunza cultural celebration with local dance and music</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="gallery-item mountains medium">
+                    <span class="category-badge">Mountains</span>
+                    <span class="image-counter">5</span>
+                    <a href="images/gallery/large/mountains-1.jpg" class="gallery-link" data-sub-html="<h4>Spantik Peak</h4><p>The golden peak of Spantik shining at sunset</p>">
+                        <img src="images/gallery/thumbnails/mountains-1.jpg" alt="Spantik Peak">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <h4>Spantik Peak</h4>
+                            <p>The golden peak of Spantik shining at sunset</p>
                         </div>
                     </a>
                 </div>
                 
                 <div class="gallery-item trekking">
-                    <a href="images/gallery/large/gallery-2.jpg" class="gallery-link">
-                        <img src="images/gallery/thumbnails/gallery-2.jpg" alt="Trekking to Baltoro Glacier">
+                    <span class="category-badge">Trekking</span>
+                    <span class="image-counter">6</span>
+                    <a href="images/gallery/large/trail-1.jpg" class="gallery-link" data-sub-html="<h4>Baltoro Glacier Trek</h4><p>Trekking across the massive Baltoro Glacier en route to K2 Base Camp</p>">
+                        <img src="images/gallery/thumbnails/trail-1.jpg" alt="Baltoro Glacier Trek">
                         <div class="gallery-overlay">
                             <i class="fas fa-search-plus"></i>
-                            <h4>Trekking to Baltoro Glacier</h4>
+                            <h4>Baltoro Glacier Trek</h4>
+                            <p>Trekking across the massive Baltoro Glacier en route to K2 Base Camp</p>
                         </div>
                     </a>
                 </div>
                 
                 <div class="gallery-item culture">
-                    <a href="images/gallery/large/gallery-3.jpg" class="gallery-link">
-                        <img src="images/gallery/thumbnails/gallery-3.jpg" alt="Local Village in Hunza">
+                    <span class="category-badge">Culture</span>
+                    <span class="image-counter">7</span>
+                    <a href="images/gallery/large/culture-1.jpg" class="gallery-link" data-sub-html="<h4>Kalash Valley</h4><p>The unique Kalash culture and their traditional festival celebrations</p>">
+                        <img src="images/gallery/thumbnails/culture-1.jpg" alt="Kalash Valley">
                         <div class="gallery-overlay">
                             <i class="fas fa-search-plus"></i>
-                            <h4>Local Village in Hunza</h4>
+                            <h4>Kalash Valley</h4>
+                            <p>The unique Kalash culture and their traditional festival celebrations</p>
                         </div>
                     </a>
                 </div>
                 
-                <div class="gallery-item landscapes">
-                    <a href="images/gallery/large/gallery-4.jpg" class="gallery-link">
-                        <img src="images/gallery/thumbnails/gallery-4.jpg" alt="Passu Cones Viewpoint">
+                <div class="gallery-item camping large">
+                    <span class="category-badge">Camping</span>
+                    <span class="image-counter">8</span>
+                    <a href="images/gallery/large/camping-1.jpg" class="gallery-link" data-sub-html="<h4>Deosai National Park</h4><p>Camping under the stars at the Deosai Plains, one of the highest plateaus in the world</p>">
+                        <img src="images/gallery/thumbnails/camping-1.jpg" alt="Deosai National Park">
                         <div class="gallery-overlay">
                             <i class="fas fa-search-plus"></i>
-                            <h4>Passu Cones Viewpoint</h4>
+                            <h4>Deosai National Park</h4>
+                            <p>Camping under the stars at the Deosai Plains, one of the highest plateaus in the world</p>
                         </div>
                     </a>
                 </div>
-                
-                <div class="gallery-item mountains">
-                    <a href="images/gallery/large/gallery-5.jpg" class="gallery-link">
-                        <img src="images/gallery/thumbnails/gallery-5.jpg" alt="Nanga Parbat">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <h4>Nanga Parbat</h4>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="gallery-item trekking">
-                    <a href="images/gallery/large/gallery-6.jpg" class="gallery-link">
-                        <img src="images/gallery/thumbnails/gallery-6.jpg" alt="Trekking Group at Base Camp">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <h4>Trekking Group at Base Camp</h4>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="gallery-item culture">
-                    <a href="images/gallery/large/gallery-7.jpg" class="gallery-link">
-                        <img src="images/gallery/thumbnails/gallery-7.jpg" alt="Traditional Music Performance">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <h4>Traditional Music Performance</h4>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="gallery-item landscapes">
-                    <a href="images/gallery/large/gallery-8.jpg" class="gallery-link">
-                        <img src="images/gallery/thumbnails/gallery-8.jpg" alt="Attabad Lake">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <h4>Attabad Lake</h4>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="gallery-item mountains">
-                    <a href="images/gallery/large/gallery-9.jpg" class="gallery-link">
-                        <img src="images/gallery/thumbnails/gallery-9.jpg" alt="Mountain Range View">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <h4>Mountain Range View</h4>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="gallery-item trekking">
-                    <a href="images/gallery/large/gallery-10.jpg" class="gallery-link">
-                        <img src="images/gallery/thumbnails/gallery-10.jpg" alt="Crossing Mountain River">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <h4>Crossing Mountain River</h4>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="gallery-item culture">
-                    <a href="images/gallery/large/gallery-11.jpg" class="gallery-link">
-                        <img src="images/gallery/thumbnails/gallery-11.jpg" alt="Baltit Fort">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <h4>Baltit Fort</h4>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="gallery-item landscapes">
-                    <a href="images/gallery/large/gallery-12.jpg" class="gallery-link">
-                        <img src="images/gallery/thumbnails/gallery-12.jpg" alt="Fairy Meadows">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <h4>Fairy Meadows</h4>
-                        </div>
-                    </a>
-                </div>
+            </div>
+            
+            <!-- Empty State -->
+            <div class="empty-state">
+                <i class="fas fa-images"></i>
+                <h3>No Images Found</h3>
+                <p>No images match your current filter selection. Please try another category or view all images.</p>
             </div>
         </div>
     </section>
     
     <!-- Call to Action -->
-    <section class="cta" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/backgrounds/cta-bg.jpg');">
+    <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready for Your Next Adventure?</h2>
-                <p>Book your unforgettable Gilgit Baltistan experience today!</p>
-                <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
+                <h2>Ready for Your Own Adventure?</h2>
+                <p>Join us on an unforgettable journey through the breathtaking landscapes of Northern Pakistan.</p>
+                <a href="contact.html" class="btn btn-primary">Book Your Trip Now</a>
             </div>
         </div>
     </section>
     
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-chevron-up"></i>
     </a>
-    
-    <!-- Include Header and Footer -->
-    <script src="js/include-components.js"></script>
-    
-    <!-- LightGallery JS -->
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
-    
-    <!-- Gallery Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize LightGallery
-            const galleryElement = document.getElementById('lightgallery');
-            if (galleryElement) {
-                lightGallery(galleryElement, {
-                    selector: '.gallery-link',
-                    plugins: [lgZoom, lgThumbnail],
-                    speed: 500,
-                    download: false,
-                    counter: true,
-                    enableDrag: true,
-                    enableSwipe: true
-                });
-            }
-            
-            // Gallery Filtering
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    // Get filter value
-                    const filterValue = this.getAttribute('data-filter');
-                    
-                    // Filter gallery items
-                    galleryItems.forEach(item => {
-                        if (filterValue === 'all' || item.classList.contains(filterValue)) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-            
-            // Preloader
+        // Preloader
+        window.addEventListener('load', function() {
             const preloader = document.querySelector('.preloader');
-            if (preloader) {
-                window.addEventListener('load', function() {
-                    preloader.style.opacity = '0';
-                    setTimeout(function() {
-                        preloader.style.display = 'none';
-                    }, 500);
+            setTimeout(function() {
+                preloader.style.opacity = '0';
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 500);
+        });
+        
+        // Initialize LightGallery
+        lightGallery(document.getElementById('lightgallery'), {
+            plugins: [lgZoom, lgThumbnail],
+            speed: 500,
+            download: false,
+            counter: true,
+            selector: '.gallery-link'
+        });
+        
+        // Gallery Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const emptyState = document.querySelector('.empty-state');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                let itemsVisible = 0;
+                
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all') {
+                        item.style.display = 'block';
+                        itemsVisible++;
+                    } else if (item.classList.contains(filterValue)) {
+                        item.style.display = 'block';
+                        itemsVisible++;
+                    } else {
+                        item.style.display = 'none';
+                    }
                 });
-            }
-            
-            // Back to Top Button
-            const backToTopButton = document.querySelector('.back-to-top');
-            
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    backToTopButton.classList.add('visible');
+                
+                // Show empty state if no items visible
+                if (itemsVisible === 0) {
+                    emptyState.style.display = 'block';
                 } else {
-                    backToTopButton.classList.remove('visible');
+                    emptyState.style.display = 'none';
                 }
             });
-            
-            backToTopButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
+        
+        // Add animation class to gallery items on scroll
+        function revealOnScroll() {
+            const gallerySection = document.querySelector('.gallery-section');
+            const sectionPosition = gallerySection.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (sectionPosition < screenPosition) {
+                gallerySection.classList.add('revealed');
+            }
+        }
+        
+        window.addEventListener('scroll', revealOnScroll);
+        
+        // Apply masonry layout
+        function resizeGridItems() {
+            const grid = document.querySelector('.gallery-masonry');
+            const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+            const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+            
+            const items = document.querySelectorAll('.gallery-item');
+            
+            items.forEach(item => {
+                const itemContent = item.querySelector('img');
+                const rowSpan = Math.ceil((itemContent.getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+                item.style.gridRowEnd = 'span ' + rowSpan;
+            });
+        }
+        
+        window.addEventListener('load', resizeGridItems);
+        window.addEventListener('resize', resizeGridItems);
     </script>
     
     <!-- PWA Script -->
     <script src="js/pwa.js"></script>
     <script src="js/app-installer.js"></script>
     <script src="js/floating-install-button.js"></script>
+    <script src="js/floating-whatsapp-button.js"></script>
+    
+    <!-- Include Header and Footer -->
+    <script src="js/include-components.js"></script>
 </body>
 </html>
