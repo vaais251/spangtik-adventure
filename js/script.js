@@ -328,10 +328,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Weather Widget Functionality
     const weatherWidgets = {
-        'gilgit-weather': {
-            location: 'Gilgit,PK',
-            lat: 35.9221,
-            lon: 74.3087
+        'skardu-weather': {
+            location: 'Skardu,PK',
+            lat: 35.2869,
+            lon: 75.6378
         },
         'k2-weather': {
             location: 'K2 Base Camp',
@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function getMockWeatherData(location) {
         // Create different weather patterns based on location
         const weatherPatterns = {
-            'Gilgit,PK': {
+            'Skardu,PK': {
                 temp: Math.floor(Math.random() * 10) + 15, // 15-25°C
                 description: 'partly cloudy',
                 icon: '02d',
@@ -599,14 +599,14 @@ function initAnimations() {
 
 // Weather widget
 function initWeatherWidget() {
-    const gilgitWeather = document.getElementById('gilgit-weather');
+    const skarduWeather = document.getElementById('skardu-weather');
     const k2Weather = document.getElementById('k2-weather');
     
-    if (gilgitWeather) {
+    if (skarduWeather) {
         // This is a placeholder for actual API implementation
         // In a real project, you would fetch data from a weather API
         setTimeout(() => {
-            gilgitWeather.innerHTML = `
+            skarduWeather.innerHTML = `
                 <div class="weather-icon"><i class="fas fa-sun"></i></div>
                 <div class="weather-temp">18°C</div>
                 <div class="weather-desc">Sunny</div>
