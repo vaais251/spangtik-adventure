@@ -94,6 +94,7 @@
     <link rel="stylesheet" href="css/additional-styles.css">
     <link rel="stylesheet" href="css/index-page.css">
     <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="css/chatbot.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -608,5 +609,18 @@
     <script src="js/app-installer.js"></script>
     <script src="js/floating-install-button.js"></script>
     <script src="js/floating-whatsapp-button.js"></script>
+    <script src="js/chatbot.js"></script>
+    
+    <script>
+    window.addEventListener('load', function() {
+        // Start carousel and other animations once everything is loaded
+        startCarousel();
+        
+        // Run these after a slight delay to make sure everything is ready
+        setTimeout(function() {
+            initAnimations();
+        }, 500);
+    });
+    </script>
 </body>
 </html>

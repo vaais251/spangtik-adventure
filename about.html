@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/additional-styles.css">
     <link rel="stylesheet" href="css/about-page.css">
     <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="css/chatbot.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -401,6 +402,25 @@
             setTimeout(function() {
                 initCounters();
                 initAboutPageAnimations();
+                
+                // Initialize FAQ accordion
+                const faqItems = document.querySelectorAll('.faq-item');
+                
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question');
+                    
+                    question.addEventListener('click', () => {
+                        // Toggle active class on the clicked item
+                        item.classList.toggle('active');
+                        
+                        // Close other items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item && otherItem.classList.contains('active')) {
+                                otherItem.classList.remove('active');
+                            }
+                        });
+                    });
+                });
             }, 500);
         });
     </script>
@@ -408,5 +428,6 @@
     <script src="js/app-installer.js"></script>
     <script src="js/floating-install-button.js"></script>
     <script src="js/floating-whatsapp-button.js"></script>
+    <script src="js/chatbot.js"></script>
 </body>
 </html>
