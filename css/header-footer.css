@@ -111,6 +111,7 @@
 .logo img {
   height: 55px;
   transition: all 0.3s ease;
+  border-radius: 50%;
 }
 
 .header.sticky .logo img {
