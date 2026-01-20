@@ -7,20 +7,28 @@
                     <img src="images/logo/logo.png" alt="Spantik Adventure" class="main-logo">
                 </a>
             </div>
-            
+
             <!-- Navigation -->
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link" id="nav-home"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="about.html" class="nav-link" id="nav-about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                    <li><a href="services.html" class="nav-link" id="nav-services"><i class="fas fa-mountain"></i> Services</a></li>
-                    <li><a href="gallery.html" class="nav-link" id="nav-gallery"><i class="fas fa-images"></i> Gallery</a></li>
-                    <li><a href="contact.html" class="nav-link" id="nav-contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="about.html" class="nav-link" id="nav-about"><i class="fas fa-info-circle"></i> About
+                            Us</a></li>
+                    <li><a href="services.html" class="nav-link" id="nav-services"><i class="fas fa-mountain"></i>
+                            Services</a></li>
+                    <li><a href="gallery.html" class="nav-link" id="nav-gallery"><i class="fas fa-images"></i>
+                            Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link" id="nav-contact"><i class="fas fa-envelope"></i>
+                            Contact</a></li>
                 </ul>
             </nav>
-            
+
             <!-- Header Right - Language & CTA -->
             <div class="header-right">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+
                 <div class="language-selector">
                     <div class="selected-language">
                         <img src="images/flags/en.svg" alt="English" class="flag-icon">
@@ -33,17 +41,17 @@
                         <li><a href="#"><img src="images/flags/fr.svg" alt="French" class="flag-icon"> French</a></li>
                     </ul>
                 </div>
-                
-                <a href="contact.html#booking" class="btn btn-primary book-btn d-none d-md-inline-block">
+
+                <a href="contact.html#booking" class="btn btn-primary book-btn d-none d-md-inline-block open-inquiry">
                     <i class="fas fa-calendar-check"></i> Book Now
                 </a>
-                
+
                 <!-- Mobile Menu Toggle -->
                 <div class="mobile-menu-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
             </div>
-            
+
             <!-- Mobile Menu Overlay -->
             <div class="menu-overlay"></div>
         </div>
@@ -51,32 +59,32 @@
 </header>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         // Mobile menu toggle functionality
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const mainNavigation = document.querySelector('.main-nav');
         const menuOverlay = document.querySelector('.menu-overlay');
-        
+
         if (mobileMenuToggle && mainNavigation && menuOverlay) {
-            mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.addEventListener('click', function () {
                 this.classList.toggle('active');
                 mainNavigation.classList.toggle('active');
                 menuOverlay.classList.toggle('active');
                 document.body.classList.toggle('menu-open');
             });
-            
-            menuOverlay.addEventListener('click', function() {
+
+            menuOverlay.addEventListener('click', function () {
                 mobileMenuToggle.classList.remove('active');
                 mainNavigation.classList.remove('active');
                 menuOverlay.classList.remove('active');
                 document.body.classList.remove('menu-open');
             });
         }
-        
+
         // Set active nav link based on current page
         const currentPath = window.location.pathname;
-        const filename = currentPath.substring(currentPath.lastIndexOf('/')+1);
-        
+        const filename = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+
         if (filename === 'index.html' || filename === '') {
             document.getElementById('nav-home').classList.add('active');
         } else if (filename === 'about.html') {
@@ -88,32 +96,32 @@
         } else if (filename === 'contact.html') {
             document.getElementById('nav-contact').classList.add('active');
         }
-        
+
         // Sticky header on scroll
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (window.scrollY > 100) {
                 document.querySelector('.header').classList.add('sticky');
             } else {
                 document.querySelector('.header').classList.remove('sticky');
             }
         });
-        
+
         // Language selector dropdown
         const selectedLanguage = document.querySelector('.selected-language');
         const languageDropdown = document.querySelector('.language-dropdown');
-        
-        selectedLanguage.addEventListener('click', function(e) {
+
+        selectedLanguage.addEventListener('click', function (e) {
             e.stopPropagation();
             languageDropdown.classList.toggle('show');
         });
-        
+
         // Close language dropdown when clicking elsewhere
-        document.addEventListener('click', function() {
+        document.addEventListener('click', function () {
             languageDropdown.classList.remove('show');
         });
-        
+
         // Prevent closing when clicking on the dropdown itself
-        languageDropdown.addEventListener('click', function(e) {
+        languageDropdown.addEventListener('click', function (e) {
             e.stopPropagation();
         });
     });
