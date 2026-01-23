@@ -49,6 +49,8 @@
     <link rel="stylesheet" href="css/mobile-nav.css">
     <link rel="stylesheet" href="css/chatbot.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -63,9 +65,11 @@
                 <!-- First slide with inline styles for guaranteed visibility -->
                 <div class="swiper-slide" data-background="images/hero/hero-1.jpg">
                     <img src="images/hero/hero-1.jpg" alt="Hero Image 1" class="hero-bg-image">
-                    <div class="hero-content">
-                        <h1>Discover the Majestic Beauty of Skardu</h1>
-                        <p>Experience thrilling adventures and breathtaking landscapes with Spantik Adventure</p>
+                    <div class="hero-content" data-aos="zoom-out" data-aos-duration="1500">
+                        <h1 class="text-white"><span class="reveal-text">Discover the Majestic Beauty of Skardu</span>
+                        </h1>
+                        <p class="text-white">Experience thrilling adventures and breathtaking landscapes with <span
+                                class="text-highlight">Spantik Adventure</span></p>
                         <div class="hero-cta">
                             <a href="services.html" class="btn btn-primary">
                                 <i class="fas fa-compass"></i> Explore Our Tours
@@ -122,6 +126,7 @@
     <section class="features">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Our Services</span>
                 <h2><i class="fas fa-check-circle"></i> What We Offer</h2>
                 <p>Premium adventure services in Northern Pakistan</p>
             </div>
@@ -682,6 +687,15 @@
     <!-- New Feature Scripts -->
     <script src="js/theme-toggle.js"></script>
     <script src="js/inquiry-modal.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
 </body>
 
 </html>

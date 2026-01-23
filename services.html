@@ -43,13 +43,15 @@
     <link rel="stylesheet" href="css/mobile-nav.css">
     <link rel="stylesheet" href="css/chatbot.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
     <!-- Page Title -->
-    <section class="page-title services-page-title">
+    <section class="page-title services-page-title" data-aos="fade">
         <div class="container">
-            <h1>Our Services</h1>
+            <h1 class="reveal-text">Our Services</h1>
             <div class="breadcrumb">
                 <a href="index.html">Home</a>
                 <span class="separator"><i class="fas fa-chevron-right"></i></span>
@@ -60,10 +62,12 @@
 
     <!-- Service Introduction -->
     <section class="service-intro">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <div class="section-header">
-                <h2><i class="fas fa-compass"></i> Adventure Services</h2>
-                <p>Discover the extraordinary with our specialized adventure offerings</p>
+                <span class="section-badge">Adventure Services</span>
+                <h2 class="text-gradient"><i class="fas fa-compass"></i> Specialized Offerings</h2>
+                <p>Discover the extraordinary with our specialized <span class="text-highlight">adventure
+                        offerings</span></p>
             </div>
             <div class="service-intro-content">
                 <p>At Spantik Adventure, we offer a range of carefully crafted services designed to provide
@@ -80,7 +84,7 @@
 
     <!-- Trekking Services -->
     <section id="trekking" class="service-section">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <div class="service-wrapper">
                 <div class="service-image">
                     <img src="images/services/trekking.jpg" alt="Trekking in Gilgit Baltistan">
@@ -672,6 +676,15 @@
     <script src="js/floating-install-button.js"></script>
     <script src="js/floating-whatsapp-button.js"></script>
     <script src="js/chatbot.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
 </body>
 
 </html>

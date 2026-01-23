@@ -44,6 +44,8 @@
     <link rel="stylesheet" href="css/chatbot.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/ceo-section.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -61,21 +63,22 @@
 
     <!-- CEO & Founder Section -->
     <section class="ceo-section">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <div class="ceo-container">
                 <div class="ceo-image-wrapper">
                     <div class="ceo-image-container">
                         <img src="images/team/ceo.jpeg" alt="Muhammad Aslam - CEO & Founder of Spantik Adventure">
-                        <div class="ceo-badge">
+                        <div class="ceo-badge float-animation">
                             <span class="experience-years">5</span>
                             <span class="experience-text">Years of Expertise</span>
                         </div>
                     </div>
                 </div>
                 <div class="ceo-content">
-                    <span class="ceo-label">Visionary & Founder</span>
-                    <h2 class="ceo-name">Muhammad Aslam</h2>
-                    <p class="ceo-title">Chief Executive Officer | Legendary Mountaineer</p>
+                    <span class="section-badge">Leadership</span>
+                    <h2 class="ceo-name text-gradient">Muhammad Aslam</h2>
+                    <p class="ceo-title">Chief Executive Officer | <span class="text-highlight">Legendary
+                            Mountaineer</span></p>
                     <div class="ceo-description">
                         <p>Muhammad Aslam is the heart and soul behind Spantik Adventure. A native of the majestic
                             Gilgit-Baltistan region, Muhammad's journey began with a childhood spent in the shadows of
@@ -543,6 +546,15 @@
     <script src="js/floating-install-button.js"></script>
     <script src="js/floating-whatsapp-button.js"></script>
     <script src="js/chatbot.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
 </body>
 
 </html>

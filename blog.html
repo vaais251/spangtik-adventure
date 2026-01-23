@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="css/mobile-nav.css">
     <link rel="stylesheet" href="css/chatbot.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -55,7 +57,7 @@
         <div class="container">
             <div class="blog-grid">
                 <!-- Blog 1: Ali Sadpara -->
-                <article class="blog-card">
+                <article class="blog-card item-premium" data-aos="fade-up" data-aos-delay="100">
                     <div class="blog-image">
                         <span class="blog-category">Legend</span>
                         <img src="images/blog/ali-sadpara.jpg" alt="Ali Sadpara - The Son of K2">
@@ -83,7 +85,7 @@
                 </article>
 
                 <!-- Blog 2: Sirbaz Khan -->
-                <article class="blog-card">
+                <article class="blog-card item-premium" data-aos="fade-up" data-aos-delay="300">
                     <div class="blog-image">
                         <span class="blog-category">Achievement</span>
                         <img src="images/blog/sirbaz-khan.jpg" alt="Sirbaz Khan - Pakistan's Pioneer of 14 Peaks">
@@ -111,7 +113,7 @@
                 </article>
 
                 <!-- Blog 3: Samina Baig -->
-                <article class="blog-card">
+                <article class="blog-card item-premium" data-aos="fade-up" data-aos-delay="500">
                     <div class="blog-image">
                         <span class="blog-category">Inspiration</span>
                         <img src="images/blog/samina-baig.jpg" alt="Samina Baig - The First Lady of the Heights">
@@ -166,6 +168,15 @@
     <script src="js/script.js"></script>
     <script src="js/pwa.js"></script>
     <script src="js/chatbot.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
 </body>
 
 </html>

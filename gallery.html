@@ -42,6 +42,8 @@
     <link rel="stylesheet" href="css/gallery-page.css">
     <link rel="stylesheet" href="css/mobile-nav.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- LightGallery CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.css">
@@ -56,10 +58,11 @@
     </div>
 
     <!-- Gallery Header -->
-    <section class="gallery-header">
+    <section class="gallery-header" data-aos="fade">
         <div class="container">
-            <h1>Our Adventure Gallery</h1>
-            <p>Immerse yourself in the breathtaking beauty of Northern Pakistan through our curated collection of
+            <h1 class="reveal-text">Our Adventure Gallery</h1>
+            <p>Immerse yourself in the breathtaking beauty of <span class="text-highlight">Northern Pakistan</span>
+                through our curated collection of
                 adventure photography</p>
         </div>
     </section>
@@ -67,9 +70,11 @@
     <!-- Gallery Section -->
     <section class="gallery-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Adventure Photography</h2>
-                <p>Visual memories from our expeditions and tours across the majestic landscapes of Gilgit Baltistan</p>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Visual Journey</span>
+                <h2 class="text-gradient">Adventure Photography</h2>
+                <p>Visual memories from our expeditions and tours across the majestic landscapes of <span
+                        class="text-highlight">Gilgit Baltistan</span></p>
             </div>
 
             <!-- Gallery Filters -->
@@ -82,8 +87,8 @@
             </div>
 
             <!-- Gallery Items -->
-            <div class="gallery-masonry" id="lightgallery">
-                <div class="gallery-item mountains large">
+            <div class="gallery-masonry" id="lightgallery" data-aos="fade-up">
+                <div class="gallery-item mountains large hover-premium">
                     <span class="category-badge">Mountains</span>
                     <span class="image-counter">1</span>
                     <a href="images/gallery/large/k2-mountain-gen.png" class="gallery-link"
@@ -345,6 +350,13 @@
 
     <!-- Include Header and Footer -->
     <script src="js/include-components.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 
 </html>
