@@ -2520,3 +2520,26 @@ body.dark-mode .modal-header h3,
 body.dark-mode .form-group label {
     color: white;
 }
+/* Blog Preview Section Enhancement */
+.blog-preview {
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
+body.dark-mode .blog-preview {
+    background-color: var(--bg-dark);
+}
+
+.blog-preview .row {
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .blog-preview .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .blog-preview .row > div {
+        width: 100%;
+    }
+}

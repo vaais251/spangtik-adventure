@@ -500,6 +500,16 @@
   font-weight: 300;
 }
 
+.footer-contact li div p a {
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.footer-contact li div p a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
 @media (min-width: 768px) {
   .footer-contact li div p {
     display: inline-block;
