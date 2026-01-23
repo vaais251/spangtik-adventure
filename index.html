@@ -287,7 +287,7 @@
                 <div class="swiper-wrapper">
                     <!-- 1. Spantik Peak -->
                     <div class="swiper-slide">
-                        <article class="destination-card">
+                        <article class="destination-card" data-dest-id="spantik">
                             <div class="destination-image">
                                 <span class="destination-badge dest-exp">Expedition</span>
                                 <img src="images/destinations/spantik.jpg" alt="Spantik Peak">
@@ -308,7 +308,7 @@
 
                     <!-- 2. Laila Peak -->
                     <div class="swiper-slide">
-                        <article class="destination-card">
+                        <article class="destination-card" data-dest-id="laila">
                             <div class="destination-image">
                                 <span class="destination-badge dest-both">Expedition & Trek</span>
                                 <img src="images/destinations/laila.jpg" alt="Laila Peak">
@@ -329,7 +329,7 @@
 
                     <!-- 3. Broad Peak -->
                     <div class="swiper-slide">
-                        <article class="destination-card">
+                        <article class="destination-card" data-dest-id="broad">
                             <div class="destination-image">
                                 <span class="destination-badge dest-exp">Expedition</span>
                                 <img src="images/destinations/broad.jpg" alt="Broad Peak">
@@ -350,7 +350,7 @@
 
                     <!-- 4. Snow Lake -->
                     <div class="swiper-slide">
-                        <article class="destination-card">
+                        <article class="destination-card" data-dest-id="snowlake">
                             <div class="destination-image">
                                 <span class="destination-badge dest-trek">Trek</span>
                                 <img src="images/destinations/snowlake.jpg" alt="Snow Lake">
@@ -371,7 +371,7 @@
 
                     <!-- 5. Masherbrum -->
                     <div class="swiper-slide">
-                        <article class="destination-card">
+                        <article class="destination-card" data-dest-id="masherbrum">
                             <div class="destination-image">
                                 <span class="destination-badge dest-exp">Expedition</span>
                                 <img src="images/destinations/masherbrum.jpg" alt="Masherbrum">
@@ -392,7 +392,7 @@
 
                     <!-- 6. K2 Concordia -->
                     <div class="swiper-slide">
-                        <article class="destination-card">
+                        <article class="destination-card" data-dest-id="concordia">
                             <div class="destination-image">
                                 <span class="destination-badge dest-trek">Trek</span>
                                 <img src="images/destinations/concordia.jpg" alt="K2 Concordia">
@@ -413,7 +413,7 @@
 
                     <!-- 7. GASHERBRUM -->
                     <div class="swiper-slide">
-                        <article class="destination-card">
+                        <article class="destination-card" data-dest-id="gasherbrum">
                             <div class="destination-image">
                                 <span class="destination-badge dest-exp">Expedition</span>
                                 <img src="images/destinations/gasherbrum.jpg" alt="Gasherbrum">
@@ -434,7 +434,7 @@
 
                     <!-- 8. KHOSA GANG -->
                     <div class="swiper-slide">
-                        <article class="destination-card">
+                        <article class="destination-card" data-dest-id="khosa">
                             <div class="destination-image">
                                 <span class="destination-badge dest-exp">Expedition</span>
                                 <img src="images/destinations/khosa.jpg" alt="Khosa Gang">
@@ -455,7 +455,7 @@
 
                     <!-- 9. MAZENO PASS -->
                     <div class="swiper-slide">
-                        <article class="destination-card">
+                        <article class="destination-card" data-dest-id="mazeno">
                             <div class="destination-image">
                                 <span class="destination-badge dest-trek">Trek</span>
                                 <img src="images/destinations/mazeno.jpg" alt="Mazeno Pass">
@@ -476,7 +476,7 @@
 
                     <!-- 10. PASTORE PEAK -->
                     <div class="swiper-slide">
-                        <article class="destination-card">
+                        <article class="destination-card" data-dest-id="pastore">
                             <div class="destination-image">
                                 <span class="destination-badge dest-both">Trek & Climbing</span>
                                 <img src="images/destinations/pastore.jpg" alt="Pastore Peak">
@@ -918,9 +918,71 @@
         </div>
     </div>
 
+    <!-- Destination Details Modal -->
+    <div class="dest-modal" id="destModal">
+        <div class="modal-container">
+            <div class="close-modal"><i class="fas fa-times"></i></div>
+            <div class="modal-body">
+                <div class="modal-media">
+                    <img src="" alt="" id="modalImg">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-tag">Destination Snapshot</span>
+                    <h2 class="modal-title" id="modalTitle"></h2>
+
+                    <div class="modal-grid">
+                        <div class="grid-item">
+                            <i class="fas fa-mountain"></i>
+                            <div class="grid-text">
+                                <span>Height</span>
+                                <p id="modalHeight"></p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <i class="fas fa-thermometer-half"></i>
+                            <div class="grid-text">
+                                <span>Typical Temp</span>
+                                <p id="modalTemp"></p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="grid-text">
+                                <span>Duration</span>
+                                <p id="modalDuration"></p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <i class="fas fa-signal"></i>
+                            <div class="grid-text">
+                                <span>Skill Level</span>
+                                <p id="modalDifficulty"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-description" id="modalDesc"></div>
+
+                    <ul class="modal-features" id="modalHighlights"></ul>
+
+                    <div class="modal-actions">
+                        <button class="share-action-btn" id="copyDestLink">
+                            <i class="fas fa-link"></i> Copy Share Link
+                        </button>
+                        <a href="#" class="share-action-btn wa-btn" id="waShareLink" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+                        </a>
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- New Feature Scripts -->
     <script src="js/theme-toggle.js"></script>
     <script src="js/inquiry-modal.js"></script>
+    <script src="js/destination-details.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
