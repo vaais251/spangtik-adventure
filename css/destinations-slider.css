@@ -1,15 +1,25 @@
-/* Signature Destinations Swiper Section */
-.signature-destinations {
-    background-color: #f1f5f9;
+/* Signature Destinations & Local Wonders Section */
+.signature-destinations,
+.local-wonders {
     padding: 100px 0;
     overflow: hidden;
 }
 
-.signature-destinations .section-header {
+.signature-destinations {
+    background-color: #f1f5f9;
+}
+
+.local-wonders {
+    background-color: #ffffff;
+}
+
+.signature-destinations .section-header,
+.local-wonders .section-header-modern {
     margin-bottom: 60px;
 }
 
-.destinations-swiper {
+.destinations-swiper,
+.local-swiper {
     padding-bottom: 50px !important;
 }
 
@@ -163,6 +173,7 @@
 .destinations-swiper .swiper-pagination-bullet-active {
     background: #2563eb;
 }
+
 /* Destination Details Modal */
 .dest-modal {
     position: fixed;
@@ -216,7 +227,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     z-index: 10;
     font-size: 20px;
     color: #0f172a;

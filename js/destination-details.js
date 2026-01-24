@@ -190,6 +190,214 @@ const destinationData = {
             'Challenging approach through beautiful Nagar Valley',
             'Incredible views of the Hunza valley from the ranks'
         ]
+    },
+    'nanga': {
+        title: 'Nanga Parbat (8,126m)',
+        image: 'images/destinations/nanga-parbat.jpg',
+        height: '8,126 meters (26,660 ft)',
+        temp: '-25°C to -45°C',
+        duration: '45 Days',
+        location: 'Diamir / Rupal Face',
+        difficulty: 'Extreme / Killer Mountain',
+        description: 'Nanga Parbat, the "Killer Mountain," is the ninth highest mountain in the world and the western anchor of the Himalayas. Its massive Rupal Face is world-renowned as the highest mountain face on Earth, rising over 4,600m directly from its base. It is a peak of extreme technical challenge and legendary mountaineering history.',
+        highlights: [
+            'Ninth highest peak in the world',
+            'World\'s highest mountain face (Rupal Face)',
+            'Legendary mountaineering history',
+            'Pristine fairy-tale meadows at its base'
+        ]
+    },
+    'passu': {
+        title: 'Passu Glacier Trek',
+        image: 'images/destinations/passu-glacier.jpg',
+        height: '3,200 meters (Average)',
+        temp: '5°C to -10°C',
+        duration: '12 Days',
+        location: 'Passu, Gojal Hunza',
+        difficulty: 'Moderate Trekking',
+        description: 'The Passu Glacier trek offers some of the most dramatic glacial scenery in the Karakoram. Walking alongside the massive river of ice while the iconic Passu Cones (Tupopdan) tower overhead is an unforgettable experience. The trek provides a close-up look at the raw power of moving glaciers in the spectacular Gojal region.',
+        highlights: [
+            'Close-up views of the iconic Passu Cones',
+            'Dramatic walk across the moving glacier ice',
+            'Cultural immersion in the hospitable Gojal valley',
+            'Proximity to the famous Passu suspension bridges'
+        ]
+    },
+    'deosai': {
+        title: 'Deosai National Park',
+        image: 'images/destinations/deosai.jpg',
+        height: '4,114 meters (Average)',
+        temp: '5°C to -10°C',
+        duration: '3-5 Days',
+        location: 'Skardu, Baltistan',
+        difficulty: 'Easy / Sightseeing',
+        description: 'Deosai, known as the "Land of Giants," is the second-highest plateau in the world. It is a vast, high-altitude alpine plain that turns into a sea of wildflowers in the summer. It is home to the Himalayan Brown Bear and offers stunning views of the surrounding Himalayan peaks.',
+        highlights: [
+            'Explore the world\'s second-highest plateau',
+            'Spot the rare Himalayan Brown Bear',
+            'Visit the crystal-clear Sheosar Lake',
+            'Unforgettable camping under the stars'
+        ]
+    },
+    'khaplu': {
+        title: 'Khaplu Fort (Yabgo Khar)',
+        image: 'images/destinations/khaplu.jpg',
+        height: '2,600 meters (Altitude)',
+        temp: '10°C to 25°C (Summer)',
+        duration: '1-2 Days',
+        location: 'Khaplu Valley, Ghanche',
+        difficulty: 'Cultural / Heritage',
+        description: 'The Khaplu Fort is a 19th-century royal palace that has been beautifully restored into a heritage hotel. It is a masterpiece of architectural fusion, blending Tibetan, Balti, and Islamic styles. The fort offers a deep dive into the royal history of the Ghanche district.',
+        highlights: [
+            'Stay in a restored 19th-century royal palace',
+            'Award-winning architectural restoration',
+            'Breathtaking views of the Masherbrum range',
+            'Explore the ancient streets of Khaplu'
+        ]
+    },
+    'thalle': {
+        title: 'Thalle La Trek',
+        image: 'images/destinations/thalle.jpg',
+        height: '4,572 meters (Pass Height)',
+        temp: '5°C to -5°C',
+        duration: '7 Days',
+        location: 'Shigar to Khaplu',
+        difficulty: 'Moderate Trekking',
+        description: 'The Thalle La trek is a beautiful journey connecting the Shigar and Khaplu valleys. It is known for its lush green meadows, stone-built shepherd huts, and vibrant wildflowers. It offers a perfect blend of natural beauty and cultural interaction with the local Balti people.',
+        highlights: [
+            'Cross the scenic 4,572m Thalle La pass',
+            'Trek through lush, flower-filled alpine meadows',
+            'Interact with local nomadic shepherds',
+            'Panoramic views of the Karakoram giants'
+        ]
+    },
+    'shigar': {
+        title: 'Shigar Palace (Fong-Khar)',
+        image: 'images/destinations/shigar.jpg',
+        height: '2,500 meters (Altitude)',
+        temp: '10°C to 30°C (Summer)',
+        duration: '1-2 Days',
+        location: 'Shigar Valley',
+        difficulty: 'Cultural / Heritage',
+        description: 'The Shigar Palace, or "The Palace on the Rock," is a beautiful 17th-century fort that has been restored with great care. It stands at the base of a massive rock cliff and is surrounded by fertile orchards. It serves as a perfect base for exploring the gateway to the Karakoram high peaks.',
+        highlights: [
+            'Historic "Palace on the Rock" architecture',
+            'Gateway to K2 and the Baltoro glacier',
+            'Beautifully restored gardens and orchards',
+            'Museum showcasing Balti history and culture'
+        ]
+    },
+    'shimshal-pass': {
+        title: 'Shimshal Pass Trek',
+        image: 'images/destinations/shimshal-pass.jpg',
+        height: '4,735 meters (Pass)',
+        temp: '5°C to -15°C',
+        duration: '12 Days',
+        location: 'Shimshal Valley, Gojal',
+        difficulty: 'Strenuous / Remote',
+        description: 'The Shimshal Pass trek is one of the most culturally rich and scenically diverse treks in the Karakoram. It takes you through the remote Shimshal valley to the high-altitude Shimshal Pass, where yaks graze in vast alpine meadows. It is a journey into the heart of the Wakhi culture.',
+        highlights: [
+            'Experience the unique Wakhi culture of Shimshal',
+            'Trek through the world\'s highest grazing grounds',
+            'Panoramic views of Distaghil Sar and other peaks',
+            'Cross the iconic Shimshal Pass'
+        ]
+    },
+    'kilik-pass': {
+        title: 'Kilik Pass (Border Trek)',
+        image: 'images/destinations/kilik-pass.jpg',
+        height: '4,827 meters (Pass)',
+        temp: '0°C to -10°C',
+        duration: '10 Days',
+        location: 'Misgar Valley, Gojal',
+        difficulty: 'Moderate / Historic',
+        description: 'Kilik Pass is a historic mountain pass on the border between Pakistan and China. It was once a key route on the ancient Silk Road. The trek offers a journey through the remote Misgar valley, featuring rugged landscapes and a sense of ancient history.',
+        highlights: [
+            'Walk the ancient Silk Road route',
+            'Stand on the historic border of Pakistan and China',
+            'Remote and untouched mountain wilderness',
+            'Traditional hospitality of Misgar valley'
+        ]
+    },
+    'shimshal-lake': {
+        title: 'Shimshal Lake (Kushruth)',
+        image: 'images/destinations/shimshal-lake.jpg',
+        height: '4,200 meters (Lake)',
+        temp: '5°C to -10°C',
+        duration: '14 Days (Combined)',
+        location: 'Shimshal Valley',
+        difficulty: 'Strenuous Trekking',
+        description: 'Shimshal Lake, also known as Kushruth Lake, is a hidden turquoise gem located near the Shimshal Pass. The lake perfectly reflects the surrounding snow-capped giants and provides a serene sanctuary in the high-altitude wilderness.',
+        highlights: [
+            'Stunning turquoise high-altitude lake',
+            'Perfect mirror reflection of the Karakoram peaks',
+            'Remote camping in pristine nature',
+            'Incredible photography opportunities'
+        ]
+    },
+    'sarfaranga': {
+        title: 'Sarfaranga Cold Desert',
+        image: 'images/destinations/sarfaranga.jpg',
+        height: '2,226 meters (Altitude)',
+        temp: '15°C to 30°C (Day)',
+        duration: '1 Day',
+        location: 'Skardu, Baltistan',
+        difficulty: 'Easy / Sightseeing',
+        description: 'The Sarfaranga Cold Desert is one of the highest deserts in the world. It features massive golden sand dunes that sit directly at the base of dark, towering, snow-dusted mountains. It is a surreal and unique landscape shaped by the extreme climate of Baltistan.',
+        highlights: [
+            'Explore one of the world\'s highest cold deserts',
+            'Dramatic contrast of sand dunes and snow peaks',
+            'Famous for the annual Sarfaranga Jeep Rally',
+            'Unreal desert photography at sunset'
+        ]
+    },
+    'kachura': {
+        title: 'Kachura Lakes (Shangrila)',
+        image: 'images/destinations/kachura.jpg',
+        height: '2,500 meters (Altitude)',
+        temp: '10°C to 25°C (Summer)',
+        duration: '1-2 Days',
+        location: 'Skardu, Baltistan',
+        difficulty: 'Easy / Recreational',
+        description: 'The Kachura Lakes consists of the famous Shangrila Lake (Lower Kachura) and the pristine Upper Kachura Lake. Shangrila is world-renowned for its iconic red-roofed cottages and heart-shaped lake, while Upper Kachura offers a quieter, wilder experience with deep blue waters.',
+        highlights: [
+            'Visit the iconic Shangrila Resort lake',
+            'Boat rides on the crystal-clear Upper Kachura Lake',
+            'Surrounded by lush fruit orchards and mountains',
+            'Perfect family-friendly destination in Skardu'
+        ]
+    },
+    'gondogoro': {
+        title: 'Gondogoro La Pass (5,585m)',
+        image: 'images/destinations/gondogoro.jpg',
+        height: '5,585 meters (Pass)',
+        temp: '-10°C to -25°C',
+        duration: '22 Days (BC Trek)',
+        location: 'Baltoro Glacier',
+        difficulty: 'Extremely Technical Trek',
+        description: 'The Gondogoro La pass is the ultimate climax of the K2 Base Camp trek. Reaching the summit of this 5,585m pass offers what many consider the greatest mountain panorama on Earth: an unobstructed view of four 8,000m peaks including K2.',
+        highlights: [
+            'World\'s greatest mountain panorama from the summit',
+            'Highest point reached on the K2 Concordia trek',
+            'Technical climb using fixed ropes and crampons',
+            'Descend into the beautiful Hushe Valley'
+        ]
+    },
+    'haramosh': {
+        title: 'Haramosh La Trek',
+        image: 'images/destinations/haramosh.jpg',
+        height: '4,800 meters (Pass)',
+        temp: '0°C to -15°C',
+        duration: '15 Days',
+        location: 'Haramosh Valley',
+        difficulty: 'Strenuous / Technical',
+        description: 'The Haramosh La trek is a challenging and wild adventure through the remote Haramosh valley. The route features stunning views of the massive Haramosh peak and the beautiful Kutwal Lake. Crossing the pass requires good stamina and basic mountaineering skills.',
+        highlights: [
+            'Explore the wild and remote Haramosh valley',
+            'Camp at the stunning Kutwal Lake',
+            'Spectacular views of Haramosh and Laila peaks',
+            'A true off-the-beaten-path trekking experience'
+        ]
     }
 };
 
