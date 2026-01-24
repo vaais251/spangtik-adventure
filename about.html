@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/additional-styles.css">
     <link rel="stylesheet" href="css/about-page.css">
+    <link rel="stylesheet" href="css/about-page-additional.css">
     <link rel="stylesheet" href="css/mobile-nav.css">
     <link rel="stylesheet" href="css/chatbot.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -49,262 +50,493 @@
 </head>
 
 <body>
-    <!-- Page Title -->
-    <section class="page-title about-page-title">
+    <!-- Modern Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-bg">
+            <div class="about-hero-overlay"></div>
+        </div>
+        <!-- Floating Particles -->
+        <div class="about-hero-particles">
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+        </div>
+        <!-- Mountain Silhouette -->
+        <div class="mountain-silhouette"></div>
         <div class="container">
-            <h1>About Us</h1>
-            <div class="breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="separator"><i class="fas fa-chevron-right"></i></span>
-                <span class="current">About Us</span>
+            <div class="about-hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <span class="hero-badge">
+                    <i class="fas fa-mountain"></i>
+                    Our Story
+                </span>
+                <h1 class="hero-title">
+                    <span class="title-line">Crafting</span>
+                    <span class="title-line gradient-text">Unforgettable</span>
+                    <span class="title-line">Adventures</span>
+                </h1>
+                <p class="hero-subtitle">Since 2010, we've been guiding adventurers through the majestic peaks of
+                    Northern Pakistan, creating memories that last a lifetime.</p>
+                <div class="hero-stats">
+                    <div class="hero-stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat-item">
+                        <span class="stat-number">8500+</span>
+                        <span class="stat-label">Happy Travelers</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Destinations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll to Explore</span>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </section>
 
-    <!-- CEO & Founder Section -->
-    <section class="ceo-section">
-        <div class="container" data-aos="fade-up">
-            <div class="ceo-container">
-                <div class="ceo-image-wrapper">
-                    <div class="ceo-image-container">
+    <!-- CEO & Founder Section - Modern Design -->
+    <section class="ceo-modern">
+        <div class="ceo-bg-elements">
+            <div class="ceo-gradient-orb orb-1"></div>
+            <div class="ceo-gradient-orb orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="ceo-wrapper" data-aos="fade-up">
+                <!-- CEO Image Side -->
+                <div class="ceo-image-side">
+                    <div class="ceo-image-frame">
+                        <div class="frame-decoration"></div>
                         <img src="images/team/ceo.jpeg" alt="Muhammad Aslam - CEO & Founder of Spantik Adventure">
-                        <div class="ceo-badge float-animation">
-                            <span class="experience-years">5</span>
-                            <span class="experience-text">Years of Expertise</span>
+                        <div class="image-overlay"></div>
+                    </div>
+                    <!-- Floating Achievement Cards -->
+                    <div class="floating-card card-summits">
+                        <div class="card-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-number">5</span>
+                            <span class="card-text">8000m Summits</span>
+                        </div>
+                    </div>
+                    <div class="floating-card card-experience">
+                        <div class="card-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-number">15+</span>
+                            <span class="card-text">Years Leading</span>
                         </div>
                     </div>
                 </div>
-                <div class="ceo-content">
-                    <span class="section-badge">Leadership</span>
-                    <h2 class="ceo-name text-gradient">Muhammad Aslam</h2>
-                    <p class="ceo-title">Chief Executive Officer | <span class="text-highlight">Legendary
-                            Mountaineer</span></p>
-                    <div class="ceo-description">
+                <!-- CEO Content Side -->
+                <div class="ceo-content-side">
+                    <span class="section-label">
+                        <span class="label-line"></span>
+                        Leadership
+                    </span>
+                    <h2 class="ceo-name-modern">Muhammad <span class="gradient-text">Aslam</span></h2>
+                    <p class="ceo-position">Chief Executive Officer & Legendary Mountaineer</p>
+
+                    <div class="ceo-bio">
                         <p>Muhammad Aslam is the heart and soul behind Spantik Adventure. A native of the majestic
-                            Gilgit-Baltistan region, Muhammad's journey began with a childhood spent in the shadows of
-                            the
-                            world's most formidable peaks. His passion for the mountains isn't just a profession; it's a
-                            lifelong calling dedicated to showcasing the unparalleled beauty of Pakistan to the world.
-                        </p>
+                            Gilgit-Baltistan region, his journey began with a childhood spent in the shadows of the
+                            world's most formidable peaks.</p>
                         <p>With summits of K2, Nanga Parbat, and Spantik Peak under his belt, Muhammad brings a depth of
-                            technical expertise and local wisdom that is unmatched in the industry. He founded Spantik
-                            Adventure with a single vision: to create a bridge between international explorers and the
-                            untouched wilderness of the Karakoram, all while fostering a culture of deep respect for
-                            nature and local communities.</p>
+                            technical expertise and local wisdom that is unmatched in the industry.</p>
                     </div>
-                    <div class="ceo-quote">
-                        <i class="fas fa-quote-left"></i>
-                        <p>"The mountains are not just rocks and ice; they are a classroom of resilience and a sanctuary
-                            for the soul. At Spantik Adventure, we don't just guide you on a path; we invite you to
-                            experience the profound silence and majestic power of the giants that have shaped my life."
-                        </p>
-                    </div>
-                    <div class="ceo-signature">
-                        <div class="signature-img">
-                            <!-- Could use an actual signature image here if available, but for now a stylized font -->
-                            <span
-                                style="font-family: 'Montserrat', sans-serif; font-style: italic; font-size: 24px; color: #2563eb;">Muhammad
-                                Aslam</span>
+
+                    <div class="ceo-quote-modern">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
                         </div>
-                        <span>Founder, Spantik Adventure</span>
+                        <blockquote>
+                            "The mountains are not just rocks and ice; they are a classroom of resilience and a
+                            sanctuary for the soul. At Spantik Adventure, we invite you to experience the profound
+                            silence and majestic power of the giants."
+                        </blockquote>
+                    </div>
+
+                    <div class="ceo-footer">
+                        <div class="ceo-signature-modern">
+                            <span class="signature-text">Muhammad Aslam</span>
+                            <span class="signature-role">Founder, Spantik Adventure</span>
+                        </div>
+                        <div class="ceo-socials">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Intro -->
-    <section class="about-intro">
+    <!-- About Story Section - Immersive Design -->
+    <section class="about-story">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-
-                </div>
-                <div class="col-md-6">
-                    <div class="about-content">
-                        <div class="section-header">
-                            <h2>Your Trusted Partner for Northern Pakistan Adventures</h2>
-                            <p>Discover the story behind Spantik Adventure and our passion for showcasing the beauty of
-                                Gilgit Baltistan</p>
+            <div class="story-wrapper">
+                <!-- Story Visual Side -->
+                <div class="story-visual" data-aos="fade-right">
+                    <div class="story-image-stack">
+                        <div class="story-image main-image">
+                            <img src="images/about/team.jpg" alt="Spantik Adventure Team">
                         </div>
+                        <div class="story-image overlay-image">
+                            <img src="images/hero/hero-1.jpg" alt="Mountain Adventure">
+                        </div>
+                    </div>
+                    <div class="story-experience-badge">
+                        <span class="badge-number">Since</span>
+                        <span class="badge-year">2010</span>
+                        <span class="badge-text">Trusted Partner</span>
+                    </div>
+                </div>
+                <!-- Story Content Side -->
+                <div class="story-content" data-aos="fade-left">
+                    <span class="section-label">
+                        <span class="label-line"></span>
+                        Our Story
+                    </span>
+                    <h2 class="story-title">Your Trusted Partner for <span class="gradient-text">Northern
+                            Pakistan</span> Adventures</h2>
+                    <p class="story-lead">Discover the story behind Spantik Adventure and our passion for showcasing the
+                        beauty of Gilgit Baltistan.</p>
+
+                    <div class="story-text">
                         <p>Founded in 2013, Spantik Adventure has grown to become one of the most respected adventure
                             tourism companies in Northern Pakistan. Our journey began with a simple mission: to share
                             the incredible natural beauty and rich cultural heritage of Gilgit Baltistan with the world.
                         </p>
                         <p>Named after the majestic Spantik Peak (7,027m), our company embodies the spirit of adventure,
-                            resilience, and breathtaking beauty that defines this region. We take pride in our deep
-                            local knowledge, professional approach, and unwavering commitment to sustainable tourism
-                            practices.</p>
-                        <ul class="about-features">
-                            <li><i class="fas fa-check-circle"></i> Local expertise with global standards</li>
-                            <li><i class="fas fa-check-circle"></i> Customized adventures for every traveler</li>
-                            <li><i class="fas fa-check-circle"></i> Safety-first approach on all expeditions</li>
-                            <li><i class="fas fa-check-circle"></i> Commitment to responsible tourism</li>
-                            <li><i class="fas fa-check-circle"></i> Support for local communities</li>
-                        </ul>
-                        <a href="services.html" class="btn btn-primary"><i class="fas fa-mountain"></i> Explore Our
-                            Services</a>
+                            resilience, and breathtaking beauty that defines this region.</p>
+                    </div>
+
+                    <div class="story-features">
+                        <div class="story-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-globe-asia"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Local Expertise</h4>
+                                <p>Deep knowledge with global standards</p>
+                            </div>
+                        </div>
+                        <div class="story-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Safety First</h4>
+                                <p>Professional approach on all expeditions</p>
+                            </div>
+                        </div>
+                        <div class="story-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Sustainable Tourism</h4>
+                                <p>Supporting local communities</p>
+                            </div>
+                        </div>
+                        <div class="story-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Personalized Care</h4>
+                                <p>Customized adventures for every traveler</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="services.html" class="btn-modern">
+                        <span>Explore Our Services</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision - Modern Cards -->
+    <section class="mission-vision-modern">
+        <div class="mission-vision-bg"></div>
+        <div class="container">
+            <div class="mv-header" data-aos="fade-up">
+                <span class="section-label centered">
+                    <span class="label-line"></span>
+                    What Drives Us
+                    <span class="label-line"></span>
+                </span>
+                <h2 class="section-title-modern">Our Purpose & <span class="gradient-text">Direction</span></h2>
+            </div>
+            <div class="mv-cards" data-aos="fade-up" data-aos-delay="100">
+                <div class="mv-card mission-card">
+                    <div class="mv-card-glow"></div>
+                    <div class="mv-card-content">
+                        <div class="mv-icon">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To provide unparalleled adventure experiences that inspire a deeper connection with nature,
+                            while promoting sustainable tourism practices that preserve the pristine environments we
+                            explore and support local communities.</p>
+                        <div class="mv-decoration">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mv-card vision-card">
+                    <div class="mv-card-glow"></div>
+                    <div class="mv-card-content">
+                        <div class="mv-icon">
+                            <i class="fas fa-binoculars"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To be the most trusted name in adventure tourism in Pakistan, recognized globally for
+                            exceptional service, safety standards, and our commitment to responsible travel that
+                            benefits both our guests and the regions we visit.</p>
+                        <div class="mv-decoration">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mission & Vision -->
-    <section class="mission-vision" style="background-color: #f9f9f9;">
+    <!-- Core Values - Modern Interactive Cards -->
+    <section class="values-modern">
         <div class="container">
-            <div class="mission-vision-wrapper">
-                <div class="mission-box">
-                    <div class="icon-box">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>Our Mission</h3>
-                    <p>To provide unparalleled adventure experiences that inspire a deeper connection with nature, while
-                        promoting sustainable tourism practices that preserve the pristine environments we explore and
-                        support local communities.</p>
-                </div>
-                <div class="vision-box">
-                    <div class="icon-box">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Our Vision</h3>
-                    <p>To be the most trusted name in adventure tourism in Pakistan, recognized globally for exceptional
-                        service, safety standards, and our commitment to responsible travel that benefits both our
-                        guests and the regions we visit.</p>
-                </div>
+            <div class="values-header" data-aos="fade-up">
+                <span class="section-label centered">
+                    <span class="label-line"></span>
+                    Our Principles
+                    <span class="label-line"></span>
+                </span>
+                <h2 class="section-title-modern">The Values That <span class="gradient-text">Guide Us</span></h2>
+                <p class="section-subtitle">The principles that shape every step of our journey</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Company Values -->
-    <section class="company-values">
-        <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-compass"></i> Our Core Values</h2>
-                <p>The principles that guide every step of our journey</p>
-            </div>
-            <div class="values-wrapper">
-                <div class="value-card">
-                    <div class="value-icon">
+            <div class="values-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="value-card-modern">
+                    <div class="value-icon-wrapper">
+                        <div class="value-icon-bg"></div>
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Safety First</h3>
                     <p>We never compromise on safety. Our guides are highly trained professionals with extensive
                         experience in mountain environments.</p>
+                    <div class="value-number">01</div>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
+                <div class="value-card-modern">
+                    <div class="value-icon-wrapper">
+                        <div class="value-icon-bg"></div>
                         <i class="fas fa-leaf"></i>
                     </div>
                     <h3>Environmental Stewardship</h3>
                     <p>We are committed to preserving the natural beauty of the mountains and minimizing our ecological
                         footprint.</p>
+                    <div class="value-number">02</div>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
+                <div class="value-card-modern">
+                    <div class="value-icon-wrapper">
+                        <div class="value-icon-bg"></div>
                         <i class="fas fa-hands-helping"></i>
                     </div>
                     <h3>Community Support</h3>
                     <p>We employ local guides and porters, ensuring that tourism benefits the communities in the regions
                         we explore.</p>
+                    <div class="value-number">03</div>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
+                <div class="value-card-modern">
+                    <div class="value-icon-wrapper">
+                        <div class="value-icon-bg"></div>
                         <i class="fas fa-certificate"></i>
                     </div>
                     <h3>Excellence</h3>
                     <p>We strive for excellence in every aspect of our service, from planning to execution of your
                         adventure.</p>
+                    <div class="value-number">04</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Journey Stats -->
-    <section class="journey-stats">
+    <!-- Journey Stats - Immersive Counters -->
+    <section class="stats-modern">
+        <div class="stats-bg-image"></div>
+        <div class="stats-overlay"></div>
+        <div class="stats-particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-chart-line"></i> Our Journey in Numbers</h2>
+            <div class="stats-header" data-aos="fade-up">
+                <h2>Our Journey in <span class="text-white">Numbers</span></h2>
                 <p>The growth and impact of our adventures over the years</p>
             </div>
-            <div class="stats-counter-wrapper">
-                <div class="stats-counter">
-                    <div class="counter" data-target="15000">0</div>
-                    <div class="counter-title">Kilometers Trekked</div>
+            <div class="stats-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-card-modern">
+                    <div class="stat-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="counter" data-target="15000">0</div>
+                        <span class="stat-unit">km</span>
+                    </div>
+                    <h4>Kilometers Trekked</h4>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="--bar-width: 85%"></div>
+                    </div>
                 </div>
-                <div class="stats-counter">
-                    <div class="counter" data-target="1200">0</div>
-                    <div class="counter-title">Mountains Climbed</div>
+                <div class="stat-card-modern">
+                    <div class="stat-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="counter" data-target="1200">0</div>
+                        <span class="stat-unit">+</span>
+                    </div>
+                    <h4>Mountains Climbed</h4>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="--bar-width: 75%"></div>
+                    </div>
                 </div>
-                <div class="stats-counter">
-                    <div class="counter" data-target="8500">0</div>
-                    <div class="counter-title">Happy Clients</div>
+                <div class="stat-card-modern">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="counter" data-target="8500">0</div>
+                        <span class="stat-unit">+</span>
+                    </div>
+                    <h4>Happy Clients</h4>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="--bar-width: 95%"></div>
+                    </div>
                 </div>
-                <div class="stats-counter">
-                    <div class="counter" data-target="25">0</div>
-                    <div class="counter-title">International Awards</div>
+                <div class="stat-card-modern">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="counter" data-target="25">0</div>
+                        <span class="stat-unit">+</span>
+                    </div>
+                    <h4>International Awards</h4>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="--bar-width: 60%"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Company Timeline -->
-    <section class="company-timeline" style="background-color: #f9f9f9;">
+    <!-- Company Timeline - Modern Vertical Design -->
+    <section class="timeline-modern">
         <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-history"></i> Our Journey</h2>
-                <p>The milestones that shaped Spantik Adventure</p>
+            <div class="timeline-header" data-aos="fade-up">
+                <span class="section-label centered">
+                    <span class="label-line"></span>
+                    Our History
+                    <span class="label-line"></span>
+                </span>
+                <h2 class="section-title-modern">The Journey of <span class="gradient-text">Spantik Adventure</span>
+                </h2>
+                <p class="section-subtitle">Milestones that shaped who we are today</p>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2010</div>
-                    <div class="timeline-content">
+            <div class="timeline-wrapper">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item-modern" data-aos="fade-up">
+                    <div class="timeline-dot">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2010</span>
                         <h3>The Beginning</h3>
                         <p>Spantik Adventure was founded by a group of three passionate mountaineers with a vision to
                             showcase the beauty of Northern Pakistan.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2012</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item-modern" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-dot">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2012</span>
                         <h3>First K2 Base Camp Expedition</h3>
                         <p>Successfully led our first international group to K2 Base Camp, establishing our reputation
                             for expert guidance in high-altitude treks.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2015</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item-modern" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-dot">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2015</span>
                         <h3>Expanded Services</h3>
                         <p>Added cultural tours and transportation services to our offerings, becoming a full-service
                             adventure tourism provider.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2018</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item-modern" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-dot">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2018</span>
                         <h3>Safety Certification</h3>
                         <p>All our guides completed international safety and first aid certifications, setting a new
                             standard for adventure tourism in Pakistan.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2020</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item-modern" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-dot">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2020</span>
                         <h3>Community Initiative</h3>
                         <p>Launched our "Give Back to the Mountains" program, dedicating a portion of our profits to
                             local education and environmental conservation.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2023</div>
-                    <div class="timeline-content">
+
+                <div class="timeline-item-modern" data-aos="fade-up" data-aos-delay="500">
+                    <div class="timeline-dot">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2023</span>
                         <h3>Global Recognition</h3>
                         <p>Recognized as one of the top adventure tourism companies in Asia by International Adventure
                             Travel Magazine.</p>
@@ -314,96 +546,131 @@
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="team-section">
+    <!-- Team Section - Modern Grid -->
+    <section class="team-modern">
+        <div class="team-bg-pattern"></div>
         <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-users"></i> Meet Our Team</h2>
-                <p>The passionate individuals who make your adventures memorable</p>
+            <div class="team-header" data-aos="fade-up">
+                <span class="section-label centered">
+                    <span class="label-line"></span>
+                    The Experts
+                    <span class="label-line"></span>
+                </span>
+                <h2 class="section-title-modern">Meet Our <span class="gradient-text">Team</span></h2>
+                <p class="section-subtitle">The passionate individuals who make your adventures memorable</p>
             </div>
-            <div class="team-wrapper">
-                <div class="team-member">
-                    <div class="team-image">
+            <div class="team-grid" data-aos="fade-up" data-aos-delay="100">
+                <!-- Team Member 1 -->
+                <div class="team-card-modern">
+                    <div class="team-image-wrapper">
                         <img src="images/team/ceo.jpeg" alt="Muhammad Aslam - Founder & Lead Guide">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-badge">
+                            <i class="fas fa-crown"></i>
+                        </div>
                     </div>
-                    <div class="team-info">
+                    <div class="team-info-modern">
                         <h3>Muhammad Aslam</h3>
-                        <p class="position">Founder & Lead Guide</p>
-                        <p class="bio">With over 5 years of mountaineering experience, Muhammad has summited five 8000m
-                            peaks and led countless expeditions across the Karakoram range.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+                        <span class="team-role">Founder & Lead Guide</span>
+                        <p>With over 15 years of mountaineering experience, Muhammad has summited five 8000m peaks and
+                            led countless expeditions.</p>
                     </div>
                 </div>
-                <div class="team-member">
-                    <div class="team-image">
+                <!-- Team Member 2 -->
+                <div class="team-card-modern">
+                    <div class="team-image-wrapper">
                         <img src="images/team/team-2.jpg" alt="Sarah Johnson - Operations Manager">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="team-info">
+                    <div class="team-info-modern">
                         <h3>Sarah Johnson</h3>
-                        <p class="position">Operations Manager</p>
-                        <p class="bio">Sarah brings international hospitality experience and a passion for Pakistani
-                            culture. She ensures that every expedition runs smoothly from start to finish.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+                        <span class="team-role">Operations Manager</span>
+                        <p>Sarah brings international hospitality experience and ensures that every expedition runs
+                            smoothly from start to finish.</p>
                     </div>
                 </div>
-                <div class="team-member">
-                    <div class="team-image">
+                <!-- Team Member 3 -->
+                <div class="team-card-modern">
+                    <div class="team-image-wrapper">
                         <img src="images/team/team-3.jpg" alt="Ali Hassan - Senior Mountain Guide">
-                    </div>
-                    <div class="team-info">
-                        <h3>Ali Hassan</h3>
-                        <p class="position">Senior Mountain Guide</p>
-                        <p class="bio">Born and raised in Hunza Valley, Ali has an intimate knowledge of the local
-                            mountains. His expertise and friendly nature make him a favorite among our clients.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
                         </div>
                     </div>
+                    <div class="team-info-modern">
+                        <h3>Ali Hassan</h3>
+                        <span class="team-role">Senior Mountain Guide</span>
+                        <p>Born and raised in Hunza Valley, Ali has an intimate knowledge of the local mountains and is
+                            a favorite among clients.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications & Partners -->
-    <section class="certifications" style="background-color: #f9f9f9;">
+    <!-- Certifications & Partners - Modern Design -->
+    <section class="certifications-modern">
         <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-award"></i> Certifications & Partners</h2>
-                <p>We're proud to be recognized and trusted by industry leaders</p>
+            <div class="cert-header" data-aos="fade-up">
+                <span class="section-label centered">
+                    <span class="label-line"></span>
+                    Trust & Recognition
+                    <span class="label-line"></span>
+                </span>
+                <h2 class="section-title-modern">Certifications & <span class="gradient-text">Partners</span></h2>
+                <p class="section-subtitle">We're proud to be recognized and trusted by industry leaders</p>
             </div>
-            <div class="certifications-wrapper">
-                <div class="certification-item">
-                    <img src="images/about/cert-1.png" alt="Tourism Association of Pakistan">
+            <div class="cert-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-card">
+                    <div class="cert-logo">
+                        <img src="images/about/cert-1.png" alt="Tourism Association of Pakistan">
+                    </div>
                     <h4>Tourism Association of Pakistan</h4>
+                    <span class="cert-badge">Certified Member</span>
                 </div>
-                <div class="certification-item">
-                    <img src="images/about/cert-2.png" alt="Adventure Travel Trade Association">
+                <div class="cert-card">
+                    <div class="cert-logo">
+                        <img src="images/about/cert-2.png" alt="Adventure Travel Trade Association">
+                    </div>
                     <h4>Adventure Travel Trade Association</h4>
+                    <span class="cert-badge">Official Partner</span>
                 </div>
-                <div class="certification-item">
-                    <img src="images/about/cert-3.png" alt="Wilderness First Aid Certified">
+                <div class="cert-card">
+                    <div class="cert-logo">
+                        <img src="images/about/cert-3.png" alt="Wilderness First Aid Certified">
+                    </div>
                     <h4>Wilderness First Aid Certified</h4>
+                    <span class="cert-badge">All Guides</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial Highlight -->
-    <section class="testimonial-highlight">
+    <!-- Testimonial Highlight - Modern Design -->
+    <section class="testimonial-modern">
+        <div class="testimonial-bg"></div>
         <div class="container">
-            <div class="testimonial-highlight-wrapper">
-                <div class="testimonial-highlight-quote">
-                    <i class="fas fa-quote-left"></i>
+            <div class="testimonial-wrapper" data-aos="fade-up">
+                <div class="testimonial-content">
+                    <div class="quote-mark">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
                     <blockquote>
                         My expedition with Spantik Adventure to K2 Base Camp was life-changing. The guides were
                         exceptional, the logistics flawless, and their knowledge of the region added incredible depth to
@@ -411,96 +678,171 @@
                         perfect balance.
                     </blockquote>
                     <div class="testimonial-author">
-                        <img src="images/testimonials/person-2.jpg" alt="Emily Richards">
-                        <div>
+                        <div class="author-image">
+                            <img src="images/testimonials/person-2.jpg" alt="Emily Richards">
+                        </div>
+                        <div class="author-info">
                             <h4>Emily Richards</h4>
                             <p>Adventure Photographer, United Kingdom</p>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
-                    <a href="testimonials.html" class="btn btn-outline"><i class="fas fa-comments"></i> Read More
-                        Stories</a>
                 </div>
-                <div class="testimonial-highlight-image">
+                <div class="testimonial-image">
                     <img src="images/about/testimonial-highlight.jpg" alt="Trekking Experience">
+                    <div class="image-frame"></div>
                 </div>
+            </div>
+            <div class="testimonial-cta" data-aos="fade-up" data-aos-delay="100">
+                <a href="testimonials.html" class="btn-modern secondary">
+                    <span>Read More Stories</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- About FAQ -->
-    <section class="about-faq">
+    <!-- FAQ Section - Modern Accordion -->
+    <section class="faq-modern">
         <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
-                <p>Common questions about our treks and expeditions</p>
-            </div>
             <div class="faq-wrapper">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How physically fit do I need to be for your treks?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Physical fitness requirements vary depending on the trek. For moderate treks like Hunza
-                            Valley, basic fitness allowing you to walk 5-6 hours a day is sufficient. For more
-                            challenging expeditions like K2 Base Camp, we recommend at least 3-6 months of targeted
-                            training, including cardiovascular fitness, strength training, and practice hikes with a
-                            loaded backpack.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What's included in your tour packages?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Our packages typically include accommodation, meals as specified in the itinerary,
-                            transportation within Pakistan, professional guides and porters, all permits and entry fees,
-                            and basic first aid supplies. International flights, travel insurance, personal equipment,
-                            and gratuities are generally not included. Detailed inclusions are provided with each
-                            specific tour package.</p>
+                <div class="faq-content" data-aos="fade-right">
+                    <span class="section-label">
+                        <span class="label-line"></span>
+                        FAQ
+                    </span>
+                    <h2 class="section-title-modern">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                    <p class="section-subtitle">Common questions about our treks and expeditions</p>
+
+                    <div class="faq-image">
+                        <img src="images/hero/hero-2.jpg" alt="Mountain Trek">
+                        <div class="faq-image-overlay"></div>
+                        <div class="faq-image-content">
+                            <i class="fas fa-headset"></i>
+                            <p>Still have questions?</p>
+                            <a href="contact.html">Contact Us</a>
+                        </div>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What's the best time to visit Gilgit Baltistan?</h3>
-                        <i class="fas fa-chevron-down"></i>
+
+                <div class="faq-accordion" data-aos="fade-left">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-number">01</span>
+                            <h3>How physically fit do I need to be for your treks?</h3>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Physical fitness requirements vary depending on the trek. For moderate treks like Hunza
+                                Valley, basic fitness allowing you to walk 5-6 hours a day is sufficient. For more
+                                challenging expeditions like K2 Base Camp, we recommend at least 3-6 months of targeted
+                                training, including cardiovascular fitness, strength training, and practice hikes with a
+                                loaded backpack.</p>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>The best time for trekking and mountaineering in Gilgit Baltistan is from June to September
-                            when the weather is most stable. Cultural tours can be enjoyed from April to October. Winter
-                            trips (November to March) are possible for those seeking snow adventures, but many
-                            high-altitude areas become inaccessible.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-number">02</span>
+                            <h3>What's included in your tour packages?</h3>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our packages typically include accommodation, meals as specified in the itinerary,
+                                transportation within Pakistan, professional guides and porters, all permits and entry
+                                fees, and basic first aid supplies. International flights, travel insurance, personal
+                                equipment, and gratuities are generally not included. Detailed inclusions are provided
+                                with each specific tour package.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How do you ensure the safety of your clients?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-number">03</span>
+                            <h3>What's the best time to visit Gilgit Baltistan?</h3>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The best time for trekking and mountaineering in Gilgit Baltistan is from June to
+                                September when the weather is most stable. Cultural tours can be enjoyed from April to
+                                October. Winter trips (November to March) are possible for those seeking snow
+                                adventures, but many high-altitude areas become inaccessible.</p>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>Safety is our top priority. Our guides are certified in Wilderness First Aid and have
-                            extensive experience in mountain environments. We maintain a low guide-to-client ratio,
-                            carry comprehensive first aid kits and satellite communication devices, and follow strict
-                            safety protocols. We also continuously monitor weather conditions and maintain connections
-                            with local communities for the latest information.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-number">04</span>
+                            <h3>How do you ensure the safety of your clients?</h3>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Safety is our top priority. Our guides are certified in Wilderness First Aid and have
+                                extensive experience in mountain environments. We maintain a low guide-to-client ratio,
+                                carry comprehensive first aid kits and satellite communication devices, and follow
+                                strict safety protocols. We also continuously monitor weather conditions and maintain
+                                connections with local communities for the latest information.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta"
-        style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/backgrounds/cta-bg.jpg');">
+    <!-- CTA Section - Immersive Design -->
+    <section class="cta-modern">
+        <div class="cta-bg-image"></div>
+        <div class="cta-overlay"></div>
+        <div class="cta-particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Embark on an Adventure?</h2>
+            <div class="cta-content" data-aos="zoom-in">
+                <span class="cta-badge">
+                    <i class="fas fa-compass"></i>
+                    Start Your Journey
+                </span>
+                <h2>Ready to Embark on an <span class="gradient-text">Adventure?</span></h2>
                 <p>Contact us today to plan your perfect journey through the majestic landscapes of Gilgit Baltistan.
                 </p>
                 <div class="cta-buttons">
-                    <a href="services.html" class="btn btn-primary"><i class="fas fa-compass"></i> Explore Our Tours</a>
-                    <a href="contact.html" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Contact Us</a>
+                    <a href="services.html" class="btn-modern primary">
+                        <span>Explore Our Tours</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="contact.html" class="btn-modern secondary">
+                        <span>Contact Us</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+                <div class="cta-trust">
+                    <div class="trust-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Safe</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-headset"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-undo"></i>
+                        <span>Easy Refund</span>
+                    </div>
                 </div>
             </div>
         </div>

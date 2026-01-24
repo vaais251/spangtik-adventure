@@ -46,6 +46,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/additional-styles.css">
     <link rel="stylesheet" href="css/index-page.css">
+    <link rel="stylesheet" href="css/index-page-enhanced.css">
     <link rel="stylesheet" href="css/mobile-nav.css">
     <link rel="stylesheet" href="css/chatbot.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -59,217 +60,467 @@
     <div class="preloader">
         <div class="loader"></div>
     </div>
-    <!-- EMERGENCY FIXED HERO SECTION - NO TAILWIND -->
-    <section class="hero">
-        <div class="hero-slider swiper">
-            <div class="swiper-wrapper">
-                <!-- First slide with inline styles for guaranteed visibility -->
-                <div class="swiper-slide" data-background="images/hero/hero-1.jpg">
-                    <img src="images/hero/hero-1.jpg" alt="Hero Image 1" class="hero-bg-image">
-                    <div class="hero-content" data-aos="zoom-out" data-aos-duration="1500">
-                        <h1 class="text-white"><span class="reveal-text">Discover the Majestic Beauty of Skardu</span>
-                        </h1>
-                        <p class="text-white">Experience thrilling adventures and breathtaking landscapes with <span
-                                class="text-highlight">Spantik Adventure</span></p>
-                        <div class="hero-cta">
-                            <a href="services.html" class="btn btn-primary">
-                                <i class="fas fa-compass"></i> Explore Our Tours
-                            </a>
-                            <a href="contact.html" class="btn btn-secondary open-inquiry">
-                                <i class="fas fa-phone"></i> Contact Us
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Other slides can be kept simple - they'll be controlled by Swiper if working -->
-                <div class="swiper-slide" data-background="images/hero/hero-2.jpg">
-                    <img src="images/hero/hero-2.jpg" alt="Hero Image 2" class="hero-bg-image">
-                    <div class="hero-content">
-                        <h1>Expert-Led Trekking & Hiking Tours</h1>
-                        <p>Trek with confidence alongside our experienced guides in Pakistan's Northern Areas</p>
-                        <div class="hero-cta">
-                            <a href="trekking.html" class="btn btn-primary">
-                                <i class="fas fa-hiking"></i> View Treks
-                            </a>
-                            <a href="contact.html#booking" class="btn btn-secondary">
-                                <i class="far fa-calendar-check"></i> Book Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <!-- Modern Hero Section with Animated Slides -->
+    <section class="hero-modern">
+        <!-- Animated Background Particles -->
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
 
-                <div class="swiper-slide" data-background="images/hero/hero-3.jpg">
-                    <img src="images/hero/hero-3.jpg" alt="Hero Image 3" class="hero-bg-image">
-                    <div class="hero-content">
-                        <h1>Cultural Expeditions & Historical Adventures</h1>
-                        <p>Immerse yourself in the rich cultural heritage of Northern Pakistan</p>
-                        <div class="hero-cta">
-                            <a href="cultural-tours.html" class="btn btn-primary">
-                                <i class="fas fa-landmark"></i> Cultural Tours
-                            </a>
-                            <a href="gallery.html" class="btn btn-secondary">
-                                <i class="fas fa-camera"></i> View Gallery
-                            </a>
+        <!-- Hero Slides Container -->
+        <div class="hero-slides-container">
+            <!-- Slide 1 -->
+            <div class="hero-slide active" data-slide="1">
+                <div class="slide-bg" style="background-image: url('images/hero/hero-1.jpg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-badge animate-fade-down">
+                        <i class="fas fa-mountain"></i> Premier Adventure Company
+                    </span>
+                    <h1 class="slide-title animate-fade-up">
+                        Discover the <span class="text-gradient">Majestic Beauty</span> of Skardu
+                    </h1>
+                    <p class="slide-description animate-fade-up-delay">
+                        Experience thrilling adventures and breathtaking landscapes with
+                        <strong>Spantik Adventure</strong> — your trusted guide to Pakistan's hidden treasures
+                    </p>
+                    <div class="slide-cta animate-fade-up-delay-2">
+                        <a href="services.html" class="btn-hero-primary">
+                            <span>Explore Our Tours</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="contact.html" class="btn-hero-outline open-inquiry">
+                            <i class="fas fa-phone"></i>
+                            <span>Contact Us</span>
+                        </a>
+                    </div>
+                    <div class="slide-stats animate-fade-up-delay-3">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="500">500+</span>
+                            <span class="stat-label">Expeditions</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="15">15+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="2000">2000+</span>
+                            <span class="stat-label">Happy Travelers</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Navigation elements -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+            <!-- Slide 2 -->
+            <div class="hero-slide" data-slide="2">
+                <div class="slide-bg" style="background-image: url('images/hero/hero-2.jpg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-badge animate-fade-down">
+                        <i class="fas fa-hiking"></i> Expert-Led Expeditions
+                    </span>
+                    <h1 class="slide-title animate-fade-up">
+                        Conquer <span class="text-gradient">Legendary Peaks</span> with Experts
+                    </h1>
+                    <p class="slide-description animate-fade-up-delay">
+                        Trek with confidence alongside our experienced mountaineers through
+                        Pakistan's Northern Areas and Karakoram Range
+                    </p>
+                    <div class="slide-cta animate-fade-up-delay-2">
+                        <a href="services.html#trekking" class="btn-hero-primary">
+                            <span>View Treks</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="contact.html#booking" class="btn-hero-outline">
+                            <i class="far fa-calendar-check"></i>
+                            <span>Book Now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide" data-slide="3">
+                <div class="slide-bg" style="background-image: url('images/hero/hero-3.jpg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-badge animate-fade-down">
+                        <i class="fas fa-landmark"></i> Cultural Heritage
+                    </span>
+                    <h1 class="slide-title animate-fade-up">
+                        Experience <span class="text-gradient">Ancient Cultures</span> & History
+                    </h1>
+                    <p class="slide-description animate-fade-up-delay">
+                        Immerse yourself in the rich cultural heritage and timeless traditions
+                        of Northern Pakistan's enchanting communities
+                    </p>
+                    <div class="slide-cta animate-fade-up-delay-2">
+                        <a href="services.html#cultural" class="btn-hero-primary">
+                            <span>Cultural Tours</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="gallery.html" class="btn-hero-outline">
+                            <i class="fas fa-camera"></i>
+                            <span>View Gallery</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide Navigation -->
+        <div class="hero-nav">
+            <button class="hero-nav-btn prev" aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="hero-nav-btn next" aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Slide Indicators -->
+        <div class="hero-indicators">
+            <button class="indicator active" data-slide="1" aria-label="Go to slide 1">
+                <span class="indicator-progress"></span>
+            </button>
+            <button class="indicator" data-slide="2" aria-label="Go to slide 2">
+                <span class="indicator-progress"></span>
+            </button>
+            <button class="indicator" data-slide="3" aria-label="Go to slide 3">
+                <span class="indicator-progress"></span>
+            </button>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
+    <!-- Features Section - Adventure Cards -->
+    <section class="adventure-features">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">Our Services</span>
-                <h2><i class="fas fa-check-circle"></i> What We Offer</h2>
-                <p>Premium adventure services in Northern Pakistan</p>
+            <!-- Floating Mountain Decoration -->
+            <div class="mountain-decoration">
+                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+                        fill="url(#mountain-gradient)" />
+                    <defs>
+                        <linearGradient id="mountain-gradient" x1="720" y1="0" x2="720" y2="120">
+                            <stop offset="0%" stop-color="rgba(37, 99, 235, 0.1)" />
+                            <stop offset="100%" stop-color="rgba(37, 99, 235, 0)" />
+                        </linearGradient>
+                    </defs>
+                </svg>
             </div>
-            <div class="features-wrapper">
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-icon">
+
+            <div class="section-header-modern" data-aos="fade-up">
+                <span class="section-tag">
+                    <i class="fas fa-compass"></i> What We Offer
+                </span>
+                <h2>Unleash Your <span class="text-accent">Adventure Spirit</span></h2>
+                <p>Premium services crafted for thrill-seekers and nature lovers exploring Northern Pakistan</p>
+            </div>
+
+            <div class="adventure-grid">
+                <!-- Trekking Card -->
+                <div class="adventure-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrap">
+                        <div class="icon-ring"></div>
                         <i class="fas fa-mountain"></i>
                     </div>
                     <h3>Trekking & Expeditions</h3>
-                    <p>Professional guided treks to majestic peaks and valleys. Experience the thrill of conquering some
-                        of the world's most challenging terrains.</p>
-                    <a href="services.html#trekking" class="btn btn-sm btn-outline">
-                        <i class="fas fa-arrow-right"></i> Learn More
-                    </a>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-map-marked-alt"></i>
+                    <p>Conquer legendary peaks with our expert mountaineers. From K2 Base Camp to hidden valleys,
+                        experience the ultimate high-altitude adventures.</p>
+                    <div class="card-features">
+                        <span><i class="fas fa-check"></i> Expert Guides</span>
+                        <span><i class="fas fa-check"></i> All Equipment</span>
+                        <span><i class="fas fa-check"></i> Safety First</span>
                     </div>
-                    <h3>Sightseeing Tours</h3>
-                    <p>Explore cultural landmarks and natural wonders. Discover the hidden gems of Skardu with our
-                        experienced local guides.</p>
-                    <a href="services.html#sightseeing" class="btn btn-sm btn-outline">
-                        <i class="fas fa-arrow-right"></i> Learn More
+                    <a href="services.html#trekking" class="card-link">
+                        Explore Treks <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
+
+                <!-- Sightseeing Card -->
+                <div class="adventure-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrap">
+                        <div class="icon-ring"></div>
+                        <i class="fas fa-binoculars"></i>
+                    </div>
+                    <h3>Scenic Tours</h3>
+                    <p>Witness breathtaking landscapes, ancient forts, and crystal-clear lakes. Our curated tours reveal
+                        the hidden beauty of Gilgit-Baltistan.</p>
+                    <div class="card-features">
+                        <span><i class="fas fa-check"></i> Luxury Transport</span>
+                        <span><i class="fas fa-check"></i> Local Insights</span>
+                        <span><i class="fas fa-check"></i> Flexible Plans</span>
+                    </div>
+                    <a href="services.html#sightseeing" class="card-link">
+                        View Tours <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Transportation Card -->
+                <div class="adventure-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrap">
+                        <div class="icon-ring"></div>
                         <i class="fas fa-shuttle-van"></i>
                     </div>
-                    <h3>Transportation</h3>
-                    <p>Reliable transportation to all destinations. Our fleet of comfortable vehicles ensures safe
-                        journeys through mountainous terrain.</p>
-                    <a href="services.html#transportation" class="btn btn-sm btn-outline">
-                        <i class="fas fa-arrow-right"></i> Learn More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Preview Section -->
-    <section class="about-preview">
-        <div class="container">
-            <div class="about-preview-wrapper">
-                <div class="about-preview-content" data-aos="fade-right">
-                    <div class="section-header text-left">
-                        <h2>About Spantik Adventure</h2>
+                    <h3>Premium Transport</h3>
+                    <p>Travel in comfort through rugged mountain terrain. Our modern fleet and experienced drivers
+                        ensure safe, scenic journeys.</p>
+                    <div class="card-features">
+                        <span><i class="fas fa-check"></i> 4x4 Vehicles</span>
+                        <span><i class="fas fa-check"></i> Pro Drivers</span>
+                        <span><i class="fas fa-check"></i> 24/7 Support</span>
                     </div>
-                    <p>Founded in 2010, Spantik Adventure is a premier adventure tourism company based in Skardu,
-                        Northern Pakistan. Our team of experienced local guides and mountaineers is dedicated to
-                        providing authentic, safe, and unforgettable adventures.</p>
-                    <ul class="about-features">
-                        <li><i class="fas fa-check-circle"></i> Local expertise and knowledge</li>
-                        <li><i class="fas fa-check-circle"></i> Safety-focused expeditions</li>
-                        <li><i class="fas fa-check-circle"></i> Personalized adventure packages</li>
-                        <li><i class="fas fa-check-circle"></i> Support for local communities</li>
-                    </ul>
-                    <a href="about.html" class="btn btn-secondary">
-                        <i class="fas fa-users"></i> Learn More About Us
+                    <a href="services.html#transportation" class="card-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
                     </a>
-                </div>
-                <div class="about-preview-image" data-aos="fade-left">
-                    <img src="images/team/team-group.jpg" alt="Spantik Adventure Team">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Popular Tours Section -->
-    <section class="popular-tours" style="background-color: #f9f9f9;">
+    <!-- About Section - Immersive Story -->
+    <section class="about-immersive">
+        <div class="about-bg-pattern"></div>
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2><i class="fas fa-compass"></i> Popular Adventures</h2>
-                <p>Discover our most sought-after experiences</p>
+            <div class="about-layout">
+                <div class="about-visual" data-aos="fade-right">
+                    <div class="visual-frame">
+                        <img src="images/team/team-group.jpg" alt="Spantik Adventure Team">
+                        <div class="frame-accent"></div>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-number">15+</span>
+                        <span class="exp-text">Years of<br>Adventure</span>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="fas fa-award"></i>
+                        <span>Award Winning</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-users"></i>
+                        <span>2000+ Happy Travelers</span>
+                    </div>
+                </div>
+
+                <div class="about-story" data-aos="fade-left">
+                    <span class="story-tag">
+                        <i class="fas fa-heart"></i> Our Story
+                    </span>
+                    <h2>Born in the <span class="highlight">Heart of Karakoram</span></h2>
+                    <p class="lead-text">Since 2010, Spantik Adventure has been your gateway to Pakistan's most
+                        spectacular landscapes. We're not just tour guides – we're fellow adventurers who call these
+                        mountains home.</p>
+                    <p>Our team of seasoned mountaineers, cultural experts, and hospitality professionals work together
+                        to create experiences that go beyond ordinary tourism. We believe in responsible travel that
+                        benefits local communities while preserving the pristine beauty of our homeland.</p>
+
+                    <div class="value-pills">
+                        <div class="pill">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Safety First</span>
+                        </div>
+                        <div class="pill">
+                            <i class="fas fa-leaf"></i>
+                            <span>Eco-Friendly</span>
+                        </div>
+                        <div class="pill">
+                            <i class="fas fa-handshake"></i>
+                            <span>Local Experts</span>
+                        </div>
+                        <div class="pill">
+                            <i class="fas fa-star"></i>
+                            <span>5-Star Service</span>
+                        </div>
+                    </div>
+
+                    <a href="about.html" class="btn-adventure">
+                        <span>Discover Our Journey</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-            <div class="tours-wrapper">
-                <div class="tour-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="tour-image">
+        </div>
+    </section>
+
+    <!-- Popular Tours - Showcase Section -->
+    <section class="tours-showcase">
+        <div class="container">
+            <div class="section-header-modern" data-aos="fade-up">
+                <span class="section-tag">
+                    <i class="fas fa-fire"></i> Top Destinations
+                </span>
+                <h2>Epic Adventures <span class="text-accent">Await You</span></h2>
+                <p>Hand-picked experiences that define adventure in the Karakoram</p>
+            </div>
+
+            <div class="tours-grid">
+                <!-- Featured Tour -->
+                <div class="tour-showcase-card featured-tour" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tour-media">
                         <img src="images/tours/k2-basecamp-gen.png" alt="K2 Base Camp Trek">
-                        <div class="tour-tag">Popular</div>
+                        <div class="media-overlay"></div>
+                        <div class="tour-badges">
+                            <span class="badge-popular"><i class="fas fa-fire-alt"></i> Bestseller</span>
+                            <span class="badge-difficulty"><i class="fas fa-signal"></i> Challenging</span>
+                        </div>
                     </div>
-                    <div class="tour-content">
-                        <h3>K2 Base Camp Trek</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-calendar-alt"></i> 21 Days</span>
-                            <span><i class="fas fa-mountain"></i> Challenging</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Skardu</span>
+                    <div class="tour-details">
+                        <div class="tour-header">
+                            <h3>K2 Base Camp Trek</h3>
+                            <div class="tour-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
                         </div>
-                        <p>Experience the journey to the base of the world's second-highest mountain through
-                            breathtaking landscapes.</p>
-                        <div class="tour-features">
-                            <span><i class="fas fa-utensils"></i> Meals Included</span>
+                        <p>Journey to the base of the world's second-highest mountain through the legendary Baltoro
+                            Glacier. An expedition of a lifetime.</p>
+                        <div class="tour-specs">
+                            <div class="spec">
+                                <i class="far fa-calendar"></i>
+                                <span>21 Days</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Skardu</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-users"></i>
+                                <span>Max 12</span>
+                            </div>
+                        </div>
+                        <div class="tour-includes">
+                            <span><i class="fas fa-utensils"></i> Meals</span>
                             <span><i class="fas fa-campground"></i> Camping</span>
-                            <span><i class="fas fa-user-shield"></i> Expert Guides</span>
+                            <span><i class="fas fa-user-shield"></i> Guides</span>
+                            <span><i class="fas fa-first-aid"></i> Safety</span>
                         </div>
-                        <div class="tour-info">
-                            <div class="tour-price"><span>From</span> $2,800</div>
-                            <a href="services.html" class="btn btn-outline">
-                                <i class="fas fa-arrow-right"></i> View Details
+                        <div class="tour-footer">
+                            <div class="price-tag">
+                                <span class="from">From</span>
+                                <span class="amount">$2,800</span>
+                            </div>
+                            <a href="services.html" class="btn-book">
+                                View Details <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="tour-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="tour-image">
+
+                <!-- Regular Tours -->
+                <div class="tour-showcase-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tour-media">
                         <img src="images/tours/hunza-valley-gen.png" alt="Hunza Valley Tour">
-                    </div>
-                    <div class="tour-content">
-                        <h3>Hunza Valley Tour</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 7 Days</span>
-                            <span><i class="fas fa-signal"></i> Easy to Moderate</span>
+                        <div class="media-overlay"></div>
+                        <div class="tour-badges">
+                            <span class="badge-difficulty easy"><i class="fas fa-leaf"></i> Easy</span>
                         </div>
-                        <p>Discover the beauty of Hunza Valley with its ancient forts, terraced fields, and snow-capped
-                            peaks.</p>
-                        <div class="tour-info">
-                            <div class="tour-price"><span>From</span> $900</div>
-                            <a href="services.html" class="btn btn-outline">View Details</a>
+                    </div>
+                    <div class="tour-details">
+                        <div class="tour-header">
+                            <h3>Hunza Valley Tour</h3>
+                            <div class="tour-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p>Explore ancient forts, terraced orchards, and witness the majestic Rakaposhi from the
+                            enchanting Hunza Valley.</p>
+                        <div class="tour-specs">
+                            <div class="spec">
+                                <i class="far fa-calendar"></i>
+                                <span>7 Days</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Hunza</span>
+                            </div>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="price-tag">
+                                <span class="from">From</span>
+                                <span class="amount">$900</span>
+                            </div>
+                            <a href="services.html" class="btn-book">View Details</a>
                         </div>
                     </div>
                 </div>
-                <div class="tour-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="tour-image">
+
+                <div class="tour-showcase-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tour-media">
                         <img src="images/tours/baltoro-glacier-gen.png" alt="Baltoro Glacier Trek">
-                    </div>
-                    <div class="tour-content">
-                        <h3>Baltoro Glacier Trek</h3>
-                        <div class="tour-meta">
-                            <span><i class="far fa-clock"></i> 14 Days</span>
-                            <span><i class="fas fa-signal"></i> Challenging</span>
+                        <div class="media-overlay"></div>
+                        <div class="tour-badges">
+                            <span class="badge-difficulty"><i class="fas fa-signal"></i> Moderate</span>
                         </div>
-                        <p>Trek along one of the world's largest glaciers with views of multiple 7000m+ peaks.</p>
-                        <div class="tour-info">
-                            <div class="tour-price"><span>From</span> $1,800</div>
-                            <a href="services.html" class="btn btn-outline">View Details</a>
+                    </div>
+                    <div class="tour-details">
+                        <div class="tour-header">
+                            <h3>Baltoro Glacier Trek</h3>
+                            <div class="tour-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                        </div>
+                        <p>Trek along one of Earth's largest glaciers with views of multiple 8000m peaks including K2,
+                            Broad Peak, and Gasherbrum.</p>
+                        <div class="tour-specs">
+                            <div class="spec">
+                                <i class="far fa-calendar"></i>
+                                <span>14 Days</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Baltoro</span>
+                            </div>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="price-tag">
+                                <span class="from">From</span>
+                                <span class="amount">$1,800</span>
+                            </div>
+                            <a href="services.html" class="btn-book">View Details</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="view-all-cta">
-                <a href="services.html" class="btn btn-primary">View All Adventures</a>
+
+            <div class="tours-cta" data-aos="fade-up">
+                <a href="services.html" class="btn-adventure large">
+                    <span>Explore All Adventures</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -505,37 +756,62 @@
     </section>
 
 
-    <!-- Upcoming Dates Section -->
-    <section class="upcoming-dates">
+    <!-- Upcoming Expeditions - Modern Timeline -->
+    <section class="expeditions-timeline">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2><i class="far fa-calendar-check"></i> Upcoming Tours</h2>
-                <p>Secure your spot on our expeditions</p>
+            <div class="section-header-modern" data-aos="fade-up">
+                <span class="section-tag">
+                    <i class="far fa-calendar-check"></i> Book Your Spot
+                </span>
+                <h2>Upcoming <span class="text-accent">Expeditions</span></h2>
+                <p>Secure your place on our most anticipated adventures</p>
             </div>
-            <div class="dates-container">
-                <div class="date-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="date-icon">
-                        <i class="fas fa-calendar-day"></i>
+
+            <div class="expedition-cards">
+                <div class="expedition-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="exp-visual">
+                        <div class="exp-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="exp-line"></div>
                     </div>
-                    <div class="date-content">
+                    <div class="exp-content">
+                        <div class="exp-status">
+                            <span class="status-dot"></span>
+                            <span>Available Year-Round</span>
+                        </div>
                         <h3>K2 Base Camp Trek</h3>
-                        <p class="availability"><i class="fas fa-info-circle"></i> Available year-round</p>
-                        <p class="spots"><i class="fas fa-users"></i> Limited spots available</p>
-                        <a href="contact.html" class="btn btn-sm btn-outline">
-                            <i class="fas fa-bookmark"></i> Reserve Now
+                        <p>The ultimate trekking experience to the world's most savage mountain</p>
+                        <div class="exp-meta">
+                            <span><i class="fas fa-users"></i> Limited Spots</span>
+                            <span><i class="fas fa-clock"></i> 21 Days</span>
+                        </div>
+                        <a href="contact.html" class="btn-reserve">
+                            Reserve Your Spot <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-                <div class="date-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="date-icon">
-                        <i class="fas fa-calendar-day"></i>
+
+                <div class="expedition-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="exp-visual">
+                        <div class="exp-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <div class="exp-line"></div>
                     </div>
-                    <div class="date-content">
+                    <div class="exp-content">
+                        <div class="exp-status">
+                            <span class="status-dot"></span>
+                            <span>Available Year-Round</span>
+                        </div>
                         <h3>Hunza Valley Tour</h3>
-                        <p class="availability"><i class="fas fa-info-circle"></i> Available year-round</p>
-                        <p class="spots"><i class="fas fa-users"></i> Limited spots available</p>
-                        <a href="contact.html" class="btn btn-sm btn-outline">
-                            <i class="fas fa-bookmark"></i> Reserve Now
+                        <p>Explore the legendary Hunza Valley and its ancient wonders</p>
+                        <div class="exp-meta">
+                            <span><i class="fas fa-users"></i> Limited Spots</span>
+                            <span><i class="fas fa-clock"></i> 7 Days</span>
+                        </div>
+                        <a href="contact.html" class="btn-reserve">
+                            Reserve Your Spot <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -543,97 +819,112 @@
         </div>
     </section>
 
-    <!-- Weather Widget Section -->
-    <section class="weather-widget">
+    <!-- Weather Section - Glassmorphism Design -->
+    <section class="weather-modern">
+        <div class="weather-bg"></div>
         <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-cloud-sun"></i> Current Weather Conditions</h2>
-                <p>Plan your adventure with real-time weather information</p>
+            <div class="section-header-modern light" data-aos="fade-up">
+                <span class="section-tag light">
+                    <i class="fas fa-cloud-sun"></i> Live Conditions
+                </span>
+                <h2>Mountain <span class="text-accent-light">Weather</span></h2>
+                <p>Real-time weather updates from key locations</p>
             </div>
 
-            <div class="weather-locations">
-                <div class="weather-location">
+            <div class="weather-grid">
+                <div class="weather-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="weather-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
                     <h3>Skardu</h3>
                     <div class="weather-data" id="skardu-weather">
                         <div class="weather-loading">
-                            <i class="fas fa-spinner fa-spin"></i>
-                            <p>Loading weather data...</p>
+                            <div class="loading-spinner"></div>
+                            <p>Loading...</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="weather-location">
+                <div class="weather-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="weather-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
                     <h3>K2 Base Camp</h3>
                     <div class="weather-data" id="k2-weather">
                         <div class="weather-loading">
-                            <i class="fas fa-spinner fa-spin"></i>
-                            <p>Loading weather data...</p>
+                            <div class="loading-spinner"></div>
+                            <p>Loading...</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="weather-location">
+                <div class="weather-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="weather-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
                     <h3>Hunza Valley</h3>
                     <div class="weather-data" id="hunza-weather">
                         <div class="weather-loading">
-                            <i class="fas fa-spinner fa-spin"></i>
-                            <p>Loading weather data...</p>
+                            <div class="loading-spinner"></div>
+                            <p>Loading...</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="weather-disclaimer">
-                <p>Weather data is updated every 3 hours. For more detailed forecasts, please <a
-                        href="contact.html">contact us</a>.</p>
-            </div>
+            <p class="weather-note">
+                <i class="fas fa-info-circle"></i>
+                Weather data updates every 3 hours. For detailed forecasts, <a href="contact.html">contact our team</a>.
+            </p>
         </div>
     </section>
 
-    <!-- Gallery Preview Section -->
-    <section class="gallery-preview">
+    <!-- Gallery Section - Masonry Style -->
+    <section class="gallery-masonry">
         <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-camera"></i> Adventure Gallery</h2>
-                <p>Glimpses of our expeditions and tours</p>
+            <div class="section-header-modern" data-aos="fade-up">
+                <span class="section-tag">
+                    <i class="fas fa-camera-retro"></i> Visual Stories
+                </span>
+                <h2>Adventure <span class="text-accent">Gallery</span></h2>
+                <p>Moments captured from our expeditions</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <a href="images/gallery/large/k2-mountain-gen.png" class="gallery-link">
-                        <img src="images/gallery/thumbnails/k2-mountain-gen.png" alt="Mountain Expedition">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                        </div>
-                    </a>
+
+            <div class="gallery-showcase" data-aos="fade-up">
+                <div class="gallery-item large">
+                    <img src="images/gallery/large/k2-mountain-gen.png" alt="K2 Mountain">
+                    <div class="gallery-hover">
+                        <i class="fas fa-expand"></i>
+                        <span>K2 - The Savage Mountain</span>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <a href="images/gallery/large/rakaposhi-camping-gen.png" class="gallery-link">
-                        <img src="images/gallery/thumbnails/rakaposhi-camping-gen.png" alt="Camping">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                        </div>
-                    </a>
+                    <img src="images/gallery/thumbnails/rakaposhi-camping-gen.png" alt="Camping at Rakaposhi">
+                    <div class="gallery-hover">
+                        <i class="fas fa-expand"></i>
+                        <span>Rakaposhi Base Camp</span>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <a href="images/gallery/large/fairy-meadows-trail-gen.png" class="gallery-link">
-                        <img src="images/gallery/thumbnails/fairy-meadows-trail-gen.png" alt="Trek Path">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                        </div>
-                    </a>
+                    <img src="images/gallery/thumbnails/fairy-meadows-trail-gen.png" alt="Fairy Meadows Trail">
+                    <div class="gallery-hover">
+                        <i class="fas fa-expand"></i>
+                        <span>Fairy Meadows</span>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <a href="images/gallery/large/hunza-culture-gen.png" class="gallery-link">
-                        <img src="images/gallery/thumbnails/hunza-culture-gen.png" alt="Local Culture">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                        </div>
-                    </a>
+                    <img src="images/gallery/thumbnails/hunza-culture-gen.png" alt="Hunza Culture">
+                    <div class="gallery-hover">
+                        <i class="fas fa-expand"></i>
+                        <span>Local Culture</span>
+                    </div>
                 </div>
             </div>
-            <div class="view-all-cta">
-                <a href="gallery.html" class="btn btn-secondary">
-                    <i class="fas fa-images"></i> View Full Gallery
+
+            <div class="gallery-cta" data-aos="fade-up">
+                <a href="gallery.html" class="btn-adventure">
+                    <span>View Full Gallery</span>
+                    <i class="fas fa-images"></i>
                 </a>
             </div>
         </div>
@@ -641,54 +932,73 @@
 
 
 
-    <!-- Blog Preview Section -->
-    <section class="blog-preview">
+    <!-- Blog Section - Magazine Style -->
+    <section class="blog-magazine">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2><i class="fas fa-newspaper"></i> Latest from our Blog</h2>
-                <p>Discover stories and insights from the world of mountaineering</p>
-            </div>
-            <div class="row align-items-center" style="display: flex; gap: 40px; flex-wrap: wrap;">
-                <div class="col-md-6" style="flex: 1; min-width: 300px;">
-                    <img src="images/blog/ali-sadpara.jpg" alt="Ali Sadpara"
-                        style="width: 100%; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+            <div class="blog-layout">
+                <div class="blog-featured" data-aos="fade-right">
+                    <div class="featured-image">
+                        <img src="images/blog/ali-sadpara.jpg" alt="Ali Sadpara - Pakistani Mountaineering Legend">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="featured-content">
+                        <span class="blog-category">
+                            <i class="fas fa-bookmark"></i> Featured Story
+                        </span>
+                        <h3>Ali Sadpara: The Immortal Spirit of K2</h3>
+                        <p>Follow the extraordinary journey of Pakistan's most legendary climber, from the humble
+                            villages of Skardu to conquering the world's most dangerous peaks.</p>
+                        <a href="blog.html" class="read-more">
+                            Read Full Story <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-md-6" style="flex: 1; min-width: 300px;">
-                    <span
-                        style="color: #2563eb; font-weight: 600; text-transform: uppercase; font-size: 14px; letter-spacing: 1px;">Featured
-                        Post</span>
-                    <h3 style="font-size: 32px; font-weight: 800; color: #1e293b; margin: 15px 0;">Ali Sadpara: The
-                        Immortal Spirit of K2</h3>
-                    <p style="color: #64748b; font-size: 18px; line-height: 1.8; margin-bottom: 25px;">Follow the
-                        journey of Pakistan's most legendary climber, from the villages of Skardu to the summit of the
-                        world's most dangerous mountain.</p>
-                    <a href="blog.html" class="btn btn-primary"><i class="fas fa-book-open"></i> Read Full Story</a>
+
+                <div class="blog-sidebar" data-aos="fade-left">
+                    <div class="section-header-modern text-left">
+                        <span class="section-tag">
+                            <i class="fas fa-newspaper"></i> Latest Stories
+                        </span>
+                        <h2>From Our <span class="text-accent">Blog</span></h2>
+                    </div>
+                    <p class="sidebar-intro">Discover tales of adventure, mountaineering wisdom, and the rich culture of
+                        Northern Pakistan.</p>
+                    <a href="blog.html" class="btn-adventure">
+                        <span>View All Articles</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials" style="background-color: #f9f9f9;">
+    <!-- Testimonials Section - Carousel -->
+    <section class="testimonials-modern">
         <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-quote-left"></i> What Our Adventurers Say</h2>
-                <p>Hear from those who've experienced our services</p>
+            <div class="section-header-modern" data-aos="fade-up">
+                <span class="section-tag">
+                    <i class="fas fa-quote-left"></i> Happy Travelers
+                </span>
+                <h2>What Adventurers <span class="text-accent">Say</span></h2>
+                <p>Real stories from those who've explored with us</p>
             </div>
-            <div class="testimonials-slider swiper">
+
+            <div class="testimonials-slider swiper" data-aos="fade-up">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="testimonial">
-                            <div class="testimonial-content">
-                                <p>"The K2 Base Camp trek with Spantik Adventure was life-changing. The guides were
-                                    knowledgeable and safety was their priority. Unforgettable experience!"</p>
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
                             </div>
+                            <p class="testimonial-text">"The K2 Base Camp trek with Spantik Adventure was life-changing.
+                                The guides were incredibly knowledgeable and safety was always their priority. An
+                                unforgettable experience!"</p>
                             <div class="testimonial-author">
                                 <img src="images/testimonials/person-1.jpg" alt="John Smith">
-                                <div class="author-info">
+                                <div class="author-details">
                                     <h4>John Smith</h4>
-                                    <p>From United Kingdom</p>
-                                    <div class="rating">
+                                    <span>United Kingdom</span>
+                                    <div class="stars">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -699,18 +1009,21 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="swiper-slide">
-                        <div class="testimonial">
-                            <div class="testimonial-content">
-                                <p>"Our Hunza Valley tour exceeded all expectations. The team was professional,
-                                    accommodating, and showed us hidden gems we wouldn't have found otherwise."</p>
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
                             </div>
+                            <p class="testimonial-text">"Our Hunza Valley tour exceeded all expectations. The team was
+                                professional, accommodating, and showed us hidden gems we wouldn't have found
+                                otherwise."</p>
                             <div class="testimonial-author">
                                 <img src="images/testimonials/person-2.jpg" alt="Sarah Johnson">
-                                <div class="author-info">
+                                <div class="author-details">
                                     <h4>Sarah Johnson</h4>
-                                    <p>From Canada</p>
-                                    <div class="rating">
+                                    <span>Canada</span>
+                                    <div class="stars">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -721,19 +1034,21 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="swiper-slide">
-                        <div class="testimonial">
-                            <div class="testimonial-content">
-                                <p>"The Baltoro Glacier trek was physically demanding but incredibly rewarding.
-                                    Spantik's team took care of all logistics perfectly, letting us focus on the amazing
-                                    views."</p>
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
                             </div>
+                            <p class="testimonial-text">"The Baltoro Glacier trek was physically demanding but
+                                incredibly rewarding. Spantik's team took care of all logistics perfectly, letting us
+                                focus on the amazing views."</p>
                             <div class="testimonial-author">
                                 <img src="images/testimonials/person-3.jpg" alt="Michael Chen">
-                                <div class="author-info">
+                                <div class="author-details">
                                     <h4>Michael Chen</h4>
-                                    <p>From Australia</p>
-                                    <div class="rating">
+                                    <span>Australia</span>
+                                    <div class="stars">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -750,16 +1065,41 @@
         </div>
     </section>
 
-    <!-- CTA before contact for a strong call-to-action -->
-    <section class="cta"
-        style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/backgrounds/cta-bg.jpg');">
+    <!-- Final CTA Section - Immersive -->
+    <section class="cta-immersive">
+        <div class="cta-bg" style="background-image: url('images/backgrounds/cta-bg.jpg');"></div>
+        <div class="cta-overlay"></div>
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready for Your Next Adventure?</h2>
-                <p>Book your unforgettable Skardu experience today!</p>
-                <a href="contact.html" class="btn btn-primary">
-                    <i class="fas fa-envelope"></i> Contact Us Now
-                </a>
+            <div class="cta-content" data-aos="zoom-in">
+                <span class="cta-badge">
+                    <i class="fas fa-rocket"></i> Start Your Journey
+                </span>
+                <h2>Ready for the Adventure of a Lifetime?</h2>
+                <p>Let us craft your perfect expedition through the majestic landscapes of Northern Pakistan</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-cta-primary">
+                        <i class="fas fa-envelope"></i>
+                        <span>Get in Touch</span>
+                    </a>
+                    <a href="services.html" class="btn-cta-outline">
+                        <i class="fas fa-compass"></i>
+                        <span>Explore Tours</span>
+                    </a>
+                </div>
+                <div class="cta-trust">
+                    <div class="trust-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Secure Booking</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-undo"></i>
+                        <span>Free Cancellation</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-headset"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -767,42 +1107,11 @@
     <!-- Include Header and Footer -->
     <script src="js/include-components.js"></script>
 
-    <!-- Load Swiper JS before script.js -->
+    <!-- Load Swiper JS -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-    <!-- Add this immediate visibility script -->
+    <!-- Preload hero images for faster display -->
     <script>
-        // Force immediate visibility regardless of page load state
-        document.addEventListener('DOMContentLoaded', function () {
-            // Force immediate visibility
-            document.querySelector('.hero').style.cssText = 'display:block !important; visibility:visible !important; opacity:1 !important; height:100vh !important;';
-
-            // Manually apply background image to first slide if needed
-            var firstSlide = document.querySelector('.swiper-slide[data-background]');
-            if (firstSlide) {
-                var bgUrl = firstSlide.getAttribute('data-background');
-                firstSlide.style.backgroundImage = 'url(' + bgUrl + ')';
-            }
-
-            // Show first slide as fallback
-            var slides = document.querySelectorAll('.swiper-slide');
-            if (slides.length > 0) {
-                slides[0].style.cssText = 'display:flex !important; visibility:visible !important; opacity:1 !important;';
-            }
-        });
-
-        // Also run immediately (don't wait for DOMContentLoaded)
-        (function () {
-            var hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.cssText = 'display:block !important; visibility:visible !important; opacity:1 !important; height:100vh !important;';
-            }
-        })();
-    </script>
-
-    <!-- Load critical resources as early as possible -->
-    <script>
-        // Preload hero images for faster display
         window.addEventListener('DOMContentLoaded', function () {
             const imageUrls = [
                 'images/hero/hero-1.jpg',
@@ -817,53 +1126,44 @@
         });
     </script>
 
-    <!-- Main Script with defer to load after DOM -->
+    <!-- Main Script -->
     <script src="js/script.js" defer></script>
 
-    <!-- Add this script at the very end before closing body tag -->
+    <!-- Initialize Sliders and Animations -->
     <script>
         window.addEventListener('load', function () {
-            // Final check to ensure slider works
+            // Start hero carousel
+            startCarousel();
+
+            // Initialize animations
             setTimeout(function () {
-                if (window.heroSlider) {
-                    console.log('Final check: slider exists');
+                initAnimations();
+            }, 500);
 
-                    // Test if the slider methods work
-                    try {
-                        // Try to access a method to verify instance is valid
-                        var currentSlide = window.heroSlider.activeIndex;
-                        console.log('Current slide:', currentSlide);
-
-                        // Try manual navigation for final test
-                        window.heroSlider.slideNext();
-                        console.log('Test navigation successful');
-                    } catch (e) {
-                        console.error('Slider instance exists but methods are not working:', e);
-                        // Attempt emergency reinitialize
-                        if (typeof Swiper !== 'undefined') {
-                            window.heroSlider = new Swiper('.hero-slider', {
-                                slidesPerView: 1,
-                                loop: true,
-                                navigation: {
-                                    nextEl: '.swiper-button-next',
-                                    prevEl: '.swiper-button-prev',
-                                },
-                            });
-                            console.log('Emergency slider initialization complete');
+            // Initialize Testimonials Swiper
+            if (typeof Swiper !== 'undefined') {
+                new Swiper('.testimonials-slider', {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.testimonials-slider .swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
                         }
                     }
-                } else {
-                    console.error('Final check: slider does NOT exist. Emergency initialization needed.');
-                    // Attempt emergency initialize
-                    if (typeof Swiper !== 'undefined') {
-                        window.heroSlider = new Swiper('.hero-slider', {
-                            slidesPerView: 1,
-                            loop: true,
-                        });
-                        console.log('Emergency slider initialization complete');
-                    }
-                }
-            }, 2000);
+                });
+            }
         });
     </script>
 
@@ -873,18 +1173,6 @@
     <script src="js/floating-install-button.js"></script>
     <script src="js/floating-whatsapp-button.js"></script>
     <script src="js/chatbot.js"></script>
-
-    <script>
-        window.addEventListener('load', function () {
-            // Start carousel and other animations once everything is loaded
-            startCarousel();
-
-            // Run these after a slight delay to make sure everything is ready
-            setTimeout(function () {
-                initAnimations();
-            }, 500);
-        });
-    </script>
     <!-- Quick Inquiry Modal -->
     <div id="inquiry-modal" class="modal">
         <div class="modal-content">
