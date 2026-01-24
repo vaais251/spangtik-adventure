@@ -148,7 +148,7 @@
 
             <!-- Slide 3 -->
             <div class="hero-slide" data-slide="3">
-                <div class="slide-bg" style="background-image: url('images/hero/hero-3.jpg');"></div>
+                <div class="slide-bg" style="background-image: url('images/hero/hero-3.png');"></div>
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <span class="slide-badge animate-fade-down">
@@ -169,6 +169,62 @@
                         <a href="gallery.html" class="btn-hero-outline">
                             <i class="fas fa-camera"></i>
                             <span>View Gallery</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="hero-slide" data-slide="4">
+                <div class="slide-bg" style="background-image: url('images/hero/hero-4.png');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-badge animate-fade-down">
+                        <i class="fas fa-shoe-prints"></i> Legendary Trails
+                    </span>
+                    <h1 class="slide-title animate-fade-up">
+                        Walk the <span class="text-gradient">Untrodden Paths</span> of Karakoram
+                    </h1>
+                    <p class="slide-description animate-fade-up-delay">
+                        Join our expert trekkers on a journey through some of the most remote
+                        and spectacular mountain landscapes on Earth
+                    </p>
+                    <div class="slide-cta animate-fade-up-delay-2">
+                        <a href="services.html#trekking" class="btn-hero-primary">
+                            <span>Explore Trails</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="contact.html" class="btn-hero-outline">
+                            <i class="fas fa-envelope"></i>
+                            <span>Inquire Now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="hero-slide" data-slide="5">
+                <div class="slide-bg" style="background-image: url('images/hero/hero-5.png');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-badge animate-fade-down">
+                        <i class="fas fa-campground"></i> Starry Expeditions
+                    </span>
+                    <h1 class="slide-title animate-fade-up">
+                        Camp Under <span class="text-gradient">A Million Stars</span>
+                    </h1>
+                    <p class="slide-description animate-fade-up-delay">
+                        Discover the magic of high-altitude camping with premium equipment
+                        and localized hospitality in the heart of the mountains
+                    </p>
+                    <div class="slide-cta animate-fade-up-delay-2">
+                        <a href="services.html" class="btn-hero-primary">
+                            <span>Our Services</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="about.html" class="btn-hero-outline">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Learn More</span>
                         </a>
                     </div>
                 </div>
@@ -194,6 +250,12 @@
                 <span class="indicator-progress"></span>
             </button>
             <button class="indicator" data-slide="3" aria-label="Go to slide 3">
+                <span class="indicator-progress"></span>
+            </button>
+            <button class="indicator" data-slide="4" aria-label="Go to slide 4">
+                <span class="indicator-progress"></span>
+            </button>
+            <button class="indicator" data-slide="5" aria-label="Go to slide 5">
                 <span class="indicator-progress"></span>
             </button>
         </div>
@@ -745,6 +807,47 @@
                             </div>
                         </article>
                     </div>
+                    <!-- 11. Trango Tower -->
+                    <div class="swiper-slide">
+                        <article class="destination-card" data-dest-id="trango">
+                            <div class="destination-image">
+                                <span class="destination-badge dest-exp">Expedition</span>
+                                <img src="images/destinations/trango.jpg" alt="Trango Tower">
+                            </div>
+                            <div class="destination-content">
+                                <h3 class="destination-title">Trango Tower (6,286m)</h3>
+                                <div class="destination-meta">
+                                    <span><i class="fas fa-mountain"></i> 6286m</span>
+                                    <span><i class="fas fa-clock"></i> 22 Days</span>
+                                </div>
+                                <div class="destination-footer">
+                                    <div class="destination-price"><span>From</span> $2,600</div>
+                                    <a href="contact.html" class="btn btn-primary dest-btn">Book Now</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- 12. Rakaposhi -->
+                    <div class="swiper-slide">
+                        <article class="destination-card" data-dest-id="rakaposhi">
+                            <div class="destination-image">
+                                <span class="destination-badge dest-exp">Expedition</span>
+                                <img src="images/destinations/Rakaposhi.jpg" alt="Rakaposhi">
+                            </div>
+                            <div class="destination-content">
+                                <h3 class="destination-title">Rakaposhi (7,788m)</h3>
+                                <div class="destination-meta">
+                                    <span><i class="fas fa-mountain"></i> 7788m</span>
+                                    <span><i class="fas fa-clock"></i> 35 Days</span>
+                                </div>
+                                <div class="destination-footer">
+                                    <div class="destination-price"><span>From</span> $3,500</div>
+                                    <a href="contact.html" class="btn btn-primary dest-btn">Book Now</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 </div>
                 <!-- Add Navigation -->
                 <div class="swiper-button-next"></div>
@@ -752,7 +855,6 @@
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
             </div>
-        </div>
     </section>
 
 
@@ -1104,11 +1206,12 @@
         </div>
     </section>
 
-    <!-- Include Header and Footer -->
-    <script src="js/include-components.js"></script>
-
     <!-- Load Swiper JS -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- Page Scripts -->
+    <script src="js/index-page.js"></script>
+    <script src="js/include-components.js"></script>
 
     <!-- Preload hero images for faster display -->
     <script>
@@ -1197,6 +1300,8 @@
                         <option value="baltoro">Baltoro Glacier Trek</option>
                         <option value="fairy-meadows">Fairy Meadows</option>
                         <option value="custom">Custom Itinerary</option>
+                        <option value="trango-tower">Trango Tower Expedition</option>
+                        <option value="rakaposhi">Rakaposhi Expedition</option>
                     </select>
                 </div>
                 <!-- Additional hidden field for preference -->

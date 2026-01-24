@@ -158,6 +158,38 @@ const destinationData = {
             'Panoramic views of the Baltoro glacier giants',
             'Excellent acclimatization peak'
         ]
+    },
+    'trango': {
+        title: 'Trango Tower (6,286m)',
+        image: 'images/destinations/trango.jpg',
+        height: '6,286 meters (20,623 ft)',
+        temp: '-10°C to -25°C',
+        duration: '22 Days',
+        location: 'Baltoro Glacier, Karakoram',
+        difficulty: 'Highly Technical Rock Climbing',
+        description: 'The Trango Towers are a family of rock towers situated on the north side of the Baltoro Glacier. They offer some of the largest cliffs and most challenging rock climbing in the world. The Great Trango Tower is the highest point, but the Nameless Tower is the most iconic spire.',
+        highlights: [
+            'World\'s tallest vertical rock face',
+            'Ultimate challenge for technical rock climbers',
+            'Spectacular granite spires rising from the glacier',
+            'Stunning views of the Baltoro region'
+        ]
+    },
+    'rakaposhi': {
+        title: 'Rakaposhi (7,788m)',
+        image: 'images/destinations/Rakaposhi.jpg',
+        height: '7,788 meters (25,551 ft)',
+        temp: '-20°C to -35°C',
+        duration: '35 Days',
+        location: 'Nagar Valley, Karakoram',
+        difficulty: 'Extreme / Technical climbing',
+        description: 'Rakaposhi is one of the most stunning mountains in the world, rising dramatically from the Hunza and Nagar valleys. Its name means "Snow Covered" in the local language. It is famous for its massive vertical rise and the longest unbroken slope in the world from base to summit.',
+        highlights: [
+            'Spectacular 6,000m vertical rise from Hunza Valley',
+            'One of the most aesthetic peaks in the Karakoram',
+            'Challenging approach through beautiful Nagar Valley',
+            'Incredible views of the Hunza valley from the ranks'
+        ]
     }
 };
 

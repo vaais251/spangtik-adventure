@@ -82,18 +82,23 @@
 }
 
 @keyframes float-particle {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) translateX(0) scale(1);
         opacity: 0.3;
     }
+
     25% {
         transform: translateY(-30px) translateX(10px) scale(1.2);
         opacity: 0.6;
     }
+
     50% {
         transform: translateY(-15px) translateX(-15px) scale(0.8);
         opacity: 0.4;
     }
+
     75% {
         transform: translateY(-40px) translateX(5px) scale(1.1);
         opacity: 0.5;
@@ -116,16 +121,17 @@
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 1s ease, visibility 1s ease;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .hero-slide.active {
     opacity: 1;
     visibility: visible;
-    z-index: 1;
+    z-index: 5;
 }
 
 /* Slide Background */
@@ -139,11 +145,11 @@
     background-position: center;
     background-repeat: no-repeat;
     transform: scale(1);
-    transition: transform 8s ease-out;
+    transition: transform 10s ease-out;
 }
 
 .hero-slide.active .slide-bg {
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 /* Slide Overlay with Gradient */
@@ -153,12 +159,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        135deg,
-        rgba(10, 22, 40, 0.85) 0%,
-        rgba(10, 22, 40, 0.6) 50%,
-        rgba(37, 99, 235, 0.3) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(10, 22, 40, 0.85) 0%,
+            rgba(10, 22, 40, 0.6) 50%,
+            rgba(37, 99, 235, 0.3) 100%);
     z-index: 1;
 }
 
@@ -346,7 +350,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
-    z-index: 10;
+    z-index: 100;
     pointer-events: none;
 }
 
@@ -383,7 +387,7 @@
     transform: translateX(-50%);
     display: flex;
     gap: 0.75rem;
-    z-index: 10;
+    z-index: 100;
 }
 
 .indicator {
@@ -417,12 +421,17 @@
 }
 
 .indicator.active .indicator-progress {
-    animation: progress-fill 6s linear forwards;
+    animation: progress-fill 3s linear forwards;
 }
 
 @keyframes progress-fill {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 /* Scroll Indicator */
@@ -460,8 +469,15 @@
 }
 
 @keyframes scroll-wheel {
-    0% { transform: translateX(-50%) translateY(0); opacity: 1; }
-    100% { transform: translateX(-50%) translateY(12px); opacity: 0; }
+    0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(12px);
+        opacity: 0;
+    }
 }
 
 .scroll-indicator span {
@@ -472,8 +488,15 @@
 }
 
 @keyframes bounce-soft {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-5px); }
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-5px);
+    }
 }
 
 /* Content Animations */
@@ -527,6 +550,7 @@
         opacity: 0;
         transform: translateY(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -538,6 +562,7 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -549,20 +574,20 @@
     .hero-nav {
         padding: 0 1rem;
     }
-    
+
     .hero-nav-btn {
         width: 45px;
         height: 45px;
     }
-    
+
     .slide-stats {
         gap: 1.5rem;
     }
-    
+
     .stat-number {
         font-size: 1.5rem;
     }
-    
+
     .stat-divider {
         height: 30px;
     }
@@ -572,41 +597,41 @@
     .hero-modern {
         min-height: 100vh;
     }
-    
+
     .slide-content {
         padding: 0 1.5rem;
         margin-top: 80px;
     }
-    
+
     .slide-badge {
         font-size: 0.75rem;
         padding: 0.5rem 1rem;
     }
-    
+
     .slide-cta {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .btn-hero-primary,
     .btn-hero-outline {
         width: 100%;
         max-width: 280px;
         justify-content: center;
     }
-    
+
     .hero-nav {
         display: none;
     }
-    
+
     .slide-stats {
         display: none;
     }
-    
+
     .hero-indicators {
         bottom: 80px;
     }
-    
+
     .scroll-indicator {
         display: none;
     }
@@ -837,10 +862,13 @@
 }
 
 @keyframes pulse-ring {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         opacity: 1;
     }
+
     50% {
         transform: scale(1.1);
         opacity: 0.5;
@@ -1024,9 +1052,12 @@
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -1268,7 +1299,7 @@
     font-weight: 600;
 }
 
-.tour-details > p {
+.tour-details>p {
     color: #64748b;
     line-height: 1.7;
     margin-bottom: 1.25rem;
@@ -1435,9 +1466,12 @@
 }
 
 @keyframes pulse-dot {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.5;
     }
@@ -1456,7 +1490,7 @@
     margin-bottom: 0.5rem;
 }
 
-.exp-content > p {
+.exp-content>p {
     color: #64748b;
     line-height: 1.6;
     margin-bottom: 1rem;
@@ -2018,7 +2052,7 @@
     .gallery-showcase {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .gallery-item.large {
         grid-column: span 2;
     }
@@ -2029,86 +2063,87 @@
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    
+
     .about-visual {
         order: -1;
     }
-    
+
     .floating-card.card-2 {
         right: 10px;
     }
-    
+
     .blog-layout {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .blog-sidebar {
         padding-left: 0;
         text-align: center;
     }
-    
+
     .blog-sidebar .section-header-modern {
         text-align: center;
     }
-    
+
     .expedition-cards {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 767.98px) {
+
     .adventure-grid,
     .tours-grid,
     .weather-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .gallery-showcase {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
-    
+
     .gallery-item.large {
         grid-column: span 1;
         grid-row: span 1;
     }
-    
+
     .gallery-item {
         height: 250px;
     }
-    
+
     .featured-image {
         height: 300px;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .btn-cta-primary,
     .btn-cta-outline {
         width: 100%;
         max-width: 280px;
         justify-content: center;
     }
-    
+
     .cta-trust {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
-    
+
     .value-pills {
         justify-content: center;
     }
-    
+
     .experience-badge {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .floating-card {
         display: none;
     }
@@ -2588,7 +2623,7 @@
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
 }
 
 .weather-location h3 {
@@ -2795,13 +2830,13 @@
     font-weight: 600;
     background-color: #2563eb;
     border: none;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
 .cta .btn-primary:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
 .btn {
@@ -2842,20 +2877,20 @@
     .section-header h2 {
         font-size: 2rem;
     }
-    
+
     .about-preview-wrapper {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .about-preview-image {
         order: -1;
     }
-    
+
     .testimonial {
         padding: 1.8rem;
     }
-    
+
     .cta-content h2 {
         font-size: 2.2rem;
     }
@@ -2865,29 +2900,29 @@
     .section-header {
         margin-bottom: 2.5rem;
     }
-    
+
     .section-header h2 {
         font-size: 1.8rem;
     }
-    
+
     .section-header p {
         font-size: 1rem;
     }
-    
+
     .feature-card {
         padding: 2rem 1.5rem;
     }
-    
-    .tours-wrapper, 
+
+    .tours-wrapper,
     .dates-container,
     .weather-locations {
         gap: 1.5rem;
     }
-    
+
     .cta-content h2 {
         font-size: 1.8rem;
     }
-    
+
     .cta-content p {
         font-size: 1rem;
     }
