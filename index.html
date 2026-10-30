@@ -70,8 +70,14 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Modern Hero Section with Animated Slides -->
+    <!-- Modern Hero Section with Continuous Video Background -->
     <section class="hero-modern">
+        <!-- Shared background stays playing while the text slides change. -->
+        <video class="hero-background-video" autoplay muted loop playsinline
+            preload="metadata" poster="images/hero/hero-1.jpg" aria-hidden="true" tabindex="-1">
+            <source src="videos/bg_video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay" aria-hidden="true"></div>
         <!-- Animated Background Particles -->
         <div class="hero-particles">
             <div class="particle"></div>
@@ -85,8 +91,6 @@
         <div class="hero-slides-container">
             <!-- Slide 1 -->
             <div class="hero-slide active" data-slide="1">
-                <div class="slide-bg" style="background-image: url('images/hero/hero-1.jpg');"></div>
-                <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <span class="slide-badge animate-fade-down">
                         <i class="fas fa-mountain"></i> Premier Adventure Company
@@ -129,8 +133,6 @@
 
             <!-- Slide 2 -->
             <div class="hero-slide" data-slide="2">
-                <div class="slide-bg" style="background-image: url('images/hero/hero-2.jpg');"></div>
-                <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <span class="slide-badge animate-fade-down">
                         <i class="fas fa-hiking"></i> Expert-Led Expeditions
@@ -157,8 +159,6 @@
 
             <!-- Slide 3 -->
             <div class="hero-slide" data-slide="3">
-                <div class="slide-bg" style="background-image: url('images/hero/hero-3.png');"></div>
-                <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <span class="slide-badge animate-fade-down">
                         <i class="fas fa-landmark"></i> Cultural Heritage
@@ -185,8 +185,6 @@
 
             <!-- Slide 4 -->
             <div class="hero-slide" data-slide="4">
-                <div class="slide-bg" style="background-image: url('images/hero/hero-4.png');"></div>
-                <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <span class="slide-badge animate-fade-down">
                         <i class="fas fa-shoe-prints"></i> Legendary Trails
@@ -213,8 +211,6 @@
 
             <!-- Slide 5 -->
             <div class="hero-slide" data-slide="5">
-                <div class="slide-bg" style="background-image: url('images/hero/hero-5.png');"></div>
-                <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <span class="slide-badge animate-fade-down">
                         <i class="fas fa-campground"></i> Starry Expeditions
@@ -1526,22 +1522,6 @@
     <!-- Page Scripts -->
     <script src="js/index-page.js"></script>
     <script src="js/include-components.js"></script>
-
-    <!-- Preload hero images for faster display -->
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            const imageUrls = [
-                'images/hero/hero-1.jpg',
-                'images/hero/hero-2.jpg',
-                'images/hero/hero-3.jpg'
-            ];
-
-            imageUrls.forEach(function (url) {
-                const img = new Image();
-                img.src = url;
-            });
-        });
-    </script>
 
     <!-- Main Script -->
     <script src="js/script.js" defer></script>

@@ -17,7 +17,32 @@
     min-height: 700px;
     width: 100%;
     overflow: hidden;
-    background-color: #0a1628;
+    background: #0a1628 url('../images/hero/hero-1.jpg') center / cover no-repeat;
+    isolation: isolate;
+}
+
+/* A single video and overlay prevent flashes between content slides. */
+.hero-background-video,
+.hero-video-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.hero-background-video {
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+.hero-video-overlay {
+    background: linear-gradient(180deg,
+        rgba(10, 22, 40, 0.55) 0%,
+        rgba(10, 22, 40, 0.45) 45%,
+        rgba(10, 22, 40, 0.75) 100%);
+    z-index: 1;
 }
 
 /* Animated Particles */
@@ -108,6 +133,7 @@
 /* Slides Container */
 .hero-slides-container {
     position: relative;
+    z-index: 3;
     width: 100%;
     height: 100%;
 }
