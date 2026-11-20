@@ -8,7 +8,7 @@ Departure-specific prices take precedence over conflicting cross-sell tables.
 | --- | ---: | --- | --- |
 | K2 Base Camp / Concordia | $1,790 | 21 days | [K2 Base Camp](https://www.apricottours.pk/tours/k2-base-camp-trek/), starting all-inclusive trek |
 | Snow Lake / Hispar La | $1,950 | 17 days | [Snow Lake options](https://www.apricottours.pk/tours/snow-lake-trek-pakistan/), trek-only offer |
-| Spantik | $3,650 | 31 days | [Spantik](https://www.apricottours.pk/tours/spantik-expedition/), base camp service, 25 July–24 August 2027 inclusive |
+| Spantik | $6,000 | 31 days | [Spantik](https://www.apricottours.pk/tours/spantik-expedition/), base camp service, 25 July–24 August 2027 inclusive |
 | Laila Peak | $2,390 | 20 days retained | [Laila](https://www.apricottours.pk/tours/laila-peak-expedition/), minimum price for 9–10 climbers; no expedition duration published. User explicitly requested retaining 20 days. |
 | Trango Tower | $2,390 | 42–45 days | [Trango](https://www.apricottours.pk/tours/trango-tower-expedition/), minimum price for 9–10 climbers; duration stated in overview |
 | Khosar Gang | $2,780 | 15 days | [Khosar Gang](https://www.apricottours.pk/tours/khosar-gang-expedition/), 4–18 August 2027 departure |
